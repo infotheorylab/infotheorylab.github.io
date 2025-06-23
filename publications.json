@@ -1,5 +1,615 @@
 [
   {
+    "id": "c48",
+    "title": "Private Approximate Nearest Neighbor Search for Vector Database Querying",
+    "authors": "S. Vithana, M. Cardone, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2024,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "private search, nearest neighbor, vector databases, information theory"
+  },
+  {
+    "id": "c47",
+    "title": "Differential-Privacy Capacity",
+    "authors": "W. Alghamdi, S. Asoodeh, F. P. Calmon, O. Kosut, L. Sankar",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2024,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, capacity, information theory"
+  },
+  {
+    "id": "c46",
+    "title": "E_γ-Mixing Time",
+    "authors": "B. Zamanlooy, S. Asoodeh, M. Diaz, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2024,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "mixing time, information theory, convergence"
+  },
+  {
+    "id": "c45",
+    "title": "Schrödinger mechanisms: Optimal differential privacy mechanisms for small sensitivity",
+    "authors": "W. Alghamdi, S. Asoodeh, F. P. Calmon, J. F. Gomez, O. Kosut, L. Sankar",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2023,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, Schrödinger mechanisms, small sensitivity"
+  },
+  {
+    "id": "c44",
+    "title": "Optimal multidimensional differentially private mechanisms in the large-composition regime",
+    "authors": "W. Alghamdi, S. Asoodeh, F. P. Calmon, J. F. Gomez, O. Kosut, L. Sankar",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2023,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, multidimensional mechanisms, large composition"
+  },
+  {
+    "id": "c43",
+    "title": "On the inevitability of the Rashomon effect",
+    "authors": "L. M. Paes, R. Cruz, F. P. Calmon, M. Diaz",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2023,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "Rashomon effect, inevitability, model multiplicity"
+  },
+  {
+    "id": "c42",
+    "title": "Differentially private secure multiplication: Hiding information in the rubble of noise",
+    "authors": "V. R. Cadambe, H. Jeong, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2023,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, secure multiplication, noise"
+  },
+  {
+    "id": "c41",
+    "title": "Differentially private distributed matrix multiplication: Fundamental accuracy-privacy trade-off limits",
+    "authors": "A. Devulapalli, V. R. Cadambe, F. P. Calmon, H. Jeong",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2022,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, distributed computing, matrix multiplication"
+  },
+  {
+    "id": "c40",
+    "title": "Cactus mechanisms: Optimal differential privacy mechanisms in the large-composition regime",
+    "authors": "W. Alghamdi, S. Asoodeh, F. P. Calmon, O. Kosut, L. Sankar, F. Wei",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2022,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, cactus mechanisms, large composition"
+  },
+  {
+    "id": "c39",
+    "title": "The impact of split classifiers on group fairness",
+    "authors": "H. Wang, M. Diaz, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "split classifiers, group fairness, machine learning"
+  },
+  {
+    "id": "c38",
+    "title": "Privacy-preserving near neighbor search via sparse coding with ambiguation",
+    "authors": "B. Razeghi, S. Ferdowsi, D. Kostadinov, F. P. Calmon, S. Voloshynovskiy",
+    "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "privacy-preserving search, sparse coding, ambiguation"
+  },
+  {
+    "id": "c37",
+    "title": "Predictive coding for lossless dataset compression",
+    "authors": "M. Barowsky, A. Mariona, F. P. Calmon",
+    "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "predictive coding, dataset compression, lossless compression"
+  },
+  {
+    "id": "c36",
+    "title": "Polynomial approximations of conditional expectations in scalar Gaussian channels",
+    "authors": "W. Alghamdi, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "polynomial approximations, Gaussian channels, conditional expectations"
+  },
+  {
+    "id": "c35",
+    "title": "Local differential privacy is equivalent to contraction of an f-divergence",
+    "authors": "S. Asoodeh, M. A. Aliakbarpour, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "local differential privacy, f-divergence, contraction"
+  },
+  {
+    "id": "c34",
+    "title": "ε-approximate coded matrix multiplication is nearly twice as efficient as exact multiplication",
+    "authors": "V. Cadambe, F. P. Calmon, A. Devulapalli, H. Jeong",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "coded matrix multiplication, approximation, efficiency"
+  },
+  {
+    "id": "c33",
+    "title": "Differentially private federated learning: An information-theoretic perspective",
+    "authors": "S. Asoodeh, W.-N. Chen, F. P. Calmon, A. Ozgur",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2021,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "differential privacy, federated learning, information theory"
+  },
+  {
+    "id": "c32",
+    "title": "Privacy-preserving image sharing via sparsifying layers on convolutional groups",
+    "authors": "S. Ferdowsi, B. Razeghi, T. Holotyak, F. P. Calmon, S. Voloshynovskiy",
+    "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)",
+    "year": 2020,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "privacy-preserving, image sharing, sparsifying layers"
+  },
+  {
+    "id": "c31",
+    "title": "Privacy amplification of iterative algorithms via contraction coefficients",
+    "authors": "S. Asoodeh, M. Diaz, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2020,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "privacy amplification, iterative algorithms, contraction coefficients"
+  },
+  {
+    "id": "c30",
+    "title": "Model projection: Theory and applications to fair machine learning",
+    "authors": "W. Alghamdi, S. Asoodeh, H. Wang, F. P. Calmon, D. Wei, K. N. Ramamurthy",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2020,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "model projection, fair machine learning, theory"
+  },
+  {
+    "id": "c29",
+    "title": "Maximal α-leakage and its properties",
+    "authors": "J. Liao, L. Sankar, O. Kosut, F. P. Calmon",
+    "venue": "IEEE Conference on Communications and Network Security (CNS)",
+    "year": 2020,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "maximal leakage, α-leakage, information theory"
+  },
+  {
+    "id": "c28",
+    "title": "High-SNR performance in Gaussian-class fading",
+    "authors": "F. R. A. Parente, F. P. Calmon, J. C. S. Santos Filho",
+    "venue": "IEEE International Conference on Communications (ICC)",
+    "year": 2020,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "SNR performance, Gaussian fading, wireless communications"
+  },
+  {
+    "id": "c27",
+    "title": "A better bound gives a hundred rounds: Enhanced privacy guarantees via f-divergences",
+    "authors": "S. Asoodeh, J. Liao, F. P. Calmon, O. Kosut, L. Sankar",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2020,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "privacy guarantees, f-divergences, bounds"
+  },
+  {
+    "id": "c26",
+    "title": "Robustness of maximal α-leakage to side information",
+    "authors": "J. Liao, L. Sankar, O. Kosut, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2019,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "maximal α-leakage, robustness, side information"
+  },
+  {
+    "id": "c25",
+    "title": "Mutual information as a function of moments",
+    "authors": "W. Alghamdi, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2019,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "mutual information, moments, information theory"
+  },
+  {
+    "id": "c24",
+    "title": "Information-theoretic privacy watchdogs",
+    "authors": "H. Hsu, S. Asoodeh, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2019,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "privacy watchdogs, information theory"
+  },
+  {
+    "id": "c23",
+    "title": "An information-theoretic view of generalization via wasserstein distance",
+    "authors": "H. Wang, M. Diaz, J. C. S. S. S. Filho, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2019,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "generalization, Wasserstein distance, information theory"
+  },
+  {
+    "id": "c22",
+    "title": "The utility cost of robust privacy guarantees",
+    "authors": "H. Wang, M. Diaz, F. P. Calmon, L. Sankar",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2018,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "utility cost, robust privacy, guarantees"
+  },
+  {
+    "id": "c21",
+    "title": "Privacy under hard distortion constraints",
+    "authors": "J. Liao, O. Kosut, L. Sankar, F. P. Calmon",
+    "venue": "IEEE Information Theory Workshop",
+    "year": 2018,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "privacy, distortion constraints, information theory"
+  },
+  {
+    "id": "c20",
+    "title": "On the direction of discrimination: An information-theoretic analysis of disparate impact in machine learning",
+    "authors": "H. Wang, B. Ustun, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2018,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "discrimination, disparate impact, information theory"
+  },
+  {
+    "id": "c19",
+    "title": "Generalizing Bottleneck Problems",
+    "authors": "H. Hsu, S. Asoodeh, S. Salamatian, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2018,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "bottleneck problems, generalization, information theory"
+  },
+  {
+    "id": "c18",
+    "title": "A tunable measure for information leakage",
+    "authors": "J. Liao, O. Kosut, L. Sankar, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2018,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "tunable measure, information leakage"
+  },
+  {
+    "id": "j27",
+    "title": "Differentially Private Secure Multiplication: Hiding Information in the Rubble of Noise",
+    "authors": "V. R. Cadambe, A. Devulapalli, H. Jeong, F. P. Calmon",
+    "venue": "arXiv:2309.16105",
+    "year": 2023,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "differential privacy, secure multiplication, noise"
+  },
+  {
+    "id": "j26",
+    "title": "Multi-Group Fairness Evaluation via Conditional Value-at-Risk Testing",
+    "authors": "L. M. Paes, A. T. Suresh, A. Beutel, F. P. Calmon, A. Beirami",
+    "venue": "IEEE J. Sel. Areas Inf. Theory",
+    "year": 2024,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "multi-group fairness, conditional value-at-risk, testing"
+  },
+  {
+    "id": "j25",
+    "title": "Measuring information from moments",
+    "authors": "W. Alghamdi, F. P. Calmon",
+    "venue": "IEEE Trans. on Inf. Theory",
+    "year": 2024,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "information theory, moments, mutual information"
+  },
+  {
+    "id": "j24",
+    "title": "Generalization bounds for noisy iterative algorithms using properties of additive noise channels",
+    "authors": "H. Wang, R. Gao, F. P. Calmon",
+    "venue": "J. Mach. Learn. Res.",
+    "year": 2023,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "generalization bounds, noisy algorithms, additive noise channels"
+  },
+  {
+    "id": "j23",
+    "title": "Bottlenecks CLUB: Unifying information-theoretic trade-offs among complexity, leakage, and utility",
+    "authors": "B. Razeghi, F. P. Calmon, D. Gunduz, S. Voloshynovskiy",
+    "venue": "IEEE Transactions on Information Forensics and Security",
+    "year": 2023,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "bottlenecks, complexity, leakage, utility"
+  },
+  {
+    "id": "j22",
+    "title": "Unified framework for diversity and coding gains over a broad gaussian class of fading channels",
+    "authors": "F. R. A. Parente, F. P. Calmon, J. C. S. Santos Filho",
+    "venue": "IEEE Transactions on Vehicular Technology",
+    "year": 2023,
+    "type": "journal",
+    "category": "Applications",
+    "keywords": "diversity gains, coding gains, fading channels"
+  },
+  {
+    "id": "j21",
+    "title": "To split or not to split: The impact of disparate treatment in classification",
+    "authors": "H. Wang, H. Hsu, M. Diaz, F. P. Calmon",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2021,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "disparate treatment, classification, information theory"
+  },
+  {
+    "id": "j20",
+    "title": "Three variants of differential privacy: Lossless conversion and applications",
+    "authors": "S. Asoodeh, J. Liao, F. P. Calmon, O. Kosut, L. Sankar",
+    "venue": "IEEE J. Sel. Areas Inf. Theory",
+    "year": 2021,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "differential privacy, lossless conversion, applications"
+  },
+  {
+    "id": "j19",
+    "title": "Optimized score transformation for consistent fair classification",
+    "authors": "D. Wei, K. N. Ramamurthy, F. P. Calmon",
+    "venue": "J. Mach. Learn. Res.",
+    "year": 2021,
+    "type": "journal",
+    "category": "AI/ML",
+    "keywords": "score transformation, fair classification, consistency"
+  },
+  {
+    "id": "j18",
+    "title": "Generalizing correspondence analysis for applications in machine learning",
+    "authors": "H. Hsu, S. Salamatian, F. P. Calmon",
+    "venue": "IEEE Trans. on Pattern Analysis and Machine Intelligence",
+    "year": 2022,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "correspondence analysis, machine learning applications"
+  },
+  {
+    "id": "j17",
+    "title": "ε-approximate coded matrix multiplication is nearly twice as efficient as exact multiplication",
+    "authors": "H. Jeong, A. Devulapalli, V. R. Cadambe, F. P. Calmon",
+    "venue": "IEEE J. Sel. Areas Inf. Theory",
+    "year": 2021,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "approximate coded matrix multiplication, efficiency"
+  },
+  {
+    "id": "j16",
+    "title": "A survey on statistical, information, and estimation-theoretic views on privacy",
+    "authors": "H. Hsu, N. L. Martinezgil, M. Bertran, G. Sapiro, F. P. Calmon",
+    "venue": "IEEE BITS the Information Theory Magazine",
+    "year": 2021,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "privacy survey, statistical views, information theory"
+  },
+  {
+    "id": "j15",
+    "title": "On the robustness of information-theoretic privacy measures and mechanisms",
+    "authors": "M. Diaz, H. Wang, F. P. Calmon, L. Sankar",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2020,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "robustness, privacy measures, information theory"
+  },
+  {
+    "id": "j14",
+    "title": "Bottleneck problems: An information and estimation-theoretic view",
+    "authors": "S. Asoodeh, F. P. Calmon",
+    "venue": "Entropy (invited paper)",
+    "year": 2020,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "bottleneck problems, information theory, estimation theory"
+  },
+  {
+    "id": "j13",
+    "title": "Asymptotic system performance over generalized fading channels with application to maximal-ratio combining",
+    "authors": "F. R. A. Parente, F. P. Calmon, J. C. S. Santos Filho",
+    "venue": "Journal of Communication and Information Systems",
+    "year": 2020,
+    "type": "journal",
+    "category": "Applications",
+    "keywords": "asymptotic performance, fading channels, maximal-ratio combining"
+  },
+  {
+    "id": "j12",
+    "title": "Tunable measures for information leakage and applications to privacy-utility tradeoffs",
+    "authors": "J. Liao, O. Kosut, L. Sankar, F. P. Calmon",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2019,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "tunable measures, information leakage, privacy-utility tradeoffs"
+  },
+  {
+    "id": "j11",
+    "title": "Privacy with estimation guarantees",
+    "authors": "H. Wang, L. Vo, F. P. Calmon, M. Médard, K. R. Duffy, M. Varia",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2019,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "privacy, estimation guarantees, information theory"
+  },
+  {
+    "id": "j10",
+    "title": "Confronting data sparsity to identify potential sources of zika virus spillover infection among primates",
+    "authors": "S. Majumdar, B. Han, F. P. Calmon, B. Glicksberg, R. Horesh, A. Kumar, A. Perer, E. V. Marschall, D. Wei, A. Mojsilovic, K. Varshney",
+    "venue": "Epidemics",
+    "year": 2019,
+    "type": "journal",
+    "category": "Applications",
+    "keywords": "data sparsity, zika virus, spillover infection, primates"
+  },
+  {
+    "id": "j9",
+    "title": "Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis",
+    "authors": "F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney",
+    "venue": "IEEE J. Sel. Topics Signal Proces",
+    "year": 2018,
+    "type": "journal",
+    "category": "AI/ML",
+    "keywords": "data preprocessing, discrimination prevention, information theory"
+  },
+  {
+    "id": "j8",
+    "title": "Strong data processing inequalities for input constrained additive noise channels",
+    "authors": "F. P. Calmon, Y. Polyanskiy, Y. Wu",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2018,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "data processing inequalities, additive noise channels"
+  },
+  {
+    "id": "j7",
+    "title": "Hypothesis testing under mutual information privacy constraints in the high privacy regime",
+    "authors": "J. Liao, L. Sankar, V. Y. F. Tan, F. P. Calmon",
+    "venue": "IEEE Trans. Inf. Forensics Security",
+    "year": 2018,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "hypothesis testing, mutual information, privacy constraints"
+  },
+  {
+    "id": "p11",
+    "title": "Optimized score transformation for fair classification",
+    "authors": "D. Wei, K. N. Ramamurthy, F. P. Calmon",
+    "venue": "US Patent 11,797,870",
+    "year": 2023,
+    "type": "patent",
+    "category": "AI/ML",
+    "keywords": "score transformation, fair classification, patent"
+  },
+  {
+    "id": "p10",
+    "title": "Time series forecasting to determine relative causal impact",
+    "authors": "F. P. Calmon, R. Heath III, R. B. Hull, E. Khabiri, M. D. Riemer, A. Vempaty",
+    "venue": "US Patent 11,537,847",
+    "year": 2022,
+    "type": "patent",
+    "category": "AI/ML",
+    "keywords": "time series forecasting, causal impact, patent"
+  },
+  {
+    "id": "p9",
+    "title": "Method and apparatus for coded multipath network communication",
+    "authors": "F. P. Calmon, M. Médard, K. Fouli",
+    "venue": "US Patent 11,489,761",
+    "year": 2022,
+    "type": "patent",
+    "category": "Applications",
+    "keywords": "coded multipath, network communication, patent"
+  },
+  {
+    "id": "p8",
+    "title": "Learning service blockchain",
+    "authors": "F. P. Calmon, M. M. Franseschini, A. Jagmohan, S. Sahu",
+    "venue": "US Patent 11,157,833",
+    "year": 2021,
+    "type": "patent",
+    "category": "AI/ML",
+    "keywords": "learning service, blockchain, patent"
+  },
+  {
+    "id": "p7",
+    "title": "Data-driven models for improving products",
+    "authors": "F. P. Calmon, R. T. Goodwin, A. Jagmohan, K. C. Ratakonda, A. Vempaty",
+    "venue": "US Patent 10,817,799",
+    "year": 2020,
+    "type": "patent",
+    "category": "AI/ML",
+    "keywords": "data-driven models, product improvement, patent"
+  },
+  {
+    "id": "p6",
+    "title": "Automatic learning curriculum generation",
+    "authors": "F. P. Calmon, R. Kokku, A. Vempaty",
+    "venue": "US Patent 10,373,511",
+    "year": 2019,
+    "type": "patent",
+    "category": "AI/ML",
+    "keywords": "automatic learning, curriculum generation, patent"
+  },
+  {
+    "id": "p5",
+    "title": "Accelerating data-driven scientific discovery",
+    "authors": "F. P. Calmon, K. R. Varshney",
+    "venue": "US Patent 10,388,039",
+    "year": 2019,
+    "type": "patent",
+    "category": "AI/ML",
+    "keywords": "data-driven discovery, scientific discovery, patent"
+  },
+  {
+    "id": "p4",
+    "title": "Method and apparatus for secure communication",
+    "authors": "F. P. Calmon, M. Medard, L. M. Zeger, M. M. Christiansen, K. R. Duffy",
+    "venue": "US Patent 10,311,243",
+    "year": 2019,
+    "type": "patent",
+    "category": "Theory",
+    "keywords": "secure communication, method, apparatus, patent"
+  },
+  {
+    "id": "p3",
+    "title": "Multi-path data transfer using network coding",
+    "authors": "F. P. Calmon, J. M. Cloud, M. Medard, W. Zeng",
+    "venue": "US Patent 10,009,259",
+    "year": 2018,
+    "type": "patent",
+    "category": "Applications",
+    "keywords": "multi-path data transfer, network coding, patent"
+  },
+  {
     "id": "cs27",
     "title": "Debiasing Functions of Private Statistics in Postprocessing",
     "authors": "F. P. Calmon, E. Du, C. Dwork, B. Finley, G. Franguridi",
@@ -32,29 +642,9 @@
     "keywords": "label noise, machine learning, decision making, robustness"
   },
   {
-    "id": "j26",
-    "title": "Multi-Group Fairness Evaluation via Conditional Value-at-Risk Testing",
-    "authors": "L. M. Paes, A. T. Suresh, A. Beutel, F. P. Calmon, A. Beirami",
-    "venue": "IEEE J. Sel. Areas Inf. Theory",
-    "year": 2024,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "fairness, multi-group, conditional value-at-risk, testing, information theory"
-  },
-  {
-    "id": "j25",
-    "title": "Measuring information from moments",
-    "authors": "W. Alghamdi, F. P. Calmon",
-    "venue": "IEEE Trans. on Inf. Theory",
-    "year": 2024,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "information theory, moments, mutual information, entropy"
-  },
-  {
     "id": "cs24",
     "title": "Multi-Group Proportional Representation",
-    "authors": "A. Oesterling, C. M. Verdun, C.X. Long, A. Glynn, L. M. Paes, S. Vithana, M. Cardone, F. P. Calmon",
+    "authors": "A. Oesterling, C. M. Verdun, C. X. Long, A. Glynn, L. M. Paes, S. Vithana, M. Cardone, F. P. Calmon",
     "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
     "year": 2024,
     "type": "conference",
@@ -102,14 +692,14 @@
     "keywords": "content moderation, algorithmic fairness, arbitrariness, social media"
   },
   {
-    "id": "j24",
-    "title": "Generalization bounds for noisy iterative algorithms using properties of additive noise channels",
-    "authors": "H. Wang, R. Gao, F. P. Calmon",
-    "venue": "J. Mach. Learn. Res.",
-    "year": 2023,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "generalization bounds, noisy algorithms, information theory, machine learning theory"
+    "id": "cs19",
+    "title": "Fair machine unlearning: Data removal while mitigating disparities",
+    "authors": "A. Oesterling, J. Ma, F. P. Calmon, H. Lakkaraju",
+    "venue": "Int. Conf. on Artificial Intelligence and Statistics (AISTATS)",
+    "year": 2024,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "machine unlearning, fairness, data removal, disparities"
   },
   {
     "id": "cs18",
@@ -206,36 +796,6 @@
     "keywords": "fairness, missing values, decision trees, imputation, healthcare"
   },
   {
-    "id": "j21",
-    "title": "To split or not to split: The impact of disparate treatment in classification",
-    "authors": "H. Wang, H. Hsu, M. Diaz, F. P. Calmon",
-    "venue": "IEEE Trans. Inf. Theory",
-    "year": 2021,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "disparate treatment, classification, information theory, fairness"
-  },
-  {
-    "id": "j18",
-    "title": "Generalizing correspondence analysis for applications in machine learning",
-    "authors": "H. Hsu, S. Salamatian, F. P. Calmon",
-    "venue": "IEEE Trans. on Pattern Analysis and Machine Intelligence",
-    "year": 2022,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "correspondence analysis, machine learning, dimensionality reduction"
-  },
-  {
-    "id": "j17",
-    "title": "ε-approximate coded matrix multiplication is nearly twice as efficient as exact multiplication",
-    "authors": "H. Jeong, A. Devulapalli, V. R. Cadambe, F. P. Calmon",
-    "venue": "IEEE J. Sel. Areas Inf. Theory",
-    "year": 2021,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "coded computing, matrix multiplication, approximation, efficiency"
-  },
-  {
     "id": "cs9",
     "title": "Analyzing the generalization capability of SGLD using properties of Gaussian channels",
     "authors": "H. Wang, Y. Huang, R. Gao, F. P. Calmon",
@@ -246,14 +806,44 @@
     "keywords": "SGLD, generalization, Gaussian channels, stochastic optimization"
   },
   {
+    "id": "cs8",
+    "title": "Optimized score transformation for fair classification",
+    "authors": "D. Wei, K. N. Ramamurthy, F. P. Calmon",
+    "venue": "Int. Conf. on Artificial Intelligence and Statistics (AISTATS)",
+    "year": 2020,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "score transformation, fair classification, optimization"
+  },
+  {
     "id": "cs7",
     "title": "Predictive Multiplicity in Classification",
-    "authors": "C.T. Marx, F. P. Calmon, B. Ustun",
+    "authors": "C. T. Marx, F. P. Calmon, B. Ustun",
     "venue": "Int. Conf. on Machine Learning (ICML)",
     "year": 2020,
     "type": "conference",
     "category": "AI/ML",
     "keywords": "predictive multiplicity, classification, Rashomon effect, model selection"
+  },
+  {
+    "id": "cs6",
+    "title": "Obfuscation via information density estimation",
+    "authors": "H. Hsu, S. Asoodeh, F. P. Calmon",
+    "venue": "Int. Conf. on Artificial Intelligence and Statistics (AISTATS)",
+    "year": 2020,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "obfuscation, information density, privacy, estimation"
+  },
+  {
+    "id": "cs5",
+    "title": "CPR: Classifier-projection regularization for continual learning",
+    "authors": "S. Cha, H. Hsu, T. Hwang, F. P. Calmon, T. Moon",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2021,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "continual learning, regularization, classifier projection"
   },
   {
     "id": "cs4",
@@ -266,33 +856,13 @@
     "keywords": "disparate impact, counterfactual fairness, model repair, bias mitigation"
   },
   {
-    "id": "j9",
-    "title": "Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis",
-    "authors": "F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney",
-    "venue": "IEEE J. Sel. Topics Signal Proces",
-    "year": 2018,
-    "type": "journal",
-    "category": "Applications",
-    "keywords": "data preprocessing, discrimination prevention, information theory, fairness"
-  },
-  {
-    "id": "j8",
-    "title": "Strong data processing inequalities for input constrained additive noise channels",
-    "authors": "F. P. Calmon, Y. Polyanskiy, Y. Wu",
-    "venue": "IEEE Trans. Inf. Theory",
-    "year": 2018,
-    "type": "journal",
-    "category": "Theory",
-    "keywords": "data processing inequalities, additive noise channels, information theory"
-  },
-  {
-    "id": "cs2",
-    "title": "Optimized pre-processing for discrimination prevention",
-    "authors": "F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. R. Varshney",
-    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
-    "year": 2017,
+    "id": "cs3",
+    "title": "Correspondence analysis using neural networks",
+    "authors": "H. Hsu, S. Salamatian, F. P. Calmon",
+    "venue": "Int. Conf. on Artificial Intelligence and Statistics (AISTATS)",
+    "year": 2019,
     "type": "conference",
     "category": "AI/ML",
-    "keywords": "preprocessing, discrimination prevention, optimization, fairness"
+    "keywords": "correspondence analysis, neural networks, dimensionality reduction"
   }
 ]
