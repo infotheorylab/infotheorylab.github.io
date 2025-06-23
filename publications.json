@@ -1,0 +1,298 @@
+[
+  {
+    "id": "cs27",
+    "title": "Debiasing Functions of Private Statistics in Postprocessing",
+    "authors": "F. P. Calmon, E. Du, C. Dwork, B. Finley, G. Franguridi",
+    "venue": "Foundations of Responsible Computing Conference",
+    "year": 2025,
+    "type": "conference",
+    "category": "AI/ML",
+    "award": "Best paper award",
+    "keywords": "privacy, statistics, debiasing, postprocessing, differential privacy"
+  },
+  {
+    "id": "cs26",
+    "title": "AI Alignment at Your Discretion",
+    "authors": "M. Buyl, H. Khalaf, C. M. Verdun, L. M. Paes, C. V. Machado, F. P. Calmon",
+    "venue": "ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)",
+    "year": 2025,
+    "type": "conference",
+    "category": "AI/ML",
+    "award": "Best paper award at NENLP'25",
+    "keywords": "AI alignment, fairness, accountability, transparency, artificial intelligence"
+  },
+  {
+    "id": "cs25",
+    "title": "Regretful Decisions under Label Noise",
+    "authors": "S. Nagaraj, Y. Liu, F. P. Calmon, B. Ustun",
+    "venue": "International Conference on Learning Representations (ICLR)",
+    "year": 2025,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "label noise, machine learning, decision making, robustness"
+  },
+  {
+    "id": "j26",
+    "title": "Multi-Group Fairness Evaluation via Conditional Value-at-Risk Testing",
+    "authors": "L. M. Paes, A. T. Suresh, A. Beutel, F. P. Calmon, A. Beirami",
+    "venue": "IEEE J. Sel. Areas Inf. Theory",
+    "year": 2024,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "fairness, multi-group, conditional value-at-risk, testing, information theory"
+  },
+  {
+    "id": "j25",
+    "title": "Measuring information from moments",
+    "authors": "W. Alghamdi, F. P. Calmon",
+    "venue": "IEEE Trans. on Inf. Theory",
+    "year": 2024,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "information theory, moments, mutual information, entropy"
+  },
+  {
+    "id": "cs24",
+    "title": "Multi-Group Proportional Representation",
+    "authors": "A. Oesterling, C. M. Verdun, C.X. Long, A. Glynn, L. M. Paes, S. Vithana, M. Cardone, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2024,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "proportional representation, fairness, multi-group, retrieval, information systems"
+  },
+  {
+    "id": "cs23",
+    "title": "Selective Explanations",
+    "authors": "L. M. Paes, D. Wei, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2024,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "explainability, selective prediction, interpretable AI, machine learning"
+  },
+  {
+    "id": "cs22",
+    "title": "Interpreting CLIP with Sparse Linear Concept Embeddings (SpLiCE)",
+    "authors": "U. Bhalla, A. Oesterling, S. Srinivas, F. P. Calmon, H. Lakkaraju",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2024,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "CLIP, concept embeddings, interpretability, computer vision, sparse representations"
+  },
+  {
+    "id": "cs21",
+    "title": "Attack-Aware Noise Calibration for Differential Privacy",
+    "authors": "B. Kulynych, J. F. Gomez, G. Kaissis, F. P. Calmon, C. Troncoso",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2024,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "differential privacy, noise calibration, privacy attacks, security"
+  },
+  {
+    "id": "cs20",
+    "title": "Algorithmic Arbitrariness in Content Moderation",
+    "authors": "J. F. Gomez, C. V. Machado, L. M. Paes, F. P. Calmon",
+    "venue": "ACM Conference on Fairness, Accountability, and Transparency (ACM FAccT)",
+    "year": 2024,
+    "type": "conference",
+    "category": "Applications",
+    "keywords": "content moderation, algorithmic fairness, arbitrariness, social media"
+  },
+  {
+    "id": "j24",
+    "title": "Generalization bounds for noisy iterative algorithms using properties of additive noise channels",
+    "authors": "H. Wang, R. Gao, F. P. Calmon",
+    "venue": "J. Mach. Learn. Res.",
+    "year": 2023,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "generalization bounds, noisy algorithms, information theory, machine learning theory"
+  },
+  {
+    "id": "cs18",
+    "title": "Individual Arbitrariness and Group Fairness",
+    "authors": "C. Long, H. Hsu, W. Alghamdi, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2023,
+    "type": "conference",
+    "category": "AI/ML",
+    "award": "Spotlight Presentation",
+    "keywords": "individual fairness, group fairness, arbitrariness, machine learning"
+  },
+  {
+    "id": "cs17",
+    "title": "Adapting fairness interventions to missing values",
+    "authors": "R. Feng, F. P. Calmon, H. Wang",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2023,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "fairness, missing values, interventions, machine learning"
+  },
+  {
+    "id": "cs16",
+    "title": "Aleatoric and Epistemic Discrimination: Fundamental Limits of Fairness Interventions",
+    "authors": "H. Wang, L. He, R. Gao, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2023,
+    "type": "conference",
+    "category": "AI/ML",
+    "award": "Spotlight Presentation",
+    "keywords": "aleatoric uncertainty, epistemic uncertainty, discrimination, fairness limits"
+  },
+  {
+    "id": "cs15",
+    "title": "The saddle-point method in differential privacy",
+    "authors": "W. Alghamdi, J. F. Gomez, S. Asoodeh, F. P. Calmon, O. Kosut, L. Sankar",
+    "venue": "Int. Conf. on Machine Learning (ICML)",
+    "year": 2023,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "differential privacy, saddle-point method, optimization, privacy mechanisms"
+  },
+  {
+    "id": "cs14",
+    "title": "Arbitrary decisions are a hidden cost of differentially private training",
+    "authors": "B. Kulynych, H. Hsu, C. Troncoso, F. P. Calmon",
+    "venue": "ACM Conference on Fairness, Accountability, and Transparency (FAccT)",
+    "year": 2023,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "differential privacy, training, arbitrary decisions, hidden costs"
+  },
+  {
+    "id": "cs13",
+    "title": "Beyond ADULT and COMPAS: Fair multi-class prediction via information projection",
+    "authors": "W. Alghamdi, H. Hsu, H. Jeong, H. Wang, P. W. Michalak, S. Asoodeh, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2022,
+    "type": "conference",
+    "category": "AI/ML",
+    "award": "Oral Presentation",
+    "keywords": "fair prediction, multi-class classification, information projection, fairness"
+  },
+  {
+    "id": "cs12",
+    "title": "Rashomon Capacity: A metric for predictive multiplicity in classification",
+    "authors": "H. Hsu, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2022,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "Rashomon effect, predictive multiplicity, classification, model diversity"
+  },
+  {
+    "id": "cs11",
+    "title": "On the epistemic limits of personalized prediction",
+    "authors": "L. M. Paes, C. Long, B. Ustun, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2022,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "personalized prediction, epistemic limits, individualization, machine learning"
+  },
+  {
+    "id": "cs10",
+    "title": "Fairness without imputation: A decision tree approach for fair prediction with missing values",
+    "authors": "H. Jeong, H. Wang, F. P. Calmon",
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "year": 2022,
+    "type": "conference",
+    "category": "Applications",
+    "award": "Oral Presentation",
+    "keywords": "fairness, missing values, decision trees, imputation, healthcare"
+  },
+  {
+    "id": "j21",
+    "title": "To split or not to split: The impact of disparate treatment in classification",
+    "authors": "H. Wang, H. Hsu, M. Diaz, F. P. Calmon",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2021,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "disparate treatment, classification, information theory, fairness"
+  },
+  {
+    "id": "j18",
+    "title": "Generalizing correspondence analysis for applications in machine learning",
+    "authors": "H. Hsu, S. Salamatian, F. P. Calmon",
+    "venue": "IEEE Trans. on Pattern Analysis and Machine Intelligence",
+    "year": 2022,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "correspondence analysis, machine learning, dimensionality reduction"
+  },
+  {
+    "id": "j17",
+    "title": "ε-approximate coded matrix multiplication is nearly twice as efficient as exact multiplication",
+    "authors": "H. Jeong, A. Devulapalli, V. R. Cadambe, F. P. Calmon",
+    "venue": "IEEE J. Sel. Areas Inf. Theory",
+    "year": 2021,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "coded computing, matrix multiplication, approximation, efficiency"
+  },
+  {
+    "id": "cs9",
+    "title": "Analyzing the generalization capability of SGLD using properties of Gaussian channels",
+    "authors": "H. Wang, Y. Huang, R. Gao, F. P. Calmon",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2021,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "SGLD, generalization, Gaussian channels, stochastic optimization"
+  },
+  {
+    "id": "cs7",
+    "title": "Predictive Multiplicity in Classification",
+    "authors": "C.T. Marx, F. P. Calmon, B. Ustun",
+    "venue": "Int. Conf. on Machine Learning (ICML)",
+    "year": 2020,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "predictive multiplicity, classification, Rashomon effect, model selection"
+  },
+  {
+    "id": "cs4",
+    "title": "Repairing without retraining: Avoiding disparate impact with counterfactual distributions",
+    "authors": "H. Wang, B. Ustun, F. P. Calmon",
+    "venue": "Int. Conf. on Machine Learning (ICML)",
+    "year": 2019,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "disparate impact, counterfactual fairness, model repair, bias mitigation"
+  },
+  {
+    "id": "j9",
+    "title": "Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis",
+    "authors": "F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney",
+    "venue": "IEEE J. Sel. Topics Signal Proces",
+    "year": 2018,
+    "type": "journal",
+    "category": "Applications",
+    "keywords": "data preprocessing, discrimination prevention, information theory, fairness"
+  },
+  {
+    "id": "j8",
+    "title": "Strong data processing inequalities for input constrained additive noise channels",
+    "authors": "F. P. Calmon, Y. Polyanskiy, Y. Wu",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2018,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "data processing inequalities, additive noise channels, information theory"
+  },
+  {
+    "id": "cs2",
+    "title": "Optimized pre-processing for discrimination prevention",
+    "authors": "F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. R. Varshney",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2017,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "preprocessing, discrimination prevention, optimization, fairness"
+  }
+]

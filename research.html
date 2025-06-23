@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - The Information Theory Laboratory</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Satoshi Font from CDN -->
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    
+    <!-- Plantin Font from CDN -->
+    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: #FFFFFF;
+            color: #1a202c;
+        }
+        
+        /* Headings use Plantin */
+        h1, h2, h3, h4, h5, h6, .font-plantin {
+            font-family: 'Plantin MT Pro', serif;
+        }
+
+        /* Harvard Crimson text color */
+        .text-harvard-crimson {
+            color: #A41034;
+        }
+
+        /* Styling for the header */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Header title font */
+        header .title-font {
+             font-family: 'Plantin MT Pro', serif;
+        }
+
+        /* Custom styles for nav links */
+        header nav a {
+            position: relative;
+            transition: color 0.3s ease;
+            text-transform: capitalize;
+            font-family: 'Plantin MT Pro', serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        /* Stylish top line effect */
+        header nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #1a202c;
+            transition: width 0.3s ease-out;
+        }
+
+        header nav a:hover::before {
+            width: 50%;
+        }
+
+        header nav a:hover {
+            color: #1a202c;
+        }
+
+        /* Publication list styles */
+        .publication-item {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .publication-title {
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .publication-venue {
+            color: #A41034;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Research area styles */
+        .research-area {
+            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 3rem;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .research-area:nth-child(even) {
+            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .diorama {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+        }
+
+        .research-content {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .research-text {
+            flex: 1;
+        }
+
+        .research-image {
+            flex-shrink: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .research-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .research-area:nth-child(even) .research-content {
+                flex-direction: column;
+            }
+        }
+
+        /* Main content area with proper header spacing */
+        .main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+
+        /* Publication search styles */
+
+        .search-input {
+            width: 100%;
+            padding: 0.75rem 1rem 0.75rem 2.5rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: white;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #A41034;
+            box-shadow: 0 0 0 3px rgba(164, 16, 52, 0.1);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6b7280;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+
+        .search-wrapper {
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .filter-btn {
+            padding: 0.375rem 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 9999px;
+            background-color: white;
+            color: #374151;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            border-color: #A41034;
+            background-color: #A41034;
+            color: white;
+        }
+
+        .publication-grid {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .publication-card {
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1.25rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #A41034;
+        }
+
+        .publication-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+        }
+
+        .pub-title {
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.375rem;
+        }
+
+        .pub-venue {
+            color: #A41034;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 0.375rem;
+        }
+
+        .pub-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+        }
+
+        .pub-tag {
+            padding: 0.125rem 0.5rem;
+            background-color: #f3f4f6;
+            color: #374151;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .pub-award {
+            background-color: #fef3c7;
+            color: #d97706;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+        }
+
+        .results-count {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-lg title-font font-normal tracking-tight">
+                <a href="index.html"><span class="text-harvard-crimson">Information Theory</span> Lab</a>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 text-gray-500 font-medium">
+                <a href="research.html" class="text-harvard-crimson">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+                    <span>Research</span>
+                </a>
+                <a href="people.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span>People</span>
+                </a>
+                <a href="news.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" /></svg>
+                    <span>News</span>
+                </a>
+                <a href="https://github.com/infoTheoryLab/" target="_blank">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    <span>Github</span>
+                </a>
+                <a href="contact.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-harvard-crimson">
+                    <span class="sr-only">Open main menu</span>
+                    <svg id="icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-harvard-crimson">Research</a>
+                <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">People</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">News</a>
+                <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Github</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container mx-auto max-w-6xl px-6 py-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tighter mb-6 text-harvard-crimson">Research</h1>
+                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+                    Our research group works on information theory, signal processing, machine learning, and artificial intelligence. We aim to develop foundational theory that guides the design of trustworthy AI and machine learning algorithms.
+                </p>
+            </div>
+
+            <!-- Research Philosophy -->
+            <div class="mb-16">
+                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Our Vision</h3>
+                            <p class="text-gray-700 leading-relaxed text-lg">
+                                We believe that information theory is key for the responsible design of AI and machine learning systems, and that a theory-guided approach can massively outperform heuristics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-6">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Our Approach</h3>
+                            <p class="text-gray-700 leading-relaxed text-lg">
+                                For any performance metric (precision, fairness, privacy), we ask not "How can a system be made better?" but "What is the absolute best a system can be?"
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Information Theory -->
+            <div class="research-area">
+                <div class="research-content">
+                    <div class="research-text">
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-harvard-crimson">Core Information Theory</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            We explore the fundamental limits of communication, computation, and inference to build a principled foundation for intelligent systems.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Our work establishes the mathematical foundations that determine what's theoretically possible in data processing, transmission, and analysis. We use information-theoretic tools to characterize fundamental performance limits and then design algorithms that achieve these limits.
+                        </p>
+                        
+                        <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
+                        <div class="publication-list space-y-3">
+                            <div class="publication-item">
+                                <div class="publication-title">Strong data processing inequalities for input constrained additive noise channels</div>
+                                <div class="publication-authors">F. P. Calmon, Y. Polyanskiy, Y. Wu</div>
+                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2018)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Principal inertia components and applications</div>
+                                <div class="publication-authors">F. P. Calmon, A. Makhdoumi, M. Médard, M. Varia, M. Christiansen, K. R. Duffy</div>
+                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2017)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Fundamental limits of perfect privacy</div>
+                                <div class="publication-authors">F. P. Calmon, A. Makhdoumi, M. Médard</div>
+                                <div class="publication-venue">Proc. IEEE Int. Symp. on Inf. Theory (ISIT) (2015)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Measuring information from moments</div>
+                                <div class="publication-authors">W. Alghamdi, F. P. Calmon</div>
+                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2024)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="research-image">
+                        <img src="figs/3Bottom.png" alt="Core information theory concepts" class="diorama">
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI and Machine Learning -->
+            <div class="research-area">
+                <div class="research-content">
+                    <div class="research-image">
+                        <img src="figs/2Middle.png" alt="AI and machine learning algorithms" class="diorama">
+                    </div>
+                    <div class="research-text">
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-harvard-crimson">Artificial Intelligence & Machine Learning</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            We translate deep theoretical insights into practical AI and machine learning algorithms that learn, adapt, and make reliable decisions.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            Our theory-guided approach to AI and machine learning focuses on three critical challenges: fairness, privacy, and reliability. We develop algorithms that don't just work well in practice, but come with mathematical guarantees about their performance and behavior.
+                        </p>
+                        
+                        <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
+                        <div class="publication-list space-y-3">
+                            <div class="publication-item">
+                                <div class="publication-title">AI Alignment at Your Discretion</div>
+                                <div class="publication-authors">M. Buyl, H. Khalaf, C.M. Verdun, L.M. Paes, C.V. Machado, F.P. Calmon</div>
+                                <div class="publication-venue">ACM FAccT (2025)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Multi-Group Proportional Representation</div>
+                                <div class="publication-authors">A. Oesterling, C.M. Verdun, C.X. Long, A. Glynn, L.M. Paes, S. Vithana, M. Cardone, F. P. Calmon</div>
+                                <div class="publication-venue">NeurIPS (2024)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Beyond ADULT and COMPAS: Fair multi-class prediction via information projection</div>
+                                <div class="publication-authors">W. Alghamdi, H. Hsu, H. Jeong, H. Wang, P. W. Michalak, S. Asoodeh, F. P. Calmon</div>
+                                <div class="publication-venue">NeurIPS (2022) - Oral Presentation</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Repairing without retraining: Avoiding disparate impact with counterfactual distributions</div>
+                                <div class="publication-authors">H. Wang, B. Ustun, F. P. Calmon</div>
+                                <div class="publication-venue">ICML (2019)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Applications -->
+            <div class="research-area">
+                <div class="research-content">
+                    <div class="research-text">
+                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-harvard-crimson">Real-World Applications</h2>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Our work impacts diverse fields, from reliable AI and privacy-preserving machine learning to next-generation wireless networks.
+                        </p>
+                        <p class="text-gray-600 mb-6">
+                            We engineer AI and machine learning algorithms that promote privacy, safety, and reliability for all. Our research extends from healthcare and hiring systems to telecommunications and beyond, ensuring that information theory reaches exciting new application frontiers.
+                        </p>
+                        
+                        <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
+                        <div class="publication-list space-y-3">
+                            <div class="publication-item">
+                                <div class="publication-title">Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis</div>
+                                <div class="publication-authors">F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney</div>
+                                <div class="publication-venue">IEEE J. Sel. Topics Signal Proces (2018)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Privacy with estimation guarantees</div>
+                                <div class="publication-authors">H. Wang, L. Vo, F. P. Calmon, M. Médard, K. R. Duffy, M. Varia</div>
+                                <div class="publication-venue">IEEE Trans. Inf. Theory (2019)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Three variants of differential privacy: Lossless conversion and applications</div>
+                                <div class="publication-authors">S. Asoodeh, J. Liao, F. P. Calmon, O. Kosut, L. Sankar</div>
+                                <div class="publication-venue">IEEE J. Sel. Areas Inf. Theory (2021)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Confronting data sparsity to identify potential sources of zika virus spillover infection among primates</div>
+                                <div class="publication-authors">S. Majumdar, B. Han, F. P. Calmon, B. Glicksberg, R. Horesh, A. Kumar, A. Perer, E. V. Marschall, D. Wei, A. Mojsilović, K. Varshney</div>
+                                <div class="publication-venue">Epidemics (2019)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="research-image">
+                        <img src="figs/1Top.png" alt="Real-world applications of information theory" class="diorama">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Publication Search Section -->
+            <div class="mt-16">
+                <h2 class="text-3xl font-semibold mb-6 text-harvard-crimson text-center">Search All Publications</h2>
+                <p class="text-gray-600 text-center mb-6">Explore our complete collection of research papers by searching titles, authors, venues, or keywords.</p>
+                <div class="search-wrapper">
+                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search by title, author, venue, or keywords...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="Theory">Theory</button>
+                    <button class="filter-btn" data-filter="AI/ML">AI/ML</button>
+                    <button class="filter-btn" data-filter="Applications">Applications</button>
+                    <button class="filter-btn" data-filter="conference">Conferences</button>
+                    <button class="filter-btn" data-filter="journal">Journals</button>
+                </div>
+                <div class="results-count" id="resultsCount"></div>
+                <div class="publication-grid" id="publicationGrid"></div>
+            </div>
+
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-600 mb-4">
+                    For a complete list of publications, visit our 
+                    <a href="https://scholar.google.com/citations?hl=en&user=P8N_YH4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="text-harvard-crimson hover:underline">Google Scholar page</a>.
+                </p>
+                
+                <div class="mt-8 bg-white p-6 rounded-lg border border-gray-200">
+                    <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Research Support</h3>
+                    <p class="text-gray-700 max-w-3xl mx-auto">
+                        Our research group is supported by the NSF and by generous gifts and awards from Google, IBM, Amazon, and Oracle Research. This funding enables us to advance the frontiers of information theory and its applications to AI and machine learning.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SEAS Logo -->
+            <div class="mt-16 text-center">
+                <img src="figs/seaslogo.png" alt="Harvard School of Engineering and Applied Sciences Logo" class="w-56 mx-auto">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Publications data and search functionality
+        let publications = [];
+        let filteredPublications = [];
+        let currentFilter = 'all';
+
+        // Load publications from JSON file
+        fetch('publications.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                publications = data;
+                filteredPublications = [...publications];
+                renderPublications();
+                updateResultsCount();
+            })
+            .catch(error => {
+                console.error('Error loading publications:', error);
+                const grid = document.getElementById('publicationGrid');
+                if (grid) {
+                    grid.innerHTML = `
+                        <div class="no-results">
+                            <p>Publications are currently loading...</p>
+                            <p class="text-sm text-gray-500 mt-2">If this persists, the search feature may require a web server to function properly.</p>
+                        </div>
+                    `;
+                }
+            });
+
+        // Search functionality
+        function searchPublications(query) {
+            const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
+            
+            return publications.filter(pub => {
+                const searchableText = [
+                    pub.title,
+                    pub.authors,
+                    pub.venue,
+                    pub.keywords,
+                    pub.category,
+                    pub.year.toString()
+                ].join(' ').toLowerCase();
+
+                return searchTerms.every(term => searchableText.includes(term));
+            });
+        }
+
+        // Filter functionality
+        function filterPublications(filter) {
+            if (filter === 'all') {
+                return [...publications];
+            }
+            
+            return publications.filter(pub => {
+                return pub.category === filter || pub.type === filter;
+            });
+        }
+
+        // Render publications
+        function renderPublications() {
+            const grid = document.getElementById('publicationGrid');
+            
+            if (filteredPublications.length === 0) {
+                grid.innerHTML = '<div class="no-results">No publications found matching your criteria.</div>';
+                return;
+            }
+
+            const publicationsHTML = filteredPublications.map(pub => {
+                let tagsHTML = `<span class="pub-tag">${pub.category}</span>`;
+                tagsHTML += `<span class="pub-tag">${pub.type}</span>`;
+                tagsHTML += `<span class="pub-tag">${pub.year}</span>`;
+                
+                if (pub.award) {
+                    tagsHTML += `<span class="pub-tag pub-award">${pub.award}</span>`;
+                }
+
+                return `
+                    <div class="publication-card">
+                        <div class="pub-title">${pub.title}</div>
+                        <div class="pub-authors">${pub.authors}</div>
+                        <div class="pub-venue">${pub.venue} (${pub.year})</div>
+                        <div class="pub-meta">
+                            ${tagsHTML}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+
+            grid.innerHTML = publicationsHTML;
+        }
+
+        // Update results count
+        function updateResultsCount() {
+            const count = filteredPublications.length;
+            const total = publications.length;
+            document.getElementById('resultsCount').textContent = 
+                `Showing ${count} of ${total} publications`;
+        }
+
+        // Apply current filter and search
+        function applyFilters() {
+            let results = filterPublications(currentFilter);
+            
+            const searchQuery = document.getElementById('searchInput').value.trim();
+            if (searchQuery) {
+                const searchTerms = searchQuery.toLowerCase().split(' ').filter(term => term.length > 0);
+                results = results.filter(pub => {
+                    const searchableText = [
+                        pub.title,
+                        pub.authors,
+                        pub.venue,
+                        pub.keywords,
+                        pub.category,
+                        pub.year.toString()
+                    ].join(' ').toLowerCase();
+
+                    return searchTerms.every(term => searchableText.includes(term));
+                });
+            }
+            
+            filteredPublications = results;
+            renderPublications();
+            updateResultsCount();
+        }
+
+        // Event listeners
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    iconOpen.classList.toggle('hidden');
+                    iconClose.classList.toggle('hidden');
+                });
+            }
+
+            // Search input
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', applyFilters);
+            }
+
+            // Filter buttons
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Update active button
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    
+                    // Update current filter
+                    currentFilter = btn.dataset.filter;
+                    applyFilters();
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

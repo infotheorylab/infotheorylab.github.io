@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People - The Information Theory Laboratory</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Satoshi Font from CDN -->
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    
+    <!-- Plantin Font from CDN -->
+    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
+
+    <style>
+        /* Custom styles for the page */
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: #FFFFFF;
+            color: #1a202c;
+        }
+        
+        /* Headings use Plantin */
+        h1, h2, h3, h4, h5, h6, .font-plantin {
+            font-family: 'Plantin MT Pro', serif;
+        }
+
+        /* Harvard Crimson text color */
+        .text-harvard-crimson {
+            color: #A41034;
+        }
+
+        /* Styling for the header */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        /* Header title font */
+        header .title-font {
+             font-family: 'Plantin MT Pro', serif;
+        }
+
+        /* Custom styles for nav links */
+        header nav a {
+            position: relative;
+            transition: color 0.3s ease;
+            text-transform: capitalize;
+            font-family: 'Plantin MT Pro', serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        /* Stylish top line effect */
+        header nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #1a202c;
+            transition: width 0.3s ease-out;
+        }
+
+        header nav a:hover::before {
+            width: 50%;
+        }
+
+        header nav a:hover {
+            color: #1a202c;
+        }
+
+        /* Group member styles */
+        .group-member {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background-color: #f9fafb;
+            border-radius: 0.5rem;
+            border-left: 4px solid #A41034;
+        }
+        
+        .current-member {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .photo-placeholder {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            border: 3px solid #A41034;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-size: 0.75rem;
+            text-align: center;
+        }
+        
+        .member-info {
+            flex: 1;
+        }
+        
+        .alumni-member {
+            background-color: transparent;
+            border-left: none;
+            padding-left: 0;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 1rem;
+        }
+
+        .member-name {
+            font-weight: 600;
+            color: #A41034;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .member-role {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .member-thesis {
+            color: #374151;
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* Main content area with proper header spacing */
+        .main-content {
+            padding-top: 100px;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Fixed Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-lg title-font font-normal tracking-tight">
+                <a href="index.html"><span class="text-harvard-crimson">Information Theory</span> Lab</a>
+            </div>
+            <!-- Desktop Navigation -->
+            <nav class="hidden md:flex space-x-8 text-gray-500 font-medium">
+                <a href="research.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
+                    <span>Research</span>
+                </a>
+                <a href="people.html" class="text-harvard-crimson">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                    <span>People</span>
+                </a>
+                <a href="news.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" /></svg>
+                    <span>News</span>
+                </a>
+                <a href="https://github.com/infoTheoryLab/" target="_blank">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    <span>Github</span>
+                </a>
+                <a href="contact.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
+                    <span>Contact</span>
+                </a>
+            </nav>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-harvard-crimson">
+                    <span class="sr-only">Open main menu</span>
+                    <svg id="icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                    <svg id="icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Research</a>
+                <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-harvard-crimson">People</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">News</a>
+                <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Github</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container mx-auto max-w-6xl px-6 py-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl md:text-5xl font-semibold tracking-tighter mb-6 text-harvard-crimson">People</h1>
+                <p class="text-xl text-gray-600">
+                    We are fortunate to work with an amazing group of students, post-docs, and visitors.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-semibold mb-8 text-harvard-crimson">Current Members</h2>
+                    
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Prof. Flavio du Pin Calmon</div>
+                            <div class="member-role">Thomas D. Cabot Associate Professor of Electrical Engineering</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Juan Felipe Gomez</div>
+                            <div class="member-role">PhD Student (G5)</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name"><a href="https://carol-long.github.io/" target="_blank" class="text-harvard-crimson hover:underline">Carol Long</a></div>
+                            <div class="member-role">PhD Student (G4)</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name"><a href="https://lucasmonteiropaes.github.io/" target="_blank" class="text-harvard-crimson hover:underline">Lucas Monteiro Paes</a></div>
+                            <div class="member-role">PhD Student (G4)</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name"><a href="https://www.alexoesterling.com/" target="_blank" class="text-harvard-crimson hover:underline">Alex Oesterling</a></div>
+                            <div class="member-role">PhD Student (G3, co-advised with Hima Lakkaraju)</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name"><a href="https://scholar.google.com/citations?user=l5oE7xwAAAAJ&hl=en" target="_blank" class="text-harvard-crimson hover:underline">Sajani Vithana</a></div>
+                            <div class="member-role">Post-doctoral Fellow</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name"><a href="https://claudioverdun.github.io/" target="_blank" class="text-harvard-crimson hover:underline">Claudio Mayrink Verdun</a></div>
+                            <div class="member-role">Post-doctoral Fellow</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name"><a href="https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR/" target="_blank" class="text-harvard-crimson hover:underline">Caio Vieira Machado</a></div>
+                            <div class="member-role">Visiting Fellow (PhD student at Oxford University)</div>
+                        </div>
+                    </div>
+
+                    <div class="group-member current-member">
+                        <div class="photo-placeholder">
+                            Photo
+                        </div>
+                        <div class="member-info">
+                            <div class="member-name">Hannah Laus</div>
+                            <div class="member-role">Visiting Fellow (TU Munich & Munich Center for Machine Learning)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-3xl font-semibold mb-8 text-harvard-crimson">Alumni</h2>
+                    
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://haowang94.github.io/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Hao Wang</a></div>
+                        <div class="member-role">Former PhD student, now at MIT-IBM Watson AI Lab</div>
+                        <div class="member-thesis">Thesis: <a href="https://dash.harvard.edu/handle/1/37372251" target="_blank" class="text-gray-600 hover:underline">"Information Theory for Trustworthy Machine Learning"</a></div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://www.delta-flow.io/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Wael Alghamdi</a></div>
+                        <div class="member-role">Former PhD student, now co-founder of Delta Flow AI</div>
+                        <div class="member-thesis">Thesis: <a href="https://dash.harvard.edu/handle/1/37375888" target="_blank" class="text-gray-600 hover:underline">"Estimation and Optimization of Information Measures with Applications to Fairness and Differential Privacy"</a></div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://hsianghsu.github.io/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Hsiang Hsu</a></div>
+                        <div class="member-role">Former PhD student, now Researcher at JP Morgan Chase</div>
+                        <div class="member-thesis">Thesis: <a href="https://dash.harvard.edu/handle/1/37375764" target="_blank" class="text-gray-600 hover:underline">"Information-Theoretic Tools for Machine Learning Beyond Accuracy"</a></div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://www.haewonjeong.com/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Haewon Jeong</a></div>
+                        <div class="member-role">Former Post-Doc, now faculty at UCSD</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://www.cas.mcmaster.ca/~asoodehs/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Shahab Asoodeh</a></div>
+                        <div class="member-role">Former Post-Doc, now faculty at McMaster University</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="http://www.berkustun.com/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Berk Ustun</a></div>
+                        <div class="member-role">Former CRCS Post-Doc, now faculty at UCSD</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://mariodiaztorres.com/" target="_blank" class="text-harvard-crimson hover:underline">Dr. Mario Diaz</a></div>
+                        <div class="member-role">Former Post-Doc (joint with ASU), now faculty at UNAM</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://www.linkedin.com/in/juwendo-denis-b92b234a" target="_blank" class="text-harvard-crimson hover:underline">Juwendo Denis</a></div>
+                        <div class="member-role">Former Post-Doc, now Senior Algorithm Designer at Parallel Wireless</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://www.linkedin.com/in/madeleinebarowsky" target="_blank" class="text-harvard-crimson hover:underline">Madeleine Barowsky</a></div>
+                        <div class="member-role">Former Master's student, now software engineer at Etsy</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="http://www.javierzazo.me/" target="_blank" class="text-harvard-crimson hover:underline">Javier Zazo</a></div>
+                        <div class="member-role">Former CRCS Post-Doc, now at Microsoft Research</div>
+                    </div>
+
+                    <div class="group-member alumni-member">
+                        <div class="member-name"><a href="https://kulyny.ch/" target="_blank" class="text-harvard-crimson hover:underline">Bogdan Kulynych</a></div>
+                        <div class="member-role">Former visiting graduate student from EPFL</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-16">
+                <div class="bg-gray-50 p-8 rounded-lg max-w-4xl mx-auto">
+                    <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Join Our Group</h3>
+                    <p class="text-gray-700 text-lg">
+                        Interested in joining our research group? We welcome students passionate about information theory, machine learning, and their applications to fairness, privacy, and reliability. We particularly encourage applications from diverse backgrounds, including students from Latin America.
+                    </p>
+                    <p class="text-gray-600 mt-4">
+                        Please see our <a href="contact.html" class="text-harvard-crimson hover:underline">contact page</a> for more information on how to get in touch.
+                    </p>
+                </div>
+            </div>
+
+            <!-- SEAS Logo -->
+            <div class="mt-16 text-center">
+                <img src="figs/seaslogo.png" alt="Harvard School of Engineering and Applied Sciences Logo" class="w-56 mx-auto">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const iconOpen = document.getElementById('icon-open');
+            const iconClose = document.getElementById('icon-close');
+
+            if (menuBtn) {
+                menuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    iconOpen.classList.toggle('hidden');
+                    iconClose.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
