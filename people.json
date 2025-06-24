@@ -36,6 +36,20 @@
       "type": "student"
     },
     {
+      "name": "Elena Ghazi",
+      "role": "PhD Student (G2, co-advised with Salil Vadhan)",
+      "website": "https://scholar.google.com/citations?user=0vnuix0AAAAJ&hl=en",
+      "photo": "elena.jpg",
+      "type": "student"
+    },
+    {
+      "name": "Hadi Khalaf",
+      "role": "PhD Student (G2)",
+      "website": "https://hadikhalaf.com/",
+      "photo": "hadi.jpg",
+      "type": "student"
+    },
+    {
       "name": "Sajani Vithana",
       "role": "Post-doctoral Fellow",
       "website": "https://scholar.google.com/citations?user=l5oE7xwAAAAJ&hl=en",

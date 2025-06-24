@@ -134,6 +134,19 @@
             text-decoration: underline !important;
         }
 
+        .photo-placeholder a {
+            cursor: pointer;
+        }
+
+        .photo-placeholder:has(a) {
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .photo-placeholder:has(a):hover {
+            transform: scale(1.05);
+            opacity: 0.9;
+        }
+
         .member-role {
             color: #6b7280;
             font-size: 0.9rem;
@@ -221,14 +234,14 @@
 
             <div class="grid lg:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-3xl font-semibold mb-8 text-harvard-crimson">Current Members</h2>
+                    <h2 class="text-3xl font-semibold mb-8 text-black">Current Members</h2>
                     <div id="current-members-container">
                         <!-- Current members will be loaded here via JavaScript -->
                     </div>
                 </div>
 
                 <div>
-                    <h2 class="text-3xl font-semibold mb-8 text-harvard-crimson">Alumni</h2>
+                    <h2 class="text-3xl font-semibold mb-8 text-black">Alumni</h2>
                     <div id="alumni-container">
                         <!-- Alumni will be loaded here via JavaScript -->
                     </div>
@@ -302,6 +315,18 @@
                 photoDiv.textContent = 'Photo';
             }
             
+            // Make photo clickable if person has website
+            let photoElement = photoDiv;
+            if (person.website) {
+                const photoLink = document.createElement('a');
+                photoLink.href = person.website;
+                photoLink.target = '_blank';
+                photoLink.style.textDecoration = 'none';
+                photoLink.style.cursor = 'pointer';
+                photoLink.appendChild(photoDiv);
+                photoElement = photoLink;
+            }
+            
             // Create member info
             const memberInfo = document.createElement('div');
             memberInfo.className = 'member-info';
@@ -327,7 +352,7 @@
             memberInfo.appendChild(nameDiv);
             memberInfo.appendChild(roleDiv);
             
-            memberDiv.appendChild(photoDiv);
+            memberDiv.appendChild(photoElement);
             memberDiv.appendChild(memberInfo);
             
             return memberDiv;
