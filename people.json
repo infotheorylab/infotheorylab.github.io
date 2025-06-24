@@ -1,0 +1,165 @@
+{
+  "current": [
+    {
+      "name": "Prof. Flavio du Pin Calmon",
+      "role": "Thomas D. Cabot Associate Professor of Electrical Engineering",
+      "website": null,
+      "photo": "flavio.jpg",
+      "type": "faculty"
+    },
+    {
+      "name": "Juan Felipe Gomez",
+      "role": "PhD Student (G5)",
+      "website": null,
+      "photo": "juan.jpg",
+      "type": "student"
+    },
+    {
+      "name": "Carol Long",
+      "role": "PhD Student (G4)",
+      "website": "https://carol-long.github.io/",
+      "photo": "carol.jpg",
+      "type": "student"
+    },
+    {
+      "name": "Lucas Monteiro Paes",
+      "role": "PhD Student (G4)",
+      "website": "https://lucasmonteiropaes.github.io/",
+      "photo": "lucas.jpg",
+      "type": "student"
+    },
+    {
+      "name": "Alex Oesterling",
+      "role": "PhD Student (G3, co-advised with Hima Lakkaraju)",
+      "website": "https://www.alexoesterling.com/",
+      "photo": "alex.jpg",
+      "type": "student"
+    },
+    {
+      "name": "Sajani Vithana",
+      "role": "Post-doctoral Fellow",
+      "website": "https://scholar.google.com/citations?user=l5oE7xwAAAAJ&hl=en",
+      "photo": "sajani.jpg",
+      "type": "postdoc"
+    },
+    {
+      "name": "Claudio Mayrink Verdun",
+      "role": "Post-doctoral Fellow",
+      "website": "https://claudioverdun.github.io/",
+      "photo": "claudio.jpg",
+      "type": "postdoc"
+    },
+    {
+      "name": "Caio Vieira Machado",
+      "role": "Visiting Fellow (PhD student at Oxford University)",
+      "website": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR/",
+      "photo": "caio.jpg",
+      "type": "visitor"
+    }
+  ],
+  "alumni": [
+    {
+      "name": "Dr. Hao Wang",
+      "role": "Former PhD student, now at MIT-IBM Watson AI Lab",
+      "website": "https://haowang94.github.io/",
+      "photo": null,
+      "thesis": {
+        "title": "Information Theory for Trustworthy Machine Learning",
+        "url": "https://dash.harvard.edu/handle/1/37372251"
+      },
+      "type": "phd"
+    },
+    {
+      "name": "Dr. Wael Alghamdi",
+      "role": "Former PhD student, now co-founder of Delta Flow AI",
+      "website": "https://www.delta-flow.io/",
+      "photo": null,
+      "thesis": {
+        "title": "Estimation and Optimization of Information Measures with Applications to Fairness and Differential Privacy",
+        "url": "https://dash.harvard.edu/handle/1/37375888"
+      },
+      "type": "phd"
+    },
+    {
+      "name": "Dr. Hsiang Hsu",
+      "role": "Former PhD student, now Researcher at JP Morgan Chase",
+      "website": "https://hsianghsu.github.io/",
+      "photo": null,
+      "thesis": {
+        "title": "Information-Theoretic Tools for Machine Learning Beyond Accuracy",
+        "url": "https://dash.harvard.edu/handle/1/37375764"
+      },
+      "type": "phd"
+    },
+    {
+      "name": "Dr. Haewon Jeong",
+      "role": "Former Post-Doc, now faculty at UCSD",
+      "website": "https://www.haewonjeong.com/",
+      "photo": null,
+      "type": "postdoc"
+    },
+    {
+      "name": "Dr. Shahab Asoodeh",
+      "role": "Former Post-Doc, now faculty at McMaster University",
+      "website": "https://www.cas.mcmaster.ca/~asoodehs/",
+      "photo": null,
+      "type": "postdoc"
+    },
+    {
+      "name": "Dr. Berk Ustun",
+      "role": "Former CRCS Post-Doc, now faculty at UCSD",
+      "website": "http://www.berkustun.com/",
+      "photo": null,
+      "type": "postdoc"
+    },
+    {
+      "name": "Dr. Mario Diaz",
+      "role": "Former Post-Doc (joint with ASU), now faculty at UNAM",
+      "website": "https://mariodiaztorres.com/",
+      "photo": null,
+      "type": "postdoc"
+    },
+    {
+      "name": "Juwendo Denis",
+      "role": "Former Post-Doc, now Senior Algorithm Designer at Parallel Wireless",
+      "website": "https://www.linkedin.com/in/juwendo-denis-b92b234a",
+      "photo": null,
+      "type": "postdoc"
+    },
+    {
+      "name": "Madeleine Barowsky",
+      "role": "Former Master's student, now software engineer at Etsy",
+      "website": "https://www.linkedin.com/in/madeleinebarowsky",
+      "photo": null,
+      "type": "masters"
+    },
+    {
+      "name": "Javier Zazo",
+      "role": "Former CRCS Post-Doc, now at Microsoft Research",
+      "website": "http://www.javierzazo.me/",
+      "photo": null,
+      "type": "postdoc"
+    },
+    {
+      "name": "Bogdan Kulynych",
+      "role": "Former visiting graduate student from EPFL",
+      "website": "https://kulyny.ch/",
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Dor Tsur",
+      "role": "Former visiting graduate student from Ben Gurion University",
+      "website": "https://sites.google.com/view/dortsur/home",
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Hannah Laus",
+      "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning)",
+      "website": null,
+      "photo": "hannah.jpg",
+      "type": "visitor"
+    }
+  ]
+}

@@ -574,7 +574,8 @@
                 return response.json();
             })
             .then(data => {
-                publications = data;
+                // Sort publications by year in descending order (newest first)
+                publications = data.sort((a, b) => b.year - a.year);
                 filteredPublications = [...publications];
                 renderPublications();
                 updateResultsCount();
