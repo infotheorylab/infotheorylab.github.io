@@ -232,20 +232,34 @@
                 </p>
             </div>
 
-            <div class="grid lg:grid-cols-2 gap-12">
-                <div>
+            <div class="container mx-auto max-w-6xl px-6 py-8 space-y-16">
+                <!-- current members -->
+                <section id="current-members">
                     <h2 class="text-3xl font-semibold mb-8 text-black">Current Members</h2>
-                    <div id="current-members-container">
-                        <!-- Current members will be loaded here via JavaScript -->
+                    <div id="current-members-container" class="space-y-6">
+                    <!-- JS injects cards here -->
                     </div>
-                </div>
+                </section>
+            </div>
+                <!-- alumni -->
+                <!-- Post-doctoral alumni -->
+            <div id="alumni-container" class="divide-y divide-gray-200"></div>
+                <section id="alumni-postdoc" class="pt-0 pb-10 first:pt-0">
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Former Post-doctoral Fellows</h3>
+                    <div class="space-y-6" id="alumni-postdoc-list"></div>
+                </section>
 
-                <div>
-                    <h2 class="text-3xl font-semibold mb-8 text-black">Alumni</h2>
-                    <div id="alumni-container">
-                        <!-- Alumni will be loaded here via JavaScript -->
-                    </div>
-                </div>
+                <!-- Graduate-student alumni (PhD & Master’s) -->
+                <section id="alumni-grad" class="pt-10 pb-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Former Graduate Students</h3>
+                    <div class="space-y-6" id="alumni-grad-list"></div>
+                </section>
+
+                <!-- Visiting scholars alumni -->
+                <section id="alumni-visitor" class="pt-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Former Visiting Fellows</h3>
+                    <div class="space-y-6" id="alumni-visitor-list"></div>
+                </section>
             </div>
 
             <div class="text-center mt-16">
@@ -417,14 +431,21 @@
                 });
                 console.log('Current members rendered');
                 
-                // Render alumni
-                const alumniContainer = document.getElementById('alumni-container');
-                data.alumni.forEach(person => {
-                    const memberElement = createAlumniMemberElement(person);
-                    alumniContainer.appendChild(memberElement);
-                });
-                console.log('Alumni rendered');
-                
+                const lists = {
+                    postdoc: document.getElementById('alumni-postdoc-list'),
+                    phd:     document.getElementById('alumni-grad-list'),
+                    masters: document.getElementById('alumni-grad-list'),
+                    visitor: document.getElementById('alumni-visitor-list')
+                    };
+
+                    // --- drop each person in the right list ---
+                    data.alumni.forEach(person => {
+                    const card = createAlumniMemberElement(person);
+                    const bucket = lists[person.type] || lists.phd;  // default to grads
+                    bucket.appendChild(card);
+                    });
+                    console.log('Alumni rendered (postdoc / grad / visitor)');
+
             } catch (error) {
                 console.error('Error loading people data:', error);
                 
