@@ -240,16 +240,16 @@
                     <!-- JS injects cards here -->
                     </div>
                 </section>
-            </div>
+            
                 <!-- alumni -->
                 <!-- Post-doctoral alumni -->
-            <div id="alumni-container" class="divide-y divide-gray-200"></div>
+            <!-- <div id="alumni-container" class="divide-y divide-gray-200"></div> -->
                 <section id="alumni-postdoc" class="pt-0 pb-10 first:pt-0">
                     <h3 class="text-2xl font-semibold mb-4 text-black">Former Post-doctoral Fellows</h3>
                     <div class="space-y-6" id="alumni-postdoc-list"></div>
                 </section>
 
-                <!-- Graduate-student alumni (PhD & Master’s) -->
+                <!-- Graduate-student alumni (PhD) -->
                 <section id="alumni-grad" class="pt-10 pb-10">
                     <h3 class="text-2xl font-semibold mb-4 text-black">Former Graduate Students</h3>
                     <div class="space-y-6" id="alumni-grad-list"></div>
@@ -425,24 +425,31 @@
                 
                 // Render current members
                 const currentContainer = document.getElementById('current-members-container');
-                data.current.forEach(person => {
-                    const memberElement = createCurrentMemberElement(person);
-                    currentContainer.appendChild(memberElement);
-                });
-                console.log('Current members rendered');
+                if (currentContainer) {
+                    data.current.forEach(person => {
+                        const memberElement = createCurrentMemberElement(person);
+                        currentContainer.appendChild(memberElement);
+                    });
+                    console.log('Current members rendered');
+                } else {
+                    console.warn('Missing container: #current-members-container');
+                }
                 
                 const lists = {
                     postdoc: document.getElementById('alumni-postdoc-list'),
                     phd:     document.getElementById('alumni-grad-list'),
-                    masters: document.getElementById('alumni-grad-list'),
                     visitor: document.getElementById('alumni-visitor-list')
                     };
 
-                    // --- drop each person in the right list ---
-                    data.alumni.forEach(person => {
+                // --- Drop each person in the appropriate list ---
+                data.alumni.forEach(person => {
                     const card = createAlumniMemberElement(person);
-                    const bucket = lists[person.type] || lists.phd;  // default to grads
-                    bucket.appendChild(card);
+                    const bucket = lists[person.type]
+                    if (bucket) {
+                        bucket.appendChild(card);
+                    } else {
+                        console.warn(`Unknown alumni type "${person.type}" for: ${person.name}`);
+                    }
                     });
                     console.log('Alumni rendered (postdoc / grad / visitor)');
 
@@ -451,7 +458,16 @@
                 
                 // Show error message
                 document.getElementById('current-members-container').innerHTML = '<p class="text-red-500">Error loading current members data. Check console for details.</p>';
-                document.getElementById('alumni-container').innerHTML = '<p class="text-red-500">Error loading alumni data. Check console for details.</p>';
+                // document.getElementById('alumni-container').innerHTML = '<p class="text-red-500">Error loading alumni data. Check console for details.</p>';
+                const fallback = document.getElementById('alumni-postdoc-list')
+                            ||  document.getElementById('alumni-grad-list')
+                            ||  document.getElementById('alumni-visitor-list');
+                if (fallback) {
+                    const errorMsg = document.createElement('p');
+                    errorMsg.className = 'text-red-500';
+                    errorMsg.textContent = 'Error loading alumni data. Check console for details.';
+                    fallback.appendChild(errorMsg);
+                }
             }
         }
     </script>

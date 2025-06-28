@@ -22,13 +22,6 @@
       "type": "student"
     },
     {
-      "name": "Lucas Monteiro Paes",
-      "role": "PhD Student (G4)",
-      "website": "https://lucasmonteiropaes.github.io/",
-      "photo": "lucas.jpg",
-      "type": "student"
-    },
-    {
       "name": "Alex Oesterling",
       "role": "PhD Student (G3, co-advised with Hima Lakkaraju)",
       "website": "https://www.alexoesterling.com/",
@@ -113,6 +106,13 @@
       "type": "phd"
     },
     {
+      "name": "Dr. Lucas Monteiro Paes",
+      "role": "Former PhD student, now Postdoctoral Researcher at Apple",
+      "website": "https://lucasmonteiropaes.github.io/",
+      "photo": "lucas.jpg",
+      "type": "phd"
+    },
+    {
       "name": "Dr. Haewon Jeong",
       "role": "Former Post-Doc, now faculty at UCSD",
       "website": "https://www.haewonjeong.com/",
@@ -141,7 +141,7 @@
       "type": "postdoc"
     },
     {
-      "name": "Juwendo Denis",
+      "name": "Dr. Juwendo Denis",
       "role": "Former Post-Doc, now Senior Algorithm Designer at Parallel Wireless",
       "website": "https://www.linkedin.com/in/juwendo-denis-b92b234a",
       "photo": null,
@@ -155,38 +155,59 @@
       "type": "masters"
     },
     {
-      "name": "Javier Zazo",
+      "name": "Dr. Javier Zazo",
       "role": "Former CRCS Post-Doc, now at Microsoft Research",
       "website": "http://www.javierzazo.me/",
       "photo": null,
       "type": "postdoc"
     },
     {
-      "name": "Bogdan Kulynych",
-      "role": "Former visiting graduate student from EPFL",
-      "website": "https://kulyny.ch/",
-      "photo": null,
-      "type": "visitor"
-    },
-    {
-      "name": "Dor Tsur",
-      "role": "Former visiting graduate student from Ben Gurion University",
-      "website": "https://sites.google.com/view/dortsur/home",
-      "photo": null,
-      "type": "visitor"
-    },
-    {
       "name": "Hannah Laus",
-      "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning)",
+      "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning, Germany)",
       "website": null,
       "photo": "hannah.jpg",
       "type": "visitor"
     },
     {
+      "name": "Dor Tsur",
+      "role": "Former Visiting Fellow (Ben Gurion University)",
+      "website": "https://sites.google.com/view/dortsur/home",
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Dr. Fernando Almeida",
+      "role": "Former Visiting Fellow (Unicamp, Brazil)",
+      "website": null,
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Bogdan Kulynych",
+      "role": "Former Visiting Fellow (EPFL, Switzerland)",
+      "website": "https://kulyny.ch/",
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Prof. Taesup Moon",
+      "role": "Former Visiting Fellow (Seoul National University, South Korea)",
+      "website": "https://scholar.google.com/citations?user=lQlioBoAAAAJ&hl=en",
+      "photo": null,
+      "type": "visitor"
+    },
+    {
       "name": "Behrooz Razeghi",
-      "role": "Former Visiting Fellow (University of Geneva)",
+      "role": "Former Visiting Fellow (University of Geneva, Switzerland)",
       "website": "http://www.behroozrazeghi.com/",
       "photo": "behrooz.jpg",
+      "type": "visitor"
+    },
+    {
+      "name": "Prof. Jose Candido Silveira Santos Filho",
+      "role": "Former Visiting Fellow (Unicamp, Brazil), 2019",
+      "website": "https://scholar.google.com/citations?hl=en&user=QuYVrekAAAAJ",
+      "photo": null,
       "type": "visitor"
     }
   ]
