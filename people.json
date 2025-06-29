@@ -64,6 +64,13 @@
       "type": "postdoc"
     },
     {
+      "name": "Behrooz Razeghi",
+      "role": "Post-doctoral Fellow",
+      "website": "http://www.behroozrazeghi.com/",
+      "photo": "behrooz.jpg",
+      "type": "postdoc"
+    },
+    {
       "name": "Caio Vieira Machado",
       "role": "Visiting Fellow (PhD student at Oxford University)",
       "website": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR/",
@@ -173,6 +180,13 @@
       "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning)",
       "website": null,
       "photo": "hannah.jpg",
+      "type": "visitor"
+    },
+    {
+      "name": "Behrooz Razeghi",
+      "role": "Former Visiting Fellow (University of Geneva)",
+      "website": "http://www.behroozrazeghi.com/",
+      "photo": "behrooz.jpg",
       "type": "visitor"
     }
   ]
