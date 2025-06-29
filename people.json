@@ -1,12 +1,12 @@
 {
+  "principal_investigator": {
+    "name": "Prof. Flavio du Pin Calmon",
+    "role": "Thomas D. Cabot Associate Professor of Electrical Engineering",
+    "website": "https://people.seas.harvard.edu/~flavio/",
+    "photo": "flavio.jpg",
+    "type": "faculty"
+  },
   "current": [
-    {
-      "name": "Prof. Flavio du Pin Calmon",
-      "role": "Thomas D. Cabot Associate Professor of Electrical Engineering",
-      "website": "https://people.seas.harvard.edu/~flavio/",
-      "photo": "flavio.jpg",
-      "type": "faculty"
-    },
     {
       "name": "Juan Felipe Gomez",
       "role": "PhD Student (G5)",
@@ -163,42 +163,42 @@
     },
     {
       "name": "Hannah Laus",
-      "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning, Germany)",
+      "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning, Germany), 2025",
       "website": null,
       "photo": "hannah.jpg",
       "type": "visitor"
     },
     {
       "name": "Dor Tsur",
-      "role": "Former Visiting Fellow (Ben Gurion University)",
+      "role": "Former Visiting Fellow (Ben Gurion University), 2024",
       "website": "https://sites.google.com/view/dortsur/home",
       "photo": null,
       "type": "visitor"
     },
     {
       "name": "Dr. Fernando Almeida",
-      "role": "Former Visiting Fellow (Unicamp, Brazil)",
+      "role": "Former Visiting Fellow (Unicamp, Brazil), 2023",
       "website": null,
       "photo": null,
       "type": "visitor"
     },
     {
       "name": "Bogdan Kulynych",
-      "role": "Former Visiting Fellow (EPFL, Switzerland)",
+      "role": "Former Visiting Fellow (EPFL, Switzerland), 2022",
       "website": "https://kulyny.ch/",
       "photo": null,
       "type": "visitor"
     },
     {
       "name": "Prof. Taesup Moon",
-      "role": "Former Visiting Fellow (Seoul National University, South Korea)",
+      "role": "Former Visiting Fellow (Seoul National University, South Korea), 2020",
       "website": "https://scholar.google.com/citations?user=lQlioBoAAAAJ&hl=en",
       "photo": null,
       "type": "visitor"
     },
     {
       "name": "Behrooz Razeghi",
-      "role": "Former Visiting Fellow (University of Geneva, Switzerland)",
+      "role": "Former Visiting Fellow (University of Geneva, Switzerland), 2019",
       "website": "http://www.behroozrazeghi.com/",
       "photo": "behrooz.jpg",
       "type": "visitor"

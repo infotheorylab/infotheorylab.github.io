@@ -233,6 +233,12 @@
             </div>
 
             <div class="container mx-auto max-w-6xl px-6 py-8 space-y-16">
+                <!-- PI -->
+                <section id="principal-investigator">
+                    <h2 class="text-3xl font-semibold mb-8 text-black">Principal Investigator</h2>
+                    <div id="principal-investigator-container" class="space-y-6"></div>
+                </section>
+
                 <!-- current members -->
                 <section id="current-members">
                     <h2 class="text-3xl font-semibold mb-8 text-black">Current Members</h2>
@@ -300,6 +306,23 @@
             // Load and render people data
             loadPeopleData();
         });
+
+        // Function to render the Principal Investigator
+        function renderPrincipalInvestigator(person) {
+            const container = document.getElementById('principal-investigator-container');
+            //const header = document.createElement('h3');
+            //header.className = 'text-2xl font-semibold mb-4 text-black';
+            //header.textContent = 'Principal Investigator';
+            //container.appendChild(header);
+
+            const piCard = createCurrentMemberElement(person);
+            container.appendChild(piCard);
+
+            // Add spacing after PI
+            const divider = document.createElement('div');
+            divider.className = 'my-6 border-t border-gray-300';
+            container.appendChild(divider);
+        }
 
         // Function to create a current member element
         function createCurrentMemberElement(person) {
@@ -425,6 +448,9 @@
                 
                 // Render current members
                 const currentContainer = document.getElementById('current-members-container');
+                 if (data.principal_investigator) {
+                    renderPrincipalInvestigator(data.principal_investigator);
+                }
                 if (currentContainer) {
                     data.current.forEach(person => {
                         const memberElement = createCurrentMemberElement(person);
