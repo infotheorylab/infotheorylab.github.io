@@ -43,21 +43,21 @@
       "type": "student"
     },
     {
-      "name": "Sajani Vithana",
+      "name": "Dr. Sajani Vithana",
       "role": "Post-doctoral Fellow",
       "website": "https://scholar.google.com/citations?user=l5oE7xwAAAAJ&hl=en",
       "photo": "sajani.jpg",
       "type": "postdoc"
     },
     {
-      "name": "Claudio Mayrink Verdun",
+      "name": "Dr. Claudio Mayrink Verdun",
       "role": "Post-doctoral Fellow",
       "website": "https://claudioverdun.github.io/",
       "photo": "claudio.jpg",
       "type": "postdoc"
     },
     {
-      "name": "Behrooz Razeghi",
+      "name": "Dr. Behrooz Razeghi",
       "role": "Post-doctoral Fellow",
       "website": "http://www.behroozrazeghi.com/",
       "photo": "behrooz.jpg",
@@ -114,7 +114,7 @@
     },
     {
       "name": "Dr. Haewon Jeong",
-      "role": "Former Post-Doc, now faculty at UCSD",
+      "role": "Former Post-Doc, now faculty at UCSB",
       "website": "https://www.haewonjeong.com/",
       "photo": null,
       "type": "postdoc"
@@ -197,7 +197,7 @@
       "type": "visitor"
     },
     {
-      "name": "Behrooz Razeghi",
+      "name": "Dr. Behrooz Razeghi",
       "role": "Former Visiting Fellow (University of Geneva, Switzerland), 2019",
       "website": "http://www.behroozrazeghi.com/",
       "photo": "behrooz.jpg",
