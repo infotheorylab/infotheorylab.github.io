@@ -11,7 +11,7 @@
       "name": "Juan Felipe Gomez",
       "role": "PhD Student (G5)",
       "website": null,
-      "photo": "juan.jpg",
+      "photo": "felipe.jpeg",
       "type": "student"
     },
     {
@@ -28,6 +28,13 @@
       "photo": "alex.jpg",
       "type": "student"
     },
+        {
+      "name": "Rodrigo Cruz",
+      "role": "PhD Student (G3)",
+      "website": null,
+      "photo": "rodrigo.jpg",
+      "type": "student"
+    },
     {
       "name": "Elena Ghazi",
       "role": "PhD Student (G2, co-advised with Salil Vadhan)",
@@ -40,13 +47,6 @@
       "role": "PhD Student (G2)",
       "website": "https://hadikhalaf.com/",
       "photo": "hadi.jpg",
-      "type": "student"
-    },
-    {
-      "name": "Rodrigo Cruz",
-      "role": "PhD Student (G3)",
-      "website": "",
-      "photo": "rodrigo.jpg",
       "type": "student"
     },
     {
