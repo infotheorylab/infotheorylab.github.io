@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - The Information Theory Laboratory</title>
     
+    <!-- Meta Tags -->
+    <meta name="description" content="Research at the Harvard Information Theory Lab, focused on trustworthy AI, ML, and information-theoretic foundations." />
+    <link rel="canonical" href="https://infotheorylab.github.io/research.html" />
+    <meta property="og:title" content="Research – HIT Lab" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://infotheorylab.github.io/assets/preview.png" />
+
     <!-- Tailwind CSS for styling -->
     <script src="https://cdn.tailwindcss.com"></script>
     
@@ -230,6 +237,38 @@
         .publication-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pub-link-button {
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            border-radius: 0.375rem;
+            text-decoration: none;
+            margin-right: 0.5rem;
+            transition: background-color 0.2s ease-in-out;
+            color: white;
+        }
+
+        /* Harvard crimson for Paper */
+        .pub-link-button.paper {
+            background-color: #A51C30;
+        }
+        .pub-link-button.paper:hover {
+            background-color: #8C1829;
+        }
+
+        /* Dark accent for arXiv, BibTeX, Code */
+        .pub-link-button.secondary {
+            background-color: #4B2E2E;
+        }
+        .pub-link-button.secondary:hover {
+            background-color: #382121;
+        }
+
+        .pub-links {
+            margin-top: 0.5rem;
         }
 
         .pub-title {
@@ -631,26 +670,69 @@
                 return;
             }
 
-            const publicationsHTML = filteredPublications.map(pub => {
-                let tagsHTML = `<span class="pub-tag">${pub.category}</span>`;
-                tagsHTML += `<span class="pub-tag">${pub.type}</span>`;
-                tagsHTML += `<span class="pub-tag">${pub.year}</span>`;
+            //const publicationsHTML = filteredPublications.map(pub => {
+            //     let tagsHTML = `<span class="pub-tag">${pub.category}</span>`;
+            //     tagsHTML += `<span class="pub-tag">${pub.type}</span>`;
+            //     tagsHTML += `<span class="pub-tag">${pub.year}</span>`;
                 
+            //     if (pub.award) {
+            //         tagsHTML += `<span class="pub-tag pub-award">${pub.award}</span>`;
+            //     }
+
+            //     return `
+            //         <div class="publication-card">
+            //             <div class="pub-title">${pub.title}</div>
+            //             <div class="pub-authors">${pub.authors}</div>
+            //             <div class="pub-venue">${pub.venue} (${pub.year})</div>
+            //             <div class="pub-meta">
+            //                 ${tagsHTML}
+            //             </div>
+            //         </div>
+            //     `;
+            // }).join('');
+
+            const publicationsHTML = filteredPublications.map(pub => {
+                // Tag badges
+                let tagsHTML = `
+                    <span class="pub-tag">${pub.category}</span>
+                    <span class="pub-tag">${pub.type}</span>
+                    <span class="pub-tag">${pub.year}</span>
+                `;
                 if (pub.award) {
                     tagsHTML += `<span class="pub-tag pub-award">${pub.award}</span>`;
                 }
 
+                // Link buttons
+                const links = [];
+
+                if (pub.pub_website) {
+                    links.push(`<a class="pub-link-button paper" href="${pub.pub_website}" target="_blank">Paper</a>`);
+                }
+                if (pub.arxiv_website) {
+                    links.push(`<a class="pub-link-button secondary" href="${pub.arxiv_website}" target="_blank">arXiv</a>`);
+                }
+                if (pub.code_repository) {
+                    links.push(`<a class="pub-link-button secondary" href="${pub.code_repository}" target="_blank">Code</a>`);
+                }
+                if (pub.bibtex) {
+                    links.push(`<a class="pub-link-button secondary" href="${pub.bibtex}" target="_blank">BibTeX</a>`);
+                }
+
+                const linksHTML = links.length ? `<div class="pub-links">${links.join(" ")}</div>` : "";
+
+                // Final HTML block
                 return `
                     <div class="publication-card">
                         <div class="pub-title">${pub.title}</div>
                         <div class="pub-authors">${pub.authors}</div>
                         <div class="pub-venue">${pub.venue} (${pub.year})</div>
-                        <div class="pub-meta">
-                            ${tagsHTML}
-                        </div>
+                        <div class="pub-meta">${pub.category}, ${pub.type}</div>
+                        <div class="pub-meta">${tagsHTML}</div>
+                        ${linksHTML}
                     </div>
                 `;
             }).join('');
+
 
             grid.innerHTML = publicationsHTML;
         }

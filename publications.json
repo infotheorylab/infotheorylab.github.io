@@ -9,7 +9,9 @@
     "category": "Theory",
     "keywords": "private search, nearest neighbor, vector databases, information theory",
     "pub_website": "https://ieeexplore.ieee.org/document/10619146",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c47",
@@ -21,7 +23,9 @@
     "category": "Theory",
     "keywords": "differential privacy, capacity, information theory",
     "pub_website": "https://ieeexplore.ieee.org/document/10619626",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c46",
@@ -33,7 +37,9 @@
     "category": "Theory",
     "keywords": "mixing time, information theory, convergence",
     "pub_website": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10619250",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c45",
@@ -45,7 +51,9 @@
     "category": "Theory",
     "keywords": "differential privacy, Schr\u00f6dinger mechanisms, small sensitivity",
     "pub_website": "https://ieeexplore.ieee.org/document/10206616",
-    "arxiv_website": ""
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c44",
@@ -57,7 +65,9 @@
     "category": "Theory",
     "keywords": "differential privacy, multidimensional mechanisms, large composition",
     "pub_website": "https://ieeexplore.ieee.org/document/10206658",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c43",
@@ -69,7 +79,9 @@
     "category": "Theory",
     "keywords": "Rashomon effect, inevitability, model multiplicity",
     "pub_website": "https://ieeexplore.ieee.org/document/10206657",
-    "arxiv_website": "https://arxiv.org/abs/2305.01273"
+    "arxiv_website": "https://arxiv.org/abs/2305.01273",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c42",
@@ -81,7 +93,9 @@
     "category": "Theory",
     "keywords": "differential privacy, secure multiplication, noise",
     "pub_website": "https://ieeexplore.ieee.org/document/10206949",
-    "arxiv_website": "https://arxiv.org/abs/2309.16105"
+    "arxiv_website": "https://arxiv.org/abs/2309.16105",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c41",
@@ -93,7 +107,9 @@
     "category": "Theory",
     "keywords": "differential privacy, distributed computing, matrix multiplication",
     "pub_website": "https://ieeexplore.ieee.org/document/9834493",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c40",
@@ -105,7 +121,9 @@
     "category": "Theory",
     "keywords": "differential privacy, cactus mechanisms, large composition",
     "pub_website": "https://ieeexplore.ieee.org/document/9834438",
-    "arxiv_website": "https://arxiv.org/abs/2207.00420"
+    "arxiv_website": "https://arxiv.org/abs/2207.00420",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c39",
@@ -117,7 +135,9 @@
     "category": "Theory",
     "keywords": "split classifiers, group fairness, machine learning",
     "pub_website": "https://ieeexplore.ieee.org/document/9517723",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c38",
@@ -129,7 +149,9 @@
     "category": "Applications",
     "keywords": "privacy-preserving search, sparse coding, ambiguation",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c37",
@@ -141,7 +163,9 @@
     "category": "Applications",
     "keywords": "predictive coding, dataset compression, lossless compression",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c36",
@@ -153,7 +177,9 @@
     "category": "Theory",
     "keywords": "polynomial approximations, Gaussian channels, conditional expectations",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c35",
@@ -165,7 +191,9 @@
     "category": "Theory",
     "keywords": "local differential privacy, f-divergence, contraction",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c34",
@@ -177,7 +205,9 @@
     "category": "Theory",
     "keywords": "coded matrix multiplication, approximation, efficiency",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c33",
@@ -189,7 +219,9 @@
     "category": "Theory",
     "keywords": "differential privacy, federated learning, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c32",
@@ -201,7 +233,9 @@
     "category": "Applications",
     "keywords": "privacy-preserving, image sharing, sparsifying layers",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c31",
@@ -213,7 +247,9 @@
     "category": "Theory",
     "keywords": "privacy amplification, iterative algorithms, contraction coefficients",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c30",
@@ -225,7 +261,9 @@
     "category": "Theory",
     "keywords": "model projection, fair machine learning, theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c29",
@@ -237,7 +275,9 @@
     "category": "Theory",
     "keywords": "maximal leakage, \u03b1-leakage, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c28",
@@ -249,7 +289,9 @@
     "category": "Applications",
     "keywords": "SNR performance, Gaussian fading, wireless communications",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c27",
@@ -261,7 +303,9 @@
     "category": "Theory",
     "keywords": "privacy guarantees, f-divergences, bounds",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c26",
@@ -273,7 +317,9 @@
     "category": "Theory",
     "keywords": "maximal \u03b1-leakage, robustness, side information",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c25",
@@ -285,7 +331,9 @@
     "category": "Theory",
     "keywords": "mutual information, moments, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c24",
@@ -297,7 +345,9 @@
     "category": "Theory",
     "keywords": "privacy watchdogs, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c23",
@@ -309,7 +359,9 @@
     "category": "Theory",
     "keywords": "generalization, Wasserstein distance, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c22",
@@ -321,7 +373,9 @@
     "category": "Theory",
     "keywords": "utility cost, robust privacy, guarantees",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c21",
@@ -333,7 +387,9 @@
     "category": "Theory",
     "keywords": "privacy, distortion constraints, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c20",
@@ -345,7 +401,9 @@
     "category": "Theory",
     "keywords": "discrimination, disparate impact, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c19",
@@ -357,7 +415,9 @@
     "category": "Theory",
     "keywords": "bottleneck problems, generalization, information theory",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "c18",
@@ -369,19 +429,23 @@
     "category": "Theory",
     "keywords": "tunable measure, information leakage",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j27",
     "title": "Differentially Private Secure Multiplication: Hiding Information in the Rubble of Noise",
     "authors": "V. R. Cadambe, A. Devulapalli, H. Jeong, F. P. Calmon",
-    "venue": "arXiv:2309.16105",
+    "venue": "under review",
     "year": 2023,
     "type": "journal",
     "category": "Theory",
     "keywords": "differential privacy, secure multiplication, noise",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": "https://arxiv.org/abs/2309.16105",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j26",
@@ -392,8 +456,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "multi-group fairness, conditional value-at-risk, testing",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/10527367",
+    "arxiv_website": "https://arxiv.org/pdf/2312.03867",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j25",
@@ -405,7 +471,9 @@
     "category": "Theory",
     "keywords": "information theory, moments, mutual information",
     "pub_website": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9868800",
-    "arxiv_website": "https://arxiv.org/abs/2109.00649"
+    "arxiv_website": "https://arxiv.org/abs/2109.00649",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j24",
@@ -416,8 +484,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "generalization bounds, noisy algorithms, additive noise channels",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://dl.acm.org/doi/10.5555/3648699.3648725",
+    "arxiv_website": "https://arxiv.org/abs/2102.02976",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j23",
@@ -428,8 +498,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "bottlenecks, complexity, leakage, utility",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/10081397",
+    "arxiv_website": "https://arxiv.org/abs/2207.04895",
+    "code_repository": "https://github.com/BehroozRazeghi/Bottlenecks-CLUB",
+    "bibtex": null
   },
   {
     "id": "j22",
@@ -440,8 +512,10 @@
     "type": "journal",
     "category": "Applications",
     "keywords": "diversity gains, coding gains, fading channels",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/10177240",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j21",
@@ -453,7 +527,9 @@
     "category": "Theory",
     "keywords": "disparate treatment, classification, information theory",
     "pub_website": "https://ieeexplore.ieee.org/document/9415697",
-    "arxiv_website": "https://arxiv.org/abs/2002.04788"
+    "arxiv_website": "https://arxiv.org/abs/2002.04788",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j20",
@@ -465,7 +541,9 @@
     "category": "Theory",
     "keywords": "differential privacy, lossless conversion, applications",
     "pub_website": "https://ieeexplore.ieee.org/document/9336023",
-    "arxiv_website": "https://arxiv.org/abs/2008.06529"
+    "arxiv_website": "https://arxiv.org/abs/2008.06529",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j19",
@@ -477,7 +555,9 @@
     "category": "AI/ML",
     "keywords": "score transformation, fair classification, consistency",
     "arxiv_website": "https://arxiv.org/abs/1906.00066",
-    "pub_website": "https://www.jmlr.org/papers/v22/20-1143.html"
+    "pub_website": "https://www.jmlr.org/papers/v22/20-1143.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j18",
@@ -488,8 +568,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "correspondence analysis, machine learning applications",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/9613745",
+    "arxiv_website": "https://arxiv.org/abs/1806.08449",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j17",
@@ -500,8 +582,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "approximate coded matrix multiplication, efficiency",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/9509407",
+    "arxiv_website": "https://arxiv.org/abs/2105.01973",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j16",
@@ -512,8 +596,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "privacy survey, statistical views, information theory",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/9524532",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j15",
@@ -524,8 +610,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "robustness, privacy measures, information theory",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/8825803",
+    "arxiv_website": "https://haowang94.github.io/files/tit20.pdf",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j14",
@@ -536,8 +624,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "bottleneck problems, information theory, estimation theory",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://www.mdpi.com/1099-4300/22/11/1325",
+    "arxiv_website": "https://arxiv.org/abs/2011.06208",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j13",
@@ -548,8 +638,10 @@
     "type": "journal",
     "category": "Applications",
     "keywords": "asymptotic performance, fading channels, maximal-ratio combining",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://jcis.sbrt.org.br/jcis/article/view/714",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j12",
@@ -560,8 +652,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "tunable measures, information leakage, privacy-utility tradeoffs",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/8804205",
+    "arxiv_website": "https://arxiv.org/abs/1809.09231",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j11",
@@ -572,20 +666,24 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "privacy, estimation guarantees, information theory",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/8794524",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j10",
     "title": "Confronting data sparsity to identify potential sources of zika virus spillover infection among primates",
-    "authors": "S. Majumdar, B. Han, F. P. Calmon, B. Glicksberg, R. Horesh, A. Kumar, A. Perer, E. V. Marschall, D. Wei, A. Mojsilovic, K. Varshney",
+    "authors": "B. Han, S. Majumdar, F. P. Calmon, B. Glicksberg, R. Horesh, A. Kumar, A. Perer, E. V. Marschall, D. Wei, A. Mojsilovic, K. Varshney",
     "venue": "Epidemics",
     "year": 2019,
     "type": "journal",
     "category": "Applications",
     "keywords": "data sparsity, zika virus, spillover infection, primates",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://www.sciencedirect.com/science/article/pii/S1755436518301531",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j9",
@@ -597,7 +695,9 @@
     "category": "AI/ML",
     "keywords": "data preprocessing, discrimination prevention, information theory",
     "arxiv_website": "https://arxiv.org/abs/1704.03354",
-    "pub_website": "https://ieeexplore.ieee.org/document/8438994/"
+    "pub_website": "https://ieeexplore.ieee.org/document/8438994/",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j8",
@@ -608,8 +708,10 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "data processing inequalities, additive noise channels",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/8186217",
+    "arxiv_website": "https://arxiv.org/abs/1512.06429",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "j7",
@@ -620,8 +722,94 @@
     "type": "journal",
     "category": "Theory",
     "keywords": "hypothesis testing, mutual information, privacy constraints",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "https://ieeexplore.ieee.org/document/8125176",
+    "arxiv_website": "https://arxiv.org/abs/1704.08347",
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
+    "id": "j6",
+    "title": "Principal inertia components and applications",
+    "authors": "F. P. Calmon, A. Makhdoumi, M. Médard, M. Varia, M. Christiansen, K. R. Duffy",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2017,
+    "type": "journal",
+    "category": "Theory",
+    "keywords": "principal inertia components, information theory, privacy, inference",
+    "pub_website": "https://ieeexplore.ieee.org/document/7918623",
+    "arxiv_website": "https://arxiv.org/abs/1704.00820",
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
+    "id": "j5",
+    "title": "Mutual outage probability",
+    "authors": "F. P. Calmon, Á. A. M. de Medeiros, M. D. Yacoub",
+    "venue": "IEEE Trans. Wireless Commun.",
+    "year": 2017,
+    "type": "journal",
+    "category": "Wireless Communications",
+    "keywords": "outage probability, mutual information, wireless communication, fading channels",
+    "pub_website": "https://ieeexplore.ieee.org/document/7880679",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
+    "id": "j4",
+    "title": "Multi-user guesswork and brute force security",
+    "authors": "M. M. Christiansen, K. R. Duffy, F. P. Calmon, M. Médard",
+    "venue": "IEEE Trans. Inf. Theory",
+    "year": 2015,
+    "type": "journal",
+    "category": "Security",
+    "keywords": "guesswork, brute-force attacks, multi-user security, information theory",
+    "pub_website": "https://ieeexplore.ieee.org/document/7293174",
+    "arxiv_website": "https://arxiv.org/abs/1405.5024",
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
+    "id": "j3",
+    "title": "Managing your private and public data: Bringing down inference attacks against your privacy",
+    "authors": "S. Salamatian, A. Zhang, F. P. Calmon, S. Bhamidipati, N. Fawaz, B. Kveton, P. Oliveira, N. Taft",
+    "venue": "IEEE J. Sel. Topics Signal Process.",
+    "year": 2015,
+    "type": "journal",
+    "category": "Privacy",
+    "keywords": "inference attacks, data privacy, information sanitization, signal processing",
+    "pub_website": "https://ieeexplore.ieee.org/document/7118663",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
+    "id": "j2",
+    "title": "Speeding multicast by acknowledgment reduction technique (SMART) enabling robustness of QoE to the number of users",
+    "authors": "A. Rezaee, F. P. Calmon, L. M. Zeger, M. Médard",
+    "venue": "IEEE J. Sel. Areas Commun.",
+    "year": 2012,
+    "type": "journal",
+    "category": "Networking",
+    "keywords": "multicast, acknowledgment reduction, SMART, QoE, wireless networks",
+    "pub_website": "https://ieeexplore.ieee.org/document/6248269",
+    "arxiv_website": "https://arxiv.org/abs/1104.2941",
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
+    "id": "j1",
+    "title": "MRCS -- selecting maximal ratio combined signals: a practical hybrid diversity combining scheme",
+    "authors": "F. P. Calmon, M. D. Yacoub",
+    "venue": "IEEE Trans. Wireless Commun.",
+    "year": 2009,
+    "type": "journal",
+    "category": "Wireless Communications",
+    "keywords": "MRCS, diversity combining, wireless communication, signal processing",
+    "pub_website": "https://ieeexplore.ieee.org/document/5165302",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p11",
@@ -632,8 +820,10 @@
     "type": "patent",
     "category": "AI/ML",
     "keywords": "score transformation, fair classification, patent",
-    "pub_website": null,
-    "arxiv_website": null
+    "pub_website": "null",
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p10",
@@ -645,7 +835,9 @@
     "category": "AI/ML",
     "keywords": "time series forecasting, causal impact, patent",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p9",
@@ -657,7 +849,9 @@
     "category": "Applications",
     "keywords": "coded multipath, network communication, patent",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p8",
@@ -669,7 +863,9 @@
     "category": "AI/ML",
     "keywords": "learning service, blockchain, patent",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p7",
@@ -681,7 +877,9 @@
     "category": "AI/ML",
     "keywords": "data-driven models, product improvement, patent",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p6",
@@ -693,7 +891,9 @@
     "category": "AI/ML",
     "keywords": "automatic learning, curriculum generation, patent",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p5",
@@ -705,7 +905,9 @@
     "category": "AI/ML",
     "keywords": "data-driven discovery, scientific discovery, patent",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p4",
@@ -717,7 +919,9 @@
     "category": "Applications",
     "keywords": "secure communication, method, apparatus, patent",
     "pub_website": "https://patents.google.com/patent/US6889328B1/en",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "p3",
@@ -729,7 +933,9 @@
     "category": "Applications",
     "keywords": "multi-path data transfer, network coding, patent",
     "pub_website": "https://patents.google.com/patent/US9537759B2/en",
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs27",
@@ -742,7 +948,9 @@
     "award": "Best paper award",
     "keywords": "privacy, statistics, debiasing, postprocessing, differential privacy",
     "arxiv_website": "https://www.arxiv.org/abs/2502.13314v4",
-    "pub_website": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol329-forc2025/LIPIcs.FORC.2025.17/LIPIcs.FORC.2025.17.pdf"
+    "pub_website": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol329-forc2025/LIPIcs.FORC.2025.17/LIPIcs.FORC.2025.17.pdf",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs26",
@@ -755,7 +963,9 @@
     "award": "Best paper award at NENLP'25",
     "keywords": "AI alignment, fairness, accountability, transparency, artificial intelligence",
     "arxiv_website": "https://arxiv.org/abs/2502.10441",
-    "pub_website": "https://dl.acm.org/doi/10.1145/3715275.3732194"
+    "pub_website": "https://dl.acm.org/doi/10.1145/3715275.3732194",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs25",
@@ -767,7 +977,9 @@
     "category": "AI/ML",
     "keywords": "label noise, machine learning, decision making, robustness",
     "arxiv_website": "https://arxiv.org/abs/2504.09330",
-    "pub_website": null
+    "pub_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs24",
@@ -779,7 +991,9 @@
     "category": "AI/ML",
     "keywords": "proportional representation, fairness, multi-group, retrieval, information systems",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/file/d00fcdd0629dabdf515b1e6425a261bb-Paper-Conference.pdf",
-    "arxiv_website": "https://arxiv.org/abs/2407.08571"
+    "arxiv_website": "https://arxiv.org/abs/2407.08571",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs23",
@@ -791,7 +1005,9 @@
     "category": "AI/ML",
     "keywords": "explainability, selective prediction, interpretable AI, machine learning",
     "arxiv_website": "https://arxiv.org/abs/2405.19562",
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/647af5f6b2538524f6c047c1d9170fd9-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/647af5f6b2538524f6c047c1d9170fd9-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs22",
@@ -803,7 +1019,9 @@
     "category": "AI/ML",
     "keywords": "CLIP, concept embeddings, interpretability, computer vision, sparse representations",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/file/996bef37d8a638f37bdfcac2789e835d-Paper-Conference.pdf",
-    "arxiv_website": "https://arxiv.org/abs/2402.10376"
+    "arxiv_website": "https://arxiv.org/abs/2402.10376",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs21",
@@ -815,7 +1033,9 @@
     "category": "AI/ML",
     "keywords": "differential privacy, noise calibration, privacy attacks, security",
     "arxiv_website": "https://arxiv.org/abs/2407.02191",
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/f33e853ba1f5f038268f9839e37821d5-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/f33e853ba1f5f038268f9839e37821d5-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs20",
@@ -827,7 +1047,9 @@
     "category": "Applications",
     "keywords": "content moderation, algorithmic fairness, arbitrariness, social media",
     "pub_website": "https://dl.acm.org/doi/10.1145/3630106.3659036",
-    "arxiv_website": "https://arxiv.org/abs/2402.16979"
+    "arxiv_website": "https://arxiv.org/abs/2402.16979",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs19",
@@ -839,7 +1061,9 @@
     "category": "AI/ML",
     "keywords": "machine unlearning, fairness, data removal, disparities",
     "arxiv_website": "https://arxiv.org/abs/2307.14754",
-    "pub_website": "https://proceedings.mlr.press/v238/oesterling24a.html"
+    "pub_website": "https://proceedings.mlr.press/v238/oesterling24a.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs18",
@@ -852,7 +1076,9 @@
     "award": "Spotlight Presentation",
     "keywords": "individual fairness, group fairness, arbitrariness, machine learning",
     "arxiv_website": null,
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d891d240b5784656a0356bf4b00f5cdd-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d891d240b5784656a0356bf4b00f5cdd-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs17",
@@ -864,7 +1090,9 @@
     "category": "AI/ML",
     "keywords": "fairness, missing values, interventions, machine learning",
     "arxiv_website": "https://arxiv.org/abs/2305.19429",
-    "pub_website": "https://papers.nips.cc/paper_files/paper/2023/hash/ba0ad9d1e0c737800b2340b9cd68c208-Abstract-Conference.html"
+    "pub_website": "https://papers.nips.cc/paper_files/paper/2023/hash/ba0ad9d1e0c737800b2340b9cd68c208-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs16",
@@ -877,7 +1105,9 @@
     "award": "Spotlight Presentation",
     "keywords": "aleatoric uncertainty, epistemic uncertainty, discrimination, fairness limits",
     "arxiv_website": "https://arxiv.org/abs/2301.11781",
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/55a49718689fdecef31b6a2386df6fe1-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/55a49718689fdecef31b6a2386df6fe1-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs15",
@@ -889,7 +1119,9 @@
     "category": "AI/ML",
     "keywords": "differential privacy, saddle-point method, optimization, privacy mechanisms",
     "arxiv_website": "https://arxiv.org/abs/2208.09595",
-    "pub_website": "https://proceedings.mlr.press/v202/alghamdi23a.html"
+    "pub_website": "https://proceedings.mlr.press/v202/alghamdi23a.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs14",
@@ -901,7 +1133,9 @@
     "category": "AI/ML",
     "keywords": "differential privacy, training, arbitrary decisions, hidden costs",
     "arxiv_website": "https://arxiv.org/abs/2302.14517",
-    "pub_website": "https://dl.acm.org/doi/10.1145/3593013.3594103"
+    "pub_website": "https://dl.acm.org/doi/10.1145/3593013.3594103",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs13",
@@ -914,7 +1148,9 @@
     "award": "Oral Presentation",
     "keywords": "fair prediction, multi-class classification, information projection, fairness",
     "arxiv_website": "https://arxiv.org/abs/2206.07801",
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/fd5013ea0c3f96931dec77174eaf9d80-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/fd5013ea0c3f96931dec77174eaf9d80-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs12",
@@ -926,7 +1162,9 @@
     "category": "AI/ML",
     "keywords": "Rashomon effect, predictive multiplicity, classification, model diversity",
     "arxiv_website": "https://arxiv.org/abs/2206.01295",
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/ba4caa85ecdcafbf9102ab8ec384182d-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/ba4caa85ecdcafbf9102ab8ec384182d-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs11",
@@ -938,7 +1176,9 @@
     "category": "AI/ML",
     "keywords": "personalized prediction, epistemic limits, individualization, machine learning",
     "arxiv_website": null,
-    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/0cfc9404f89400c5ed897035e0d3748c-Abstract-Conference.html"
+    "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/0cfc9404f89400c5ed897035e0d3748c-Abstract-Conference.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs10",
@@ -951,7 +1191,9 @@
     "award": "Oral Presentation",
     "keywords": "fairness, missing values, decision trees, imputation, healthcare",
     "pub_website": null,
-    "arxiv_website": null
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs9",
@@ -963,7 +1205,9 @@
     "category": "AI/ML",
     "keywords": "SGLD, generalization, Gaussian channels, stochastic optimization",
     "arxiv_website": "https://arxiv.org/abs/2102.02976v2",
-    "pub_website": "https://proceedings.neurips.cc/paper/2021/hash/cb77649f5d53798edfa0ff40dae46322-Abstract.html"
+    "pub_website": "https://proceedings.neurips.cc/paper/2021/hash/cb77649f5d53798edfa0ff40dae46322-Abstract.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs8",
@@ -975,7 +1219,9 @@
     "category": "AI/ML",
     "keywords": "score transformation, fair classification, optimization",
     "arxiv_website": "https://arxiv.org/abs/1906.00066",
-    "pub_website": "https://proceedings.mlr.press/v108/wei20a.html"
+    "pub_website": "https://proceedings.mlr.press/v108/wei20a.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs7",
@@ -987,7 +1233,9 @@
     "category": "AI/ML",
     "keywords": "predictive multiplicity, classification, Rashomon effect, model selection",
     "arxiv_website": "https://arxiv.org/abs/1909.06677",
-    "pub_website": "https://proceedings.mlr.press/v119/marx20a.html"
+    "pub_website": "https://proceedings.mlr.press/v119/marx20a.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs6",
@@ -999,7 +1247,9 @@
     "category": "AI/ML",
     "keywords": "obfuscation, information density, privacy, estimation",
     "arxiv_website": "https://arxiv.org/abs/1910.08109",
-    "pub_website": "https://proceedings.mlr.press/v108/hsu20a.html"
+    "pub_website": "https://proceedings.mlr.press/v108/hsu20a.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs5",
@@ -1011,7 +1261,9 @@
     "category": "AI/ML",
     "keywords": "continual learning, regularization, classifier projection",
     "arxiv_website": "https://arxiv.org/abs/2006.07326",
-    "pub_website": "https://openreview.net/forum?id=F2v4aqEL6ze"
+    "pub_website": "https://openreview.net/forum?id=F2v4aqEL6ze",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs4",
@@ -1023,7 +1275,9 @@
     "category": "AI/ML",
     "keywords": "disparate impact, counterfactual fairness, model repair, bias mitigation",
     "arxiv_website": "https://arxiv.org/abs/1901.10501",
-    "pub_website": "http://proceedings.mlr.press/v97/wang19l.html"
+    "pub_website": "http://proceedings.mlr.press/v97/wang19l.html",
+    "code_repository": null,
+    "bibtex": null
   },
   {
     "id": "cs3",
@@ -1035,6 +1289,8 @@
     "category": "AI/ML",
     "keywords": "correspondence analysis, neural networks, dimensionality reduction",
     "arxiv_website": "https://arxiv.org/abs/1902.07828",
-    "pub_website": "https://proceedings.mlr.press/v89/hsu19b.html"
+    "pub_website": "https://proceedings.mlr.press/v89/hsu19b.html",
+    "code_repository": null,
+    "bibtex": null
   }
 ]
