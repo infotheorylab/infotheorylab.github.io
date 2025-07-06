@@ -285,7 +285,7 @@
 
         .bibtex-block {
             background-color: #f7f7ff;
-            border-left: 4px solid #A51C30;
+            border-left: 4px solid #4B3869;
             padding: 1em 1.25em;
             border-radius: 0.5rem;
             font-family: monospace;
@@ -760,23 +760,6 @@
                 if (pub.code_repository) {
                     links.push(`<a class="pub-link-button code" href="${pub.code_repository}" target="_blank">Code</a>`);
                 }
-                // if (pub.bibtex) {
-                //     links.push(`<a class="pub-link-button bibtex" href="${pub.bibtex}" target="_blank">BibTeX</a>`);
-                // }
-                // if (pub.bibtex) {
-                //     const bibId = `bib-${pub.id}`;
-                //     links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}')">BibTeX</a>`);
-                //     bibtexBlock = `
-                //         <pre id="${bibId}" class="bibtex-block hidden">${pub.bibtex}</pre>
-                //     `;
-                // }
-                // if (pub.bibtex && pub.bibtex.startsWith("/bibtex/")) {
-                //     fetch(pub.bibtex)
-                //         .then(response => response.text())
-                //         .then(data => {
-                //         // display data inside <pre> block
-                //         });
-                // }
                 if (pub.bibtex) {
                     const bibId = `bib-${pub.id}`;
                     links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}', '${pub.bibtex}')">BibTeX</a>`);

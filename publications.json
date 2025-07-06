@@ -585,7 +585,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9509407",
     "arxiv_website": "https://arxiv.org/abs/2105.01973",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j17.bib"
   },
   {
     "id": "j16",
@@ -599,7 +599,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9524532",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j16.bib"
   },
   {
     "id": "j15",
@@ -613,7 +613,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8825803",
     "arxiv_website": "https://haowang94.github.io/files/tit20.pdf",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j15.bib"
   },
   {
     "id": "j14",
@@ -627,7 +627,7 @@
     "pub_website": "https://www.mdpi.com/1099-4300/22/11/1325",
     "arxiv_website": "https://arxiv.org/abs/2011.06208",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j14.bib"
   },
   {
     "id": "j13",
@@ -641,7 +641,7 @@
     "pub_website": "https://jcis.sbrt.org.br/jcis/article/view/714",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j13.bib"
   },
   {
     "id": "j12",
@@ -655,7 +655,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8804205",
     "arxiv_website": "https://arxiv.org/abs/1809.09231",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j12.bib"
   },
   {
     "id": "j11",
@@ -669,7 +669,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8794524",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j11.bib"
   },
   {
     "id": "j10",
@@ -683,7 +683,7 @@
     "pub_website": "https://www.sciencedirect.com/science/article/pii/S1755436518301531",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j10.bib"
   },
   {
     "id": "j9",
@@ -697,7 +697,7 @@
     "arxiv_website": "https://arxiv.org/abs/1704.03354",
     "pub_website": "https://ieeexplore.ieee.org/document/8438994/",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j9.bib"
   },
   {
     "id": "j8",
@@ -711,7 +711,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8186217",
     "arxiv_website": "https://arxiv.org/abs/1512.06429",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j8.bib"
   },
   {
     "id": "j7",
@@ -725,7 +725,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8125176",
     "arxiv_website": "https://arxiv.org/abs/1704.08347",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j7.bib"
   },
   {
     "id": "j6",
@@ -739,7 +739,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7918623",
     "arxiv_website": "https://arxiv.org/abs/1704.00820",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j6.bib"
   },
   {
     "id": "j5",
@@ -753,7 +753,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7880679",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j5.bib"
   },
   {
     "id": "j4",
@@ -767,7 +767,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7293174",
     "arxiv_website": "https://arxiv.org/abs/1405.5024",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j4.bib"
   },
   {
     "id": "j3",
@@ -781,7 +781,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7118663",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j3.bib"
   },
   {
     "id": "j2",
@@ -795,7 +795,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/6248269",
     "arxiv_website": "https://arxiv.org/abs/1104.2941",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j2.bib"
   },
   {
     "id": "j1",
@@ -809,7 +809,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/5165302",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j1.bib"
   },
   {
     "id": "p11",
