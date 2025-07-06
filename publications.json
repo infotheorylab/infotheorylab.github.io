@@ -459,7 +459,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/10527367",
     "arxiv_website": "https://arxiv.org/pdf/2312.03867",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j26.bib"
   },
   {
     "id": "j25",
@@ -473,7 +473,7 @@
     "pub_website": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9868800",
     "arxiv_website": "https://arxiv.org/abs/2109.00649",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j25.bib"
   },
   {
     "id": "j24",
@@ -487,7 +487,7 @@
     "pub_website": "https://dl.acm.org/doi/10.5555/3648699.3648725",
     "arxiv_website": "https://arxiv.org/abs/2102.02976",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j24.bib"
   },
   {
     "id": "j23",
@@ -501,7 +501,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/10081397",
     "arxiv_website": "https://arxiv.org/abs/2207.04895",
     "code_repository": "https://github.com/BehroozRazeghi/Bottlenecks-CLUB",
-    "bibtex": null
+    "bibtex": "/bibtex/j23.bib"
   },
   {
     "id": "j22",
@@ -515,7 +515,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/10177240",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j22.bib"
   },
   {
     "id": "j21",
@@ -529,7 +529,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9415697",
     "arxiv_website": "https://arxiv.org/abs/2002.04788",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j21.bib"
   },
   {
     "id": "j20",
@@ -543,7 +543,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9336023",
     "arxiv_website": "https://arxiv.org/abs/2008.06529",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j20.bib"
   },
   {
     "id": "j19",
@@ -557,7 +557,7 @@
     "arxiv_website": "https://arxiv.org/abs/1906.00066",
     "pub_website": "https://www.jmlr.org/papers/v22/20-1143.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j19.bib"
   },
   {
     "id": "j18",
@@ -571,7 +571,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9613745",
     "arxiv_website": "https://arxiv.org/abs/1806.08449",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/j18.bib"
   },
   {
     "id": "j17",

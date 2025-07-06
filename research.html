@@ -251,7 +251,7 @@
             color: white;
         }
 
-        /* Harvard crimson for Paper */
+        /* Harvard Crimson for Paper */
         .pub-link-button.paper {
             background-color: #A51C30;
         }
@@ -259,12 +259,46 @@
             background-color: #8C1829;
         }
 
-        /* Dark accent for arXiv, BibTeX, Code */
-        .pub-link-button.secondary {
-            background-color: #4B2E2E;
+        /* Slate Blue for arXiv (cool academic contrast) */
+        .pub-link-button.arxiv {
+            background-color: #3C4C6B;
         }
-        .pub-link-button.secondary:hover {
-            background-color: #382121;
+        .pub-link-button.arxiv:hover {
+            background-color: #2C3B55;
+        }
+
+        /* Forest Green for Code (tech/dev-friendly) */
+        .pub-link-button.code {
+            background-color: #2E5E4E;
+        }
+        .pub-link-button.code:hover {
+            background-color: #234A3C;
+        }
+
+        /* Deep Indigo for BibTeX (scholarly tone) */
+        .pub-link-button.bibtex {
+            background-color: #4B3869;
+        }
+        .pub-link-button.bibtex:hover {
+            background-color: #392A4E;
+        }
+
+        .bibtex-block {
+            background-color: #f7f7ff;
+            border-left: 4px solid #A51C30;
+            padding: 1em 1.25em;
+            border-radius: 0.5rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            font-size: 0.9rem;
+            margin-top: 0.75em;
+            color: #1a1a1a;
+            line-height: 1.5;
+            overflow-x: auto;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .pub-links {
@@ -442,7 +476,14 @@
                         </p>
                         
                         <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
+
+                        <!-- Publication list ordered from most recent to oldest -->
                         <div class="publication-list space-y-3">
+                            <div class="publication-item">
+                                <div class="publication-title">Measuring information from moments</div>
+                                <div class="publication-authors">W. Alghamdi, F. P. Calmon</div>
+                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2024)</div>
+                            </div>
                             <div class="publication-item">
                                 <div class="publication-title">Strong data processing inequalities for input constrained additive noise channels</div>
                                 <div class="publication-authors">F. P. Calmon, Y. Polyanskiy, Y. Wu</div>
@@ -457,11 +498,6 @@
                                 <div class="publication-title">Fundamental limits of perfect privacy</div>
                                 <div class="publication-authors">F. P. Calmon, A. Makhdoumi, M. Médard</div>
                                 <div class="publication-venue">Proc. IEEE Int. Symp. on Inf. Theory (ISIT) (2015)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Measuring information from moments</div>
-                                <div class="publication-authors">W. Alghamdi, F. P. Calmon</div>
-                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2024)</div>
                             </div>
                         </div>
                     </div>
@@ -487,6 +523,8 @@
                         </p>
                         
                         <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
+                        
+                        <!-- Publication list ordered from most recent to oldest -->
                         <div class="publication-list space-y-3">
                             <div class="publication-item">
                                 <div class="publication-title">AI Alignment at Your Discretion</div>
@@ -526,16 +564,13 @@
                         </p>
                         
                         <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
+
+                        <!-- Publication list ordered from most recent to oldest -->
                         <div class="publication-list space-y-3">
                             <div class="publication-item">
-                                <div class="publication-title">Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis</div>
-                                <div class="publication-authors">F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney</div>
-                                <div class="publication-venue">IEEE J. Sel. Topics Signal Proces (2018)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Privacy with estimation guarantees</div>
-                                <div class="publication-authors">H. Wang, L. Vo, F. P. Calmon, M. Médard, K. R. Duffy, M. Varia</div>
-                                <div class="publication-venue">IEEE Trans. Inf. Theory (2019)</div>
+                                <div class="publication-title">Bottlenecks CLUB: Unifying information-theoretic trade-offs among complexity, leakage, and utility</div>
+                                <div class="publication-authors">B. Razeghi, F. P. Calmon, D. Gunduz, S. Voloshynovskiy</div>
+                                <div class="publication-venue">IEEE Trans. Inf. Forensics and Security (2023)</div>
                             </div>
                             <div class="publication-item">
                                 <div class="publication-title">Three variants of differential privacy: Lossless conversion and applications</div>
@@ -543,9 +578,19 @@
                                 <div class="publication-venue">IEEE J. Sel. Areas Inf. Theory (2021)</div>
                             </div>
                             <div class="publication-item">
+                                <div class="publication-title">Privacy with estimation guarantees</div>
+                                <div class="publication-authors">H. Wang, L. Vo, F. P. Calmon, M. Médard, K. R. Duffy, M. Varia</div>
+                                <div class="publication-venue">IEEE Trans. Inf. Theory (2019)</div>
+                            </div>
+                            <div class="publication-item">
                                 <div class="publication-title">Confronting data sparsity to identify potential sources of zika virus spillover infection among primates</div>
                                 <div class="publication-authors">S. Majumdar, B. Han, F. P. Calmon, B. Glicksberg, R. Horesh, A. Kumar, A. Perer, E. V. Marschall, D. Wei, A. Mojsilović, K. Varshney</div>
                                 <div class="publication-venue">Epidemics (2019)</div>
+                            </div>
+                            <div class="publication-item">
+                                <div class="publication-title">Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis</div>
+                                <div class="publication-authors">F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney</div>
+                                <div class="publication-venue">IEEE J. Sel. Topics Signal Proces (2018)</div>
                             </div>
                         </div>
                     </div>
@@ -661,6 +706,27 @@
             });
         }
 
+        // bib functionality
+        function toggleBibtex(id, filePath) {
+            const el = document.getElementById(id);
+            if (!el) return;
+
+            if (el.classList.contains('hidden')) {
+                if (el.textContent === 'Loading...') {
+                fetch(filePath)
+                    .then(res => res.text())
+                    .then(data => {
+                    el.textContent = data;
+                    el.classList.remove('hidden');
+                    });
+                } else {
+                el.classList.remove('hidden');
+                }
+            } else {
+                el.classList.add('hidden');
+            }
+        }
+
         // Render publications
         function renderPublications() {
             const grid = document.getElementById('publicationGrid');
@@ -669,27 +735,6 @@
                 grid.innerHTML = '<div class="no-results">No publications found matching your criteria.</div>';
                 return;
             }
-
-            //const publicationsHTML = filteredPublications.map(pub => {
-            //     let tagsHTML = `<span class="pub-tag">${pub.category}</span>`;
-            //     tagsHTML += `<span class="pub-tag">${pub.type}</span>`;
-            //     tagsHTML += `<span class="pub-tag">${pub.year}</span>`;
-                
-            //     if (pub.award) {
-            //         tagsHTML += `<span class="pub-tag pub-award">${pub.award}</span>`;
-            //     }
-
-            //     return `
-            //         <div class="publication-card">
-            //             <div class="pub-title">${pub.title}</div>
-            //             <div class="pub-authors">${pub.authors}</div>
-            //             <div class="pub-venue">${pub.venue} (${pub.year})</div>
-            //             <div class="pub-meta">
-            //                 ${tagsHTML}
-            //             </div>
-            //         </div>
-            //     `;
-            // }).join('');
 
             const publicationsHTML = filteredPublications.map(pub => {
                 // Tag badges
@@ -704,18 +749,38 @@
 
                 // Link buttons
                 const links = [];
+                let bibtexBlock = "";
 
                 if (pub.pub_website) {
                     links.push(`<a class="pub-link-button paper" href="${pub.pub_website}" target="_blank">Paper</a>`);
                 }
                 if (pub.arxiv_website) {
-                    links.push(`<a class="pub-link-button secondary" href="${pub.arxiv_website}" target="_blank">arXiv</a>`);
+                    links.push(`<a class="pub-link-button arxiv" href="${pub.arxiv_website}" target="_blank">arXiv</a>`);
                 }
                 if (pub.code_repository) {
-                    links.push(`<a class="pub-link-button secondary" href="${pub.code_repository}" target="_blank">Code</a>`);
+                    links.push(`<a class="pub-link-button code" href="${pub.code_repository}" target="_blank">Code</a>`);
                 }
+                // if (pub.bibtex) {
+                //     links.push(`<a class="pub-link-button bibtex" href="${pub.bibtex}" target="_blank">BibTeX</a>`);
+                // }
+                // if (pub.bibtex) {
+                //     const bibId = `bib-${pub.id}`;
+                //     links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}')">BibTeX</a>`);
+                //     bibtexBlock = `
+                //         <pre id="${bibId}" class="bibtex-block hidden">${pub.bibtex}</pre>
+                //     `;
+                // }
+                // if (pub.bibtex && pub.bibtex.startsWith("/bibtex/")) {
+                //     fetch(pub.bibtex)
+                //         .then(response => response.text())
+                //         .then(data => {
+                //         // display data inside <pre> block
+                //         });
+                // }
                 if (pub.bibtex) {
-                    links.push(`<a class="pub-link-button secondary" href="${pub.bibtex}" target="_blank">BibTeX</a>`);
+                    const bibId = `bib-${pub.id}`;
+                    links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}', '${pub.bibtex}')">BibTeX</a>`);
+                    bibtexBlock = `<pre id="${bibId}" class="bibtex-block hidden">Loading...</pre>`;
                 }
 
                 const linksHTML = links.length ? `<div class="pub-links">${links.join(" ")}</div>` : "";
@@ -729,6 +794,7 @@
                         <div class="pub-meta">${pub.category}, ${pub.type}</div>
                         <div class="pub-meta">${tagsHTML}</div>
                         ${linksHTML}
+                        ${bibtexBlock}
                     </div>
                 `;
             }).join('');
