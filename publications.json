@@ -1049,7 +1049,7 @@
     "pub_website": "https://dl.acm.org/doi/10.1145/3630106.3659036",
     "arxiv_website": "https://arxiv.org/abs/2402.16979",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/cs20.bib"
   },
   {
     "id": "cs19",
@@ -1062,8 +1062,8 @@
     "keywords": "machine unlearning, fairness, data removal, disparities",
     "arxiv_website": "https://arxiv.org/abs/2307.14754",
     "pub_website": "https://proceedings.mlr.press/v238/oesterling24a.html",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/AI4LIFE-GROUP/fair-unlearning",
+    "bibtex": "/bibtex/cs19.bib"
   },
   {
     "id": "cs18",
@@ -1077,8 +1077,8 @@
     "keywords": "individual fairness, group fairness, arbitrariness, machine learning",
     "arxiv_website": null,
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d891d240b5784656a0356bf4b00f5cdd-Abstract-Conference.html",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/Carol-Long/Fairness_and_Arbitrariness",
+    "bibtex": "/bibtex/cs18.bib"
   },
   {
     "id": "cs17",
@@ -1092,7 +1092,7 @@
     "arxiv_website": "https://arxiv.org/abs/2305.19429",
     "pub_website": "https://papers.nips.cc/paper_files/paper/2023/hash/ba0ad9d1e0c737800b2340b9cd68c208-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/cs17.bib"
   },
   {
     "id": "cs16",
@@ -1107,7 +1107,7 @@
     "arxiv_website": "https://arxiv.org/abs/2301.11781",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/55a49718689fdecef31b6a2386df6fe1-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "/bibtex/cs16.bib"
   },
   {
     "id": "cs15",
@@ -1120,8 +1120,8 @@
     "keywords": "differential privacy, saddle-point method, optimization, privacy mechanisms",
     "arxiv_website": "https://arxiv.org/abs/2208.09595",
     "pub_website": "https://proceedings.mlr.press/v202/alghamdi23a.html",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/Felipe-Gomez/saddlepoint_accountant",
+    "bibtex": "/bibtex/cs15.bib"
   },
   {
     "id": "cs14",
@@ -1134,8 +1134,8 @@
     "keywords": "differential privacy, training, arbitrary decisions, hidden costs",
     "arxiv_website": "https://arxiv.org/abs/2302.14517",
     "pub_website": "https://dl.acm.org/doi/10.1145/3593013.3594103",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/spring-epfl/dp_multiplicity",
+    "bibtex": "/bibtex/cs14.bib"
   },
   {
     "id": "cs13",
@@ -1149,8 +1149,8 @@
     "keywords": "fair prediction, multi-class classification, information projection, fairness",
     "arxiv_website": "https://arxiv.org/abs/2206.07801",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/fd5013ea0c3f96931dec77174eaf9d80-Abstract-Conference.html",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/HsiangHsu/Fair-Projection",
+    "bibtex": "/bibtex/cs13.bib"
   },
   {
     "id": "cs12",
@@ -1163,8 +1163,8 @@
     "keywords": "Rashomon effect, predictive multiplicity, classification, model diversity",
     "arxiv_website": "https://arxiv.org/abs/2206.01295",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/ba4caa85ecdcafbf9102ab8ec384182d-Abstract-Conference.html",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/HsiangHsu/rashomon-capacity",
+    "bibtex": "/bibtex/cs12.bib"
   },
   {
     "id": "cs11",
