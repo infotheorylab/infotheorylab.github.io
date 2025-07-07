@@ -459,7 +459,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/10527367",
     "arxiv_website": "https://arxiv.org/pdf/2312.03867",
     "code_repository": null,
-    "bibtex": "/bibtex/j26.bib"
+    "bibtex": "bibtex/j26.bib"
   },
   {
     "id": "j25",
@@ -473,7 +473,7 @@
     "pub_website": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9868800",
     "arxiv_website": "https://arxiv.org/abs/2109.00649",
     "code_repository": null,
-    "bibtex": "/bibtex/j25.bib"
+    "bibtex": "bibtex/j25.bib"
   },
   {
     "id": "j24",
@@ -487,7 +487,7 @@
     "pub_website": "https://dl.acm.org/doi/10.5555/3648699.3648725",
     "arxiv_website": "https://arxiv.org/abs/2102.02976",
     "code_repository": null,
-    "bibtex": "/bibtex/j24.bib"
+    "bibtex": "bibtex/j24.bib"
   },
   {
     "id": "j23",
@@ -501,7 +501,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/10081397",
     "arxiv_website": "https://arxiv.org/abs/2207.04895",
     "code_repository": "https://github.com/BehroozRazeghi/Bottlenecks-CLUB",
-    "bibtex": "/bibtex/j23.bib"
+    "bibtex": "bibtex/j23.bib"
   },
   {
     "id": "j22",
@@ -515,7 +515,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/10177240",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j22.bib"
+    "bibtex": "bibtex/j22.bib"
   },
   {
     "id": "j21",
@@ -529,7 +529,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9415697",
     "arxiv_website": "https://arxiv.org/abs/2002.04788",
     "code_repository": null,
-    "bibtex": "/bibtex/j21.bib"
+    "bibtex": "bibtex/j21.bib"
   },
   {
     "id": "j20",
@@ -543,7 +543,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9336023",
     "arxiv_website": "https://arxiv.org/abs/2008.06529",
     "code_repository": null,
-    "bibtex": "/bibtex/j20.bib"
+    "bibtex": "bibtex/j20.bib"
   },
   {
     "id": "j19",
@@ -557,7 +557,7 @@
     "arxiv_website": "https://arxiv.org/abs/1906.00066",
     "pub_website": "https://www.jmlr.org/papers/v22/20-1143.html",
     "code_repository": null,
-    "bibtex": "/bibtex/j19.bib"
+    "bibtex": "bibtex/j19.bib"
   },
   {
     "id": "j18",
@@ -571,7 +571,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9613745",
     "arxiv_website": "https://arxiv.org/abs/1806.08449",
     "code_repository": null,
-    "bibtex": "/bibtex/j18.bib"
+    "bibtex": "bibtex/j18.bib"
   },
   {
     "id": "j17",
@@ -585,7 +585,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9509407",
     "arxiv_website": "https://arxiv.org/abs/2105.01973",
     "code_repository": null,
-    "bibtex": "/bibtex/j17.bib"
+    "bibtex": "bibtex/j17.bib"
   },
   {
     "id": "j16",
@@ -599,7 +599,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/9524532",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j16.bib"
+    "bibtex": "bibtex/j16.bib"
   },
   {
     "id": "j15",
@@ -613,7 +613,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8825803",
     "arxiv_website": "https://haowang94.github.io/files/tit20.pdf",
     "code_repository": null,
-    "bibtex": "/bibtex/j15.bib"
+    "bibtex": "bibtex/j15.bib"
   },
   {
     "id": "j14",
@@ -627,7 +627,7 @@
     "pub_website": "https://www.mdpi.com/1099-4300/22/11/1325",
     "arxiv_website": "https://arxiv.org/abs/2011.06208",
     "code_repository": null,
-    "bibtex": "/bibtex/j14.bib"
+    "bibtex": "bibtex/j14.bib"
   },
   {
     "id": "j13",
@@ -641,7 +641,7 @@
     "pub_website": "https://jcis.sbrt.org.br/jcis/article/view/714",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j13.bib"
+    "bibtex": "bibtex/j13.bib"
   },
   {
     "id": "j12",
@@ -655,7 +655,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8804205",
     "arxiv_website": "https://arxiv.org/abs/1809.09231",
     "code_repository": null,
-    "bibtex": "/bibtex/j12.bib"
+    "bibtex": "bibtex/j12.bib"
   },
   {
     "id": "j11",
@@ -669,7 +669,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8794524",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j11.bib"
+    "bibtex": "bibtex/j11.bib"
   },
   {
     "id": "j10",
@@ -683,7 +683,7 @@
     "pub_website": "https://www.sciencedirect.com/science/article/pii/S1755436518301531",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j10.bib"
+    "bibtex": "bibtex/j10.bib"
   },
   {
     "id": "j9",
@@ -697,7 +697,7 @@
     "arxiv_website": "https://arxiv.org/abs/1704.03354",
     "pub_website": "https://ieeexplore.ieee.org/document/8438994/",
     "code_repository": null,
-    "bibtex": "/bibtex/j9.bib"
+    "bibtex": "bibtex/j9.bib"
   },
   {
     "id": "j8",
@@ -711,7 +711,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8186217",
     "arxiv_website": "https://arxiv.org/abs/1512.06429",
     "code_repository": null,
-    "bibtex": "/bibtex/j8.bib"
+    "bibtex": "bibtex/j8.bib"
   },
   {
     "id": "j7",
@@ -725,7 +725,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/8125176",
     "arxiv_website": "https://arxiv.org/abs/1704.08347",
     "code_repository": null,
-    "bibtex": "/bibtex/j7.bib"
+    "bibtex": "bibtex/j7.bib"
   },
   {
     "id": "j6",
@@ -739,7 +739,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7918623",
     "arxiv_website": "https://arxiv.org/abs/1704.00820",
     "code_repository": null,
-    "bibtex": "/bibtex/j6.bib"
+    "bibtex": "bibtex/j6.bib"
   },
   {
     "id": "j5",
@@ -753,7 +753,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7880679",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j5.bib"
+    "bibtex": "bibtex/j5.bib"
   },
   {
     "id": "j4",
@@ -767,7 +767,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7293174",
     "arxiv_website": "https://arxiv.org/abs/1405.5024",
     "code_repository": null,
-    "bibtex": "/bibtex/j4.bib"
+    "bibtex": "bibtex/j4.bib"
   },
   {
     "id": "j3",
@@ -781,7 +781,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/7118663",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j3.bib"
+    "bibtex": "bibtex/j3.bib"
   },
   {
     "id": "j2",
@@ -795,7 +795,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/6248269",
     "arxiv_website": "https://arxiv.org/abs/1104.2941",
     "code_repository": null,
-    "bibtex": "/bibtex/j2.bib"
+    "bibtex": "bibtex/j2.bib"
   },
   {
     "id": "j1",
@@ -809,7 +809,7 @@
     "pub_website": "https://ieeexplore.ieee.org/document/5165302",
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": "/bibtex/j1.bib"
+    "bibtex": "bibtex/j1.bib"
   },
   {
     "id": "p11",
@@ -950,7 +950,7 @@
     "arxiv_website": "https://www.arxiv.org/abs/2502.13314v4",
     "pub_website": "https://drops.dagstuhl.de/storage/00lipics/lipics-vol329-forc2025/LIPIcs.FORC.2025.17/LIPIcs.FORC.2025.17.pdf",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs27.bib"
   },
   {
     "id": "cs26",
@@ -965,7 +965,7 @@
     "arxiv_website": "https://arxiv.org/abs/2502.10441",
     "pub_website": "https://dl.acm.org/doi/10.1145/3715275.3732194",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs26.bib"
   },
   {
     "id": "cs25",
@@ -979,7 +979,7 @@
     "arxiv_website": "https://arxiv.org/abs/2504.09330",
     "pub_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs25.bib"
   },
   {
     "id": "cs24",
@@ -993,7 +993,7 @@
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/file/d00fcdd0629dabdf515b1e6425a261bb-Paper-Conference.pdf",
     "arxiv_website": "https://arxiv.org/abs/2407.08571",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs24.bib"
   },
   {
     "id": "cs23",
@@ -1007,7 +1007,7 @@
     "arxiv_website": "https://arxiv.org/abs/2405.19562",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/647af5f6b2538524f6c047c1d9170fd9-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs23.bib"
   },
   {
     "id": "cs22",
@@ -1021,7 +1021,7 @@
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/file/996bef37d8a638f37bdfcac2789e835d-Paper-Conference.pdf",
     "arxiv_website": "https://arxiv.org/abs/2402.10376",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs22.bib"
   },
   {
     "id": "cs21",
@@ -1035,7 +1035,7 @@
     "arxiv_website": "https://arxiv.org/abs/2407.02191",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2024/hash/f33e853ba1f5f038268f9839e37821d5-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs21.bib"
   },
   {
     "id": "cs20",
@@ -1049,7 +1049,7 @@
     "pub_website": "https://dl.acm.org/doi/10.1145/3630106.3659036",
     "arxiv_website": "https://arxiv.org/abs/2402.16979",
     "code_repository": null,
-    "bibtex": "/bibtex/cs20.bib"
+    "bibtex": "bibtex/cs20.bib"
   },
   {
     "id": "cs19",
@@ -1063,7 +1063,7 @@
     "arxiv_website": "https://arxiv.org/abs/2307.14754",
     "pub_website": "https://proceedings.mlr.press/v238/oesterling24a.html",
     "code_repository": "https://github.com/AI4LIFE-GROUP/fair-unlearning",
-    "bibtex": "/bibtex/cs19.bib"
+    "bibtex": "bibtex/cs19.bib"
   },
   {
     "id": "cs18",
@@ -1078,7 +1078,7 @@
     "arxiv_website": null,
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/d891d240b5784656a0356bf4b00f5cdd-Abstract-Conference.html",
     "code_repository": "https://github.com/Carol-Long/Fairness_and_Arbitrariness",
-    "bibtex": "/bibtex/cs18.bib"
+    "bibtex": "bibtex/cs18.bib"
   },
   {
     "id": "cs17",
@@ -1092,7 +1092,7 @@
     "arxiv_website": "https://arxiv.org/abs/2305.19429",
     "pub_website": "https://papers.nips.cc/paper_files/paper/2023/hash/ba0ad9d1e0c737800b2340b9cd68c208-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": "/bibtex/cs17.bib"
+    "bibtex": "bibtex/cs17.bib"
   },
   {
     "id": "cs16",
@@ -1107,7 +1107,7 @@
     "arxiv_website": "https://arxiv.org/abs/2301.11781",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2023/hash/55a49718689fdecef31b6a2386df6fe1-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": "/bibtex/cs16.bib"
+    "bibtex": "bibtex/cs16.bib"
   },
   {
     "id": "cs15",
@@ -1121,7 +1121,7 @@
     "arxiv_website": "https://arxiv.org/abs/2208.09595",
     "pub_website": "https://proceedings.mlr.press/v202/alghamdi23a.html",
     "code_repository": "https://github.com/Felipe-Gomez/saddlepoint_accountant",
-    "bibtex": "/bibtex/cs15.bib"
+    "bibtex": "bibtex/cs15.bib"
   },
   {
     "id": "cs14",
@@ -1135,7 +1135,7 @@
     "arxiv_website": "https://arxiv.org/abs/2302.14517",
     "pub_website": "https://dl.acm.org/doi/10.1145/3593013.3594103",
     "code_repository": "https://github.com/spring-epfl/dp_multiplicity",
-    "bibtex": "/bibtex/cs14.bib"
+    "bibtex": "bibtex/cs14.bib"
   },
   {
     "id": "cs13",
@@ -1150,7 +1150,7 @@
     "arxiv_website": "https://arxiv.org/abs/2206.07801",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/fd5013ea0c3f96931dec77174eaf9d80-Abstract-Conference.html",
     "code_repository": "https://github.com/HsiangHsu/Fair-Projection",
-    "bibtex": "/bibtex/cs13.bib"
+    "bibtex": "bibtex/cs13.bib"
   },
   {
     "id": "cs12",
@@ -1164,7 +1164,7 @@
     "arxiv_website": "https://arxiv.org/abs/2206.01295",
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/ba4caa85ecdcafbf9102ab8ec384182d-Abstract-Conference.html",
     "code_repository": "https://github.com/HsiangHsu/rashomon-capacity",
-    "bibtex": "/bibtex/cs12.bib"
+    "bibtex": "bibtex/cs12.bib"
   },
   {
     "id": "cs11",
@@ -1178,7 +1178,7 @@
     "arxiv_website": null,
     "pub_website": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/0cfc9404f89400c5ed897035e0d3748c-Abstract-Conference.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs11.bib"
   },
   {
     "id": "cs10",
@@ -1193,7 +1193,7 @@
     "pub_website": null,
     "arxiv_website": null,
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs10.bib"
   },
   {
     "id": "cs9",
@@ -1207,7 +1207,7 @@
     "arxiv_website": "https://arxiv.org/abs/2102.02976v2",
     "pub_website": "https://proceedings.neurips.cc/paper/2021/hash/cb77649f5d53798edfa0ff40dae46322-Abstract.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs9.bib"
   },
   {
     "id": "cs8",
@@ -1221,7 +1221,7 @@
     "arxiv_website": "https://arxiv.org/abs/1906.00066",
     "pub_website": "https://proceedings.mlr.press/v108/wei20a.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs8.bib"
   },
   {
     "id": "cs7",
@@ -1235,7 +1235,7 @@
     "arxiv_website": "https://arxiv.org/abs/1909.06677",
     "pub_website": "https://proceedings.mlr.press/v119/marx20a.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs7.bib"
   },
   {
     "id": "cs6",
@@ -1249,7 +1249,7 @@
     "arxiv_website": "https://arxiv.org/abs/1910.08109",
     "pub_website": "https://proceedings.mlr.press/v108/hsu20a.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs6.bib"
   },
   {
     "id": "cs5",
@@ -1262,8 +1262,8 @@
     "keywords": "continual learning, regularization, classifier projection",
     "arxiv_website": "https://arxiv.org/abs/2006.07326",
     "pub_website": "https://openreview.net/forum?id=F2v4aqEL6ze",
-    "code_repository": null,
-    "bibtex": null
+    "code_repository": "https://github.com/csm9493/CPR_CL",
+    "bibtex": "bibtex/cs5.bib"
   },
   {
     "id": "cs4",
@@ -1275,9 +1275,9 @@
     "category": "AI/ML",
     "keywords": "disparate impact, counterfactual fairness, model repair, bias mitigation",
     "arxiv_website": "https://arxiv.org/abs/1901.10501",
-    "pub_website": "http://proceedings.mlr.press/v97/wang19l.html",
+    "pub_website": "https://proceedings.mlr.press/v97/wang19l",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs4.bib"
   },
   {
     "id": "cs3",
@@ -1291,6 +1291,34 @@
     "arxiv_website": "https://arxiv.org/abs/1902.07828",
     "pub_website": "https://proceedings.mlr.press/v89/hsu19b.html",
     "code_repository": null,
-    "bibtex": null
+    "bibtex": "bibtex/cs3.bib"
+  },
+  {
+    "id": "cs2",
+    "title": "Optimized pre-processing for discrimination prevention",
+    "authors": "F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. R. Varshney",
+    "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+    "year": 2017,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "fairness, pre-processing, discrimination prevention, machine learning",
+    "arxiv_website": null,
+    "pub_website": "https://proceedings.neurips.cc/paper/2017/hash/9a49a25d845a483fae4be7e341368e36-Abstract.html",
+    "code_repository": null,
+    "bibtex": "bibtex/cs2.bib"
+  },
+   {
+    "id": "cs1",
+    "title": "Correcting forecasts with multifactor neural attention",
+    "authors": "M. Riemer, A. Vempaty, F. P. Calmon, F. Heath, R. Hull, E. Khabiri",
+    "venue": "Int. Conf. on Machine Learning (ICML)",
+    "year": 2016,
+    "type": "conference",
+    "category": "AI/ML",
+    "keywords": "forecast correction, neural attention, time series, machine learning",
+    "arxiv_website": null,
+    "pub_website": "https://proceedings.mlr.press/v48/riemer16.html",
+    "code_repository": null,
+    "bibtex": "bibtex/cs1.bib"
   }
 ]
