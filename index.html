@@ -151,6 +151,14 @@
                 transform: translateX(-50%) translateY(-4px);
             }
         }
+
+        /* Binary decoding animation styles */
+        .binary-decode {
+            display: inline-block;
+            position: relative;
+            color: #A41034;
+            font-family: 'Plantin MT Pro', serif;
+        }
     </style>
 </head>
 <body class="overflow-hidden">
@@ -217,7 +225,7 @@
         <!-- Section 1: Title & Motto -->
         <section id="home" class="scroll-section">
             <div class="text-center fade-in max-w-4xl">
-                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter mb-6">The <span class="text-harvard-crimson">Information Theory</span> Laboratory</h1>
+                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter mb-6">The <span id="binary-text" class="binary-decode">Information Theory</span> Laboratory</h1>
                 <p class="text-xl md:text-2xl text-gray-600">We build the foundations of systems that store, transmit, and learn from information. </p>
             </div>
             <!-- Animated Scroll Down Indicator -->
@@ -363,6 +371,53 @@
                 iconOpen.classList.toggle('hidden');
                 iconClose.classList.toggle('hidden');
             });
+
+            // Binary decoding animation
+            const binaryText = document.getElementById('binary-text');
+            const originalText = 'Information Theory';
+            const chars = originalText.split('');
+            let animationInterval;
+
+            function generateRandomBinary(length) {
+                return Array.from({ length }, () => Math.random() > 0.5 ? '1' : '0').join('');
+            }
+
+            function animateBinaryDecode() {
+                let step = 0;
+                const totalSteps = 20; // Number of animation frames
+                const decodeSteps = 12; // When to start revealing actual text
+
+                const interval = setInterval(() => {
+                    if (step < decodeSteps) {
+                        // Pure binary phase
+                        binaryText.textContent = generateRandomBinary(originalText.length);
+                    } else {
+                        // Progressive decode phase
+                        const revealIndex = Math.floor(((step - decodeSteps) / (totalSteps - decodeSteps)) * originalText.length);
+                        const revealed = originalText.substring(0, revealIndex);
+                        const binary = generateRandomBinary(originalText.length - revealIndex);
+                        binaryText.textContent = revealed + binary;
+                    }
+                    
+                    step++;
+                    
+                    if (step >= totalSteps) {
+                        clearInterval(interval);
+                        // Final reveal
+                        binaryText.textContent = originalText;
+                        
+                        // Schedule next animation cycle
+                        setTimeout(() => {
+                            animateBinaryDecode();
+                        }, 3000); // Wait 3 seconds before next cycle
+                    }
+                }, 100); // 100ms between frames
+            }
+
+            // Start the animation after a short delay
+            setTimeout(() => {
+                animateBinaryDecode();
+            }, 2000);
         });
 
     </script>
