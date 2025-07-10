@@ -1,0 +1,5 @@
+{
+  "theory": ["j25", "j24", "j21"],
+  "aiml": ["cs24", "cs13", "cs7"],
+  "applications": ["cs26", "cs20","cs18", "cs15"]
+}

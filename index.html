@@ -14,7 +14,6 @@
     <!-- Plantin Font from CDN -->
     <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
 
-
     <style>
         /* Custom styles for the page */
         body {
@@ -38,17 +37,30 @@
             scroll-snap-type: y mandatory;
             overflow-y: scroll;
             height: 100vh;
+            scroll-padding-top: 80px; /* Account for fixed header */
         }
 
         /* Each section will snap into view */
         .scroll-section {
             scroll-snap-align: start;
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 2rem;
             position: relative;
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            .scroll-section {
+                min-height: 100vh;
+                padding: 1rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
         }
 
         /* Animation for elements to fade in when they become visible */
@@ -74,7 +86,6 @@
         header .title-font {
              font-family: 'Plantin MT Pro', serif;
         }
-
 
         /* Custom styles for nav links */
         header nav a {
@@ -109,7 +120,7 @@
             color: #1a202c;
         }
 
-        /* Styling for the diorama images (shadow removed) */
+        /* Styling for the diorama images */
         .diorama {
             max-width: 450px;
             width: 100%;
@@ -158,6 +169,160 @@
             position: relative;
             color: #A41034;
             font-family: 'Plantin MT Pro', serif;
+        }
+
+
+        /* Simple publication list styling */
+        .publication-list {
+            margin-top: 1rem;
+        }
+
+        .publication-item {
+            display: block;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .publication-item:hover {
+            background-color: #f9fafb;
+            padding-left: 0.5rem;
+        }
+
+        .publication-link {
+            display: inline;
+            color: #A41034;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .publication-link:hover {
+            color: #7c2d2e;
+        }
+
+        .publication-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Venue information styling */
+        .venue-info {
+            font-size: 0.9em;
+            color: #6b7280;
+            font-weight: normal;
+            margin-left: 0.5rem;
+        }
+
+        /* Research area content layout */
+        .research-area-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+            gap: 1rem;
+            align-items: start;
+        }
+
+        /* Desktop layout: Group title+explanation+publications in left, image in right for normal sections */
+        .research-area-content .content-title {
+            grid-column: 1;
+            grid-row: 1;
+            text-align: left;
+        }
+
+        .research-area-content .content-explanation {
+            grid-column: 1;
+            grid-row: 2;
+            text-align: left;
+        }
+
+        .research-area-content .content-image {
+            grid-column: 2;
+            grid-row: 1 / span 3;
+            text-align: center;
+            align-self: center;
+        }
+
+        .research-area-content .content-publications {
+            grid-column: 1;
+            grid-row: 3;
+            text-align: left;
+        }
+
+        /* Desktop layout for reverse sections: Image on left, content on right */
+        .research-area-content.reverse .content-title {
+            grid-column: 2;
+            grid-row: 1;
+            text-align: left;
+        }
+
+        .research-area-content.reverse .content-explanation {
+            grid-column: 2;
+            grid-row: 2;
+            text-align: left;
+        }
+
+        .research-area-content.reverse .content-image {
+            grid-column: 1;
+            grid-row: 1 / span 3;
+            text-align: center;
+            align-self: center;
+        }
+
+        .research-area-content.reverse .content-publications {
+            grid-column: 2;
+            grid-row: 3;
+            text-align: left;
+        }
+
+        @media (max-width: 768px) {
+            .research-area-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            /* Mobile order: Title → Explanation → Image → Publications */
+            .content-title {
+                order: 1;
+            }
+            
+            .content-explanation {
+                order: 2;
+            }
+            
+            .content-image {
+                order: 3;
+            }
+            
+            .content-publications {
+                order: 4;
+            }
+        }
+
+        /* Loading state for publications */
+        .publication-loading {
+            text-align: center;
+            padding: 2rem;
+            color: #6b7280;
+        }
+
+        /* Additional mobile adjustments */
+        @media (max-width: 768px) {
+            .diorama {
+                max-width: 300px;
+            }
+            
+            .text-4xl {
+                font-size: 2rem;
+            }
+            
+            .text-5xl {
+                font-size: 2.5rem;
+            }
+            
+            .text-6xl {
+                font-size: 3rem;
+            }
         }
     </style>
 </head>
@@ -226,7 +391,7 @@
         <section id="home" class="scroll-section">
             <div class="text-center fade-in max-w-4xl">
                 <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter mb-6">The <span id="binary-text" class="binary-decode">Information Theory</span> Laboratory</h1>
-                <p class="text-xl md:text-2xl text-gray-600">We build the foundations of systems that store, transmit, and learn from information. </p>
+                <p class="text-xl md:text-2xl text-gray-600">Building the mathematical foundations of trustworthy machine learning and artificial intelligence systems.</p>
             </div>
             <!-- Animated Scroll Down Indicator -->
             <div class="scroll-down-indicator">
@@ -238,46 +403,79 @@
         </section>
 
         <!-- Section 2: Core Information Theory -->
-        <section id="research" class="scroll-section">
-            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center fade-in">
-                <div class="text-left">
-                    <img src="figs/3Bottom.png" alt="Diorama showing core information theory concepts" class="diorama mx-auto md:mx-0">
-                </div>
-                <div class="text-center md:text-left">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-4 text-harvard-crimson">Information Theory</h2>
-                    <p class="text-xl text-gray-600">
-                        We explore the fundamental limits of learning to build a principled foundation for intelligent systems.
-                    </p>
+        <section class="scroll-section">
+            <div class="container mx-auto max-w-6xl px-6 fade-in">
+                <div class="research-area-content">
+                    <div class="content-title">
+                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-3 text-harvard-crimson">Core Information Theory</h2>
+                    </div>
+                    <div class="content-explanation">
+                        <p class="text-xl text-gray-600 mb-4">
+                            We explore the fundamental limits of communication, computation, and inference to build a principled foundation for intelligent systems.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <img src="figs/3Bottom.png" alt="Core information theory concepts" class="diorama mx-auto">
+                    </div>
+                    <div class="content-publications">
+                        <div id="theory-publications-container" class="mt-4">
+                            <div class="publication-loading">
+                                <p>Loading theory publications...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3: Theory to Systems -->
+        <!-- Section 3: AI and Machine Learning -->
         <section class="scroll-section">
-            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center fade-in">
-                <div class="text-center md:text-left order-2 md:order-1">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-4 text-harvard-crimson">Theory to Systems</h2>
-                    <p class="text-xl text-gray-600">
-                        Our theory-guided approach leads to algorithms that massively outperform heuristics in practice. 
-                    </p>
-                </div>
-                <div class="order-1 md:order-2">
-                    <img src="figs/2Middle.png" alt="Diorama showing algorithms and systems" class="diorama mx-auto md:ml-auto md:mr-0">
+            <div class="container mx-auto max-w-6xl px-6 fade-in">
+                <div class="research-area-content reverse">
+                    <div class="content-title">
+                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-3 text-harvard-crimson">Artificial Intelligence & Machine Learning</h2>
+                    </div>
+                    <div class="content-explanation">
+                        <p class="text-xl text-gray-600 mb-4">
+                            We engineer AI and machine learning algorithms that promote privacy, safety, and reliability for all.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <img src="figs/2Middle.png" alt="AI and machine learning algorithms" class="diorama mx-auto">
+                    </div>
+                    <div class="content-publications">
+                        <div id="aiml-publications-container" class="mt-4">
+                            <div class="publication-loading">
+                                <p>Loading AI/ML publications...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Section 4: Applications -->
         <section class="scroll-section">
-            <div class="container mx-auto grid md:grid-cols-2 gap-8 items-center fade-in">
-                <div>
-                     <img src="figs/1Top.png" alt="Diorama showing applications of information theory" class="diorama mx-auto md:mx-0">
-                </div>
-                <div class="text-center md:text-left">
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-4 text-harvard-crimson">Real-World Applications</h2>
-                    <p class="text-xl text-gray-600">
-                        We engineer machine learning and AI algorithms that promote privacy, safety, and reliability for all. Our work extends the reach of information theory to exciting new application frontiers.
-                    </p>
+            <div class="container mx-auto max-w-6xl px-6 fade-in">
+                <div class="research-area-content">
+                    <div class="content-title">
+                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-3 text-harvard-crimson">Applications</h2>
+                    </div>
+                    <div class="content-explanation">
+                        <p class="text-xl text-gray-600 mb-4">
+                            We are interested in a applications including AI alignment, differential privacy, fair ML, coded computing, and beyond.
+                        </p>
+                    </div>
+                    <div class="content-image">
+                        <img src="figs/1Top.png" alt="Real-world applications" class="diorama mx-auto">
+                    </div>
+                    <div class="content-publications">
+                        <div id="applications-publications-container" class="mt-4">
+                            <div class="publication-loading">
+                                <p>Loading applications publications...</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -341,6 +539,114 @@
     </div>
 
     <script>
+        // Publication IDs configuration - loaded from external file
+        let PUBLICATION_CONFIG = {};
+
+        // Publications data
+        let publications = [];
+
+        // Load both configuration and publications
+        Promise.all([
+            fetch('publication-config.json'),
+            fetch('publications.json')
+        ])
+        .then(responses => {
+            // Check if both requests were successful
+            if (!responses[0].ok) {
+                throw new Error(`Error loading config: ${responses[0].status}`);
+            }
+            if (!responses[1].ok) {
+                throw new Error(`Error loading publications: ${responses[1].status}`);
+            }
+            return Promise.all([responses[0].json(), responses[1].json()]);
+        })
+        .then(([configData, publicationsData]) => {
+            PUBLICATION_CONFIG = configData;
+            publications = publicationsData;
+            loadPublications();
+        })
+        .catch(error => {
+            console.error('Error loading data:', error);
+            // Show error message in publication containers
+            document.querySelectorAll('.publication-loading').forEach(container => {
+                container.innerHTML = '<p>Error loading publications. Please check your connection.</p>';
+            });
+        });
+
+        // Function to find publication by ID
+        function findPublicationById(id) {
+            return publications.find(pub => pub.id === id);
+        }
+
+        // Function to render a publication link
+        function renderPublicationLink(publication) {
+            if (!publication) return '';
+            
+            // Use paper link if available, otherwise arXiv link
+            const link = publication.pub_website || publication.arxiv_website;
+            const venueInfo = `<span class="venue-info">${publication.venue}, ${publication.year}</span>`;
+            
+            if (link) {
+                return `<div class="publication-item"><a href="${link}" target="_blank" class="publication-link">${publication.title}</a> ${venueInfo}</div>`;
+            } else {
+                return `<div class="publication-item"><span class="publication-link" style="cursor: default; color: #6b7280;">${publication.title}</span> ${venueInfo}</div>`;
+            }
+        }
+
+        // Function to load publications into containers
+        function loadPublications() {
+            // Load theory publications
+            const theoryContainer = document.getElementById('theory-publications-container');
+            const theoryPubs = PUBLICATION_CONFIG.theory
+                .map(findPublicationById)
+                .filter(pub => pub !== undefined);
+            
+            if (theoryPubs.length > 0) {
+                theoryContainer.innerHTML = `
+                    <h4 class="text-lg font-semibold mb-3 text-harvard-crimson">Selected Publications</h4>
+                    <div class="publication-list">
+                        ${theoryPubs.map(renderPublicationLink).join('')}
+                    </div>
+                `;
+            } else {
+                theoryContainer.innerHTML = '<p class="text-gray-600">No theory publications available.</p>';
+            }
+
+            // Load AI/ML publications
+            const aimlContainer = document.getElementById('aiml-publications-container');
+            const aimlPubs = PUBLICATION_CONFIG.aiml
+                .map(findPublicationById)
+                .filter(pub => pub !== undefined);
+            
+            if (aimlPubs.length > 0) {
+                aimlContainer.innerHTML = `
+                    <h4 class="text-lg font-semibold mb-3 text-harvard-crimson">Selected Publications</h4>
+                    <div class="publication-list">
+                        ${aimlPubs.map(renderPublicationLink).join('')}
+                    </div>
+                `;
+            } else {
+                aimlContainer.innerHTML = '<p class="text-gray-600">No AI/ML publications available.</p>';
+            }
+
+            // Load applications publications
+            const applicationsContainer = document.getElementById('applications-publications-container');
+            const applicationsPubs = PUBLICATION_CONFIG.applications
+                .map(findPublicationById)
+                .filter(pub => pub !== undefined);
+            
+            if (applicationsPubs.length > 0) {
+                applicationsContainer.innerHTML = `
+                    <h4 class="text-lg font-semibold mb-3 text-harvard-crimson">Selected Publications</h4>
+                    <div class="publication-list">
+                        ${applicationsPubs.map(renderPublicationLink).join('')}
+                    </div>
+                `;
+            } else {
+                applicationsContainer.innerHTML = '<p class="text-gray-600">No applications publications available.</p>';
+            }
+        }
+
         // JavaScript to handle the fade-in effect on scroll
         document.addEventListener('DOMContentLoaded', () => {
             const observerOptions = {
@@ -419,7 +725,6 @@
                 animateBinaryDecode();
             }, 2000);
         });
-
     </script>
 
 </body>
