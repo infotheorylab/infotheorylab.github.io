@@ -1,5 +1,19 @@
 [
   {
+    "id": "c49",
+    "title": "Tensorization of f-divergences",
+    "authors": "R. Cruz, M. Diaz, F. P. Calmon",
+    "venue": "IEEE Int. Symp. on Inf. Theory (ISIT)",
+    "year": 2025,
+    "type": "conference",
+    "category": "Theory",
+    "keywords": "f-divergences, tensorization, information theory",
+    "pub_website": null,
+    "arxiv_website": null,
+    "code_repository": null,
+    "bibtex": null
+  },
+  {
     "id": "c48",
     "title": "Private Approximate Nearest Neighbor Search for Vector Database Querying",
     "authors": "S. Vithana, M. Cardone, F. P. Calmon",
