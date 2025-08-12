@@ -14,6 +14,9 @@
     <!-- Plantin Font from CDN -->
     <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
 
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         /* Custom styles for the page */
         body {
@@ -147,6 +150,45 @@
             opacity: 0.9;
         }
 
+        /* Social links styling - inline next to name */
+        .social-links {
+            display: inline-flex;
+            gap: 0.4rem;
+            margin-left: 0.5rem;
+            align-items: center;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            opacity: 0.8;
+            color: #1d4ed8 !important;
+        }
+
+        .social-link:hover {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+
+        .social-link i {
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        /* Override red color from .member-name a for social links */
+        .member-name .social-link {
+            color: #1d4ed8 !important;
+        }
+
+        .member-name .social-link i {
+            color: inherit !important;
+        }
+
         .member-role {
             color: #6b7280;
             font-size: 0.9rem;
@@ -227,6 +269,7 @@
         <div class="container mx-auto max-w-6xl px-6 py-8">
             <div class="text-center mb-12">
                 <h1 class="text-4xl md:text-5xl font-semibold tracking-tighter mb-6 text-harvard-crimson">People</h1>
+                
                 <p class="text-xl text-gray-600">
                     We are fortunate to work with an amazing group of students, post-docs, and visitors.
                 </p>
@@ -243,22 +286,17 @@
                 <section id="current-members">
                     <h2 class="text-3xl font-semibold mb-8 text-black">Current Members</h2>
                     <div id="current-members-container" class="space-y-6">
-                    <!-- JS injects cards here -->
                     </div>
                 </section>
-            
-                <!-- alumni -->
-                <!-- Post-doctoral alumni -->
-            <!-- <div id="alumni-container" class="divide-y divide-gray-200"></div> -->
-                <section id="alumni-postdoc" class="pt-0 pb-10 first:pt-0">
-                    <h3 class="text-2xl font-semibold mb-4 text-black">Former Post-doctoral Fellows</h3>
-                    <div class="space-y-6" id="alumni-postdoc-list"></div>
-                </section>
-
-                <!-- Graduate-student alumni (PhD) -->
-                <section id="alumni-grad" class="pt-10 pb-10">
+                <section id="alumni-grad" class="pt-0 pb-10 first:pt-0">
                     <h3 class="text-2xl font-semibold mb-4 text-black">Former Graduate Students</h3>
                     <div class="space-y-6" id="alumni-grad-list"></div>
+                </section>
+
+                <!-- Post-doctoral alumni -->
+                <section id="alumni-postdoc" class="pt-10 pb-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-black">Former Post-doctoral Fellows</h3>
+                    <div class="space-y-6" id="alumni-postdoc-list"></div>
                 </section>
 
                 <!-- Visiting scholars alumni -->
@@ -307,14 +345,55 @@
             loadPeopleData();
         });
 
+        // Function to create social links for a person
+        function createSocialLinks(person) {
+            
+            const socialContainer = document.createElement('span');
+            socialContainer.className = 'social-links';
+
+            // Website link (globe icon)
+            if (person.website) {
+                const websiteLink = document.createElement('a');
+                websiteLink.href = person.website;
+                websiteLink.target = '_blank';
+                websiteLink.className = 'social-link';
+                websiteLink.style.color = '#2563eb';
+                websiteLink.innerHTML = '<i class="fas fa-globe"></i>';
+                websiteLink.title = 'Personal Website';
+                socialContainer.appendChild(websiteLink);
+            }
+
+            // Google Scholar link (graduation cap icon)
+            if (person.google_scholar) {
+                const scholarLink = document.createElement('a');
+                scholarLink.href = person.google_scholar;
+                scholarLink.target = '_blank';
+                scholarLink.className = 'social-link';
+                scholarLink.style.color = '#2563eb';
+                scholarLink.innerHTML = '<i class="fas fa-graduation-cap"></i>';
+                scholarLink.title = 'Google Scholar';
+                socialContainer.appendChild(scholarLink);
+            }
+
+            // LinkedIn link
+            if (person.linkedin) {
+                const linkedinLink = document.createElement('a');
+                linkedinLink.href = person.linkedin;
+                linkedinLink.target = '_blank';
+                linkedinLink.className = 'social-link';
+                linkedinLink.style.color = '#2563eb';
+                linkedinLink.innerHTML = '<i class="fab fa-linkedin-in"></i>';
+                linkedinLink.title = 'LinkedIn';
+                socialContainer.appendChild(linkedinLink);
+            }
+
+            return socialContainer.children.length > 0 ? socialContainer : null;
+        }
+
         // Function to render the Principal Investigator
         function renderPrincipalInvestigator(person) {
             const container = document.getElementById('principal-investigator-container');
-            //const header = document.createElement('h3');
-            //header.className = 'text-2xl font-semibold mb-4 text-black';
-            //header.textContent = 'Principal Investigator';
-            //container.appendChild(header);
-
+            
             const piCard = createCurrentMemberElement(person);
             container.appendChild(piCard);
 
@@ -371,6 +450,7 @@
             const nameDiv = document.createElement('div');
             nameDiv.className = 'member-name';
             
+            // Create name text/link
             if (person.website) {
                 const nameLink = document.createElement('a');
                 nameLink.href = person.website;
@@ -379,7 +459,15 @@
                 nameLink.textContent = person.name;
                 nameDiv.appendChild(nameLink);
             } else {
-                nameDiv.textContent = person.name;
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = person.name;
+                nameDiv.appendChild(nameSpan);
+            }
+
+            // Add social links inline next to name
+            const socialLinks = createSocialLinks(person);
+            if (socialLinks) {
+                nameDiv.appendChild(socialLinks);
             }
             
             const roleDiv = document.createElement('div');
@@ -403,6 +491,7 @@
             const nameDiv = document.createElement('div');
             nameDiv.className = 'member-name';
             
+            // Create name text/link
             if (person.website) {
                 const nameLink = document.createElement('a');
                 nameLink.href = person.website;
@@ -411,7 +500,15 @@
                 nameLink.textContent = person.name;
                 nameDiv.appendChild(nameLink);
             } else {
-                nameDiv.textContent = person.name;
+                const nameSpan = document.createElement('span');
+                nameSpan.textContent = person.name;
+                nameDiv.appendChild(nameSpan);
+            }
+
+            // Add social links inline next to name
+            const socialLinks = createSocialLinks(person);
+            if (socialLinks) {
+                nameDiv.appendChild(socialLinks);
             }
             
             const roleDiv = document.createElement('div');
@@ -435,16 +532,13 @@
         // Function to load and render people data
         async function loadPeopleData() {
             try {
-                console.log('Attempting to fetch people.json...');
                 const response = await fetch('people.json');
-                console.log('Fetch response:', response.status, response.statusText);
                 
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
                 
                 const data = await response.json();
-                console.log('Data loaded successfully:', data);
                 
                 // Render current members
                 const currentContainer = document.getElementById('current-members-container');
@@ -456,9 +550,6 @@
                         const memberElement = createCurrentMemberElement(person);
                         currentContainer.appendChild(memberElement);
                     });
-                    console.log('Current members rendered');
-                } else {
-                    console.warn('Missing container: #current-members-container');
                 }
                 
                 const lists = {
@@ -477,14 +568,12 @@
                         console.warn(`Unknown alumni type "${person.type}" for: ${person.name}`);
                     }
                     });
-                    console.log('Alumni rendered (postdoc / grad / visitor)');
 
             } catch (error) {
                 console.error('Error loading people data:', error);
                 
                 // Show error message
                 document.getElementById('current-members-container').innerHTML = '<p class="text-red-500">Error loading current members data. Check console for details.</p>';
-                // document.getElementById('alumni-container').innerHTML = '<p class="text-red-500">Error loading alumni data. Check console for details.</p>';
                 const fallback = document.getElementById('alumni-postdoc-list')
                             ||  document.getElementById('alumni-grad-list')
                             ||  document.getElementById('alumni-visitor-list');

@@ -20,6 +20,12 @@
     
     <!-- Plantin Font from CDN -->
     <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
+    
+    <!-- Satoshi Font from CDN -->
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    
+    <!-- Plantin Font from CDN -->
+    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
 
     <style>
         /* Custom styles for the page */
@@ -27,6 +33,11 @@
             font-family: 'Satoshi', sans-serif;
             background-color: #FFFFFF;
             color: #1a202c;
+        }
+        
+        /* Headings use Plantin */
+        h1, h2, h3, h4, h5, h6, .font-plantin {
+            font-family: 'Plantin MT Pro', serif;
         }
         
         /* Headings use Plantin */
@@ -49,6 +60,39 @@
         /* Header title font */
         header .title-font {
              font-family: 'Plantin MT Pro', serif;
+        }
+
+        /* Custom styles for nav links */
+        header nav a {
+            position: relative;
+            transition: color 0.3s ease;
+            text-transform: capitalize;
+            font-family: 'Plantin MT Pro', serif;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding-top: 0.5rem;
+        }
+
+        /* Stylish top line effect */
+        header nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #1a202c;
+            transition: width 0.3s ease-out;
+        }
+
+        header nav a:hover::before {
+            width: 50%;
+        }
+
+        header nav a:hover {
+            color: #1a202c;
         }
 
         /* Custom styles for nav links */
@@ -165,28 +209,29 @@
 
         .search-input {
             width: 100%;
-            padding: 0.75rem 1rem 0.75rem 2.5rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 0.5rem;
+            padding: 0.875rem 1.25rem 0.875rem 3rem;
+            border: 2px solid #d1d5db;
+            border-radius: 0.75rem;
             font-size: 1rem;
             transition: all 0.3s ease;
-            background-color: white;
+            background-color: #f9fafb;
         }
 
         .search-input:focus {
             outline: none;
             border-color: #A41034;
-            box-shadow: 0 0 0 3px rgba(164, 16, 52, 0.1);
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(164, 16, 52, 0.1);
         }
 
         .search-icon {
             position: absolute;
-            left: 0.75rem;
+            left: 1rem;
             top: 50%;
             transform: translateY(-50%);
             color: #6b7280;
-            width: 1.25rem;
-            height: 1.25rem;
+            width: 1.5rem;
+            height: 1.5rem;
         }
 
         .search-wrapper {
@@ -202,13 +247,13 @@
         }
 
         .filter-btn {
-            padding: 0.375rem 0.75rem;
+            padding: 0.5rem 1rem;
             border: 2px solid #e2e8f0;
             border-radius: 9999px;
             background-color: white;
             color: #374151;
             font-size: 0.875rem;
-            font-weight: 500;
+            font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -229,14 +274,15 @@
             background: white;
             border: 1px solid #e5e7eb;
             border-radius: 0.75rem;
-            padding: 1.25rem;
+            padding: 1.5rem;
             transition: all 0.3s ease;
             border-left: 4px solid #A41034;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         .publication-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px -2px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 7px 14px rgba(0,0,0,0.07), 0 3px 6px rgba(0,0,0,0.05);
         }
         
         .pub-link-button {
@@ -358,6 +404,64 @@
             font-size: 0.875rem;
             margin-bottom: 1rem;
         }
+
+        /* Pagination and scrollable container styles */
+        .publication-container {
+            max-height: 600px;
+            overflow-y: auto;
+            border: 1px solid #e5e7eb;
+            border-radius: 0.75rem;
+            padding: 1rem;
+            background-color: #f9fafb;
+            margin-bottom: 1.5rem;
+            scrollbar-width: thin;
+            scrollbar-color: #A41034 #f1f5f9;
+        }
+
+        .publication-container::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .publication-container::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 4px;
+        }
+
+        .publication-container::-webkit-scrollbar-thumb {
+            background: #A41034;
+            border-radius: 4px;
+        }
+
+        .publication-container::-webkit-scrollbar-thumb:hover {
+            background: #8C1829;
+        }
+
+        /* Mobile responsive styles */
+        @media (max-width: 768px) {
+            .publication-container {
+                max-height: 500px;
+                padding: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .publication-container {
+                max-height: 400px;
+                padding: 0.5rem;
+            }
+        }
+
+        /* Animation for fade-in effect */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -428,182 +532,51 @@
 
             <!-- Research Philosophy -->
             <div class="mb-16">
-                <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                    <div class="flex items-start space-x-6">
+                <div class="space-y-6 max-w-4xl mx-auto">
+                    <div class="flex items-start space-x-6 fade-in-section">
                         <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                </svg>
+                            <div class="w-16 h-16 bg-harvard-crimson rounded-2xl flex items-center justify-center shadow-lg">
+                                <img src="figs/telescope_low.png" alt="Telescope icon for Vision" class="w-12 h-12">
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Our Vision</h3>
                             <p class="text-gray-700 leading-relaxed text-lg">
-                                We believe that information theory is key for the responsible design of AI and machine learning systems, and that a theory-guided approach can massively outperform heuristics.
+                                <span class="text-xl font-semibold text-harvard-crimson font-plantin">Vision:</span> A future where AI systems work reliably for everyone, are trustworthy by design, and are built on solid mathematical foundations.
                             </p>
                         </div>
                     </div>
-                    <div class="flex items-start space-x-6">
+                    <div class="flex items-start space-x-6 fade-in-section">
                         <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-2xl flex items-center justify-center shadow-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="white" class="w-8 h-8">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
-                                </svg>
+                            <div class="w-16 h-16 bg-harvard-crimson rounded-2xl flex items-center justify-center shadow-lg">
+                                <img src="figs/gears_low.png" alt="Gears icon for Approach" class="w-12 h-12">
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Our Approach</h3>
                             <p class="text-gray-700 leading-relaxed text-lg">
-                                For any performance metric (precision, fairness, privacy), we ask not "How can a system be made better?" but "What is the absolute best a system can be?"
+                                <span class="text-xl font-semibold text-harvard-crimson font-plantin">Approach:</span> We use tools from information theory to understand how to design trustworthy AI systems. We prove theorems <b>and</b> create algorithms since  theory-guided solutions can massively outperform trial-and-error heuristics.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-6 fade-in-section">
+                        <div class="flex-shrink-0">
+                            <div class="w-16 h-16 bg-harvard-crimson rounded-2xl flex items-center justify-center shadow-lg">
+                                <img src="figs/rocket_low.png" alt="Rocket icon for Research Support" class="w-12 h-12">
+                            </div>
+                        </div>
+                        <div>
+                            <p class="text-gray-700 leading-relaxed text-lg">
+                                <span class="text-xl font-semibold text-harvard-crimson font-plantin">Research Support:</span> Our research group is supported by the NSF and by generous gifts and awards from Google, IBM, Amazon, and Oracle Research.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Core Information Theory -->
-            <div class="research-area">
-                <div class="research-content">
-                    <div class="research-text">
-                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-harvard-crimson">Core Information Theory</h2>
-                        <p class="text-lg text-gray-700 mb-4">
-                            We explore the fundamental limits of communication, computation, and inference to build a principled foundation for intelligent systems.
-                        </p>
-                        <p class="text-gray-600 mb-6">
-                            Our work establishes the mathematical foundations that determine what's theoretically possible in data processing, transmission, and analysis. We use information-theoretic tools to characterize fundamental performance limits and then design algorithms that achieve these limits.
-                        </p>
-                        
-                        <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
-
-                        <!-- Publication list ordered from most recent to oldest -->
-                        <div class="publication-list space-y-3">
-                            <div class="publication-item">
-                                <div class="publication-title">Measuring information from moments</div>
-                                <div class="publication-authors">W. Alghamdi, F. P. Calmon</div>
-                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2024)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Strong data processing inequalities for input constrained additive noise channels</div>
-                                <div class="publication-authors">F. P. Calmon, Y. Polyanskiy, Y. Wu</div>
-                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2018)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Principal inertia components and applications</div>
-                                <div class="publication-authors">F. P. Calmon, A. Makhdoumi, M. Médard, M. Varia, M. Christiansen, K. R. Duffy</div>
-                                <div class="publication-venue">IEEE Trans. on Inf. Theory (2017)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Fundamental limits of perfect privacy</div>
-                                <div class="publication-authors">F. P. Calmon, A. Makhdoumi, M. Médard</div>
-                                <div class="publication-venue">Proc. IEEE Int. Symp. on Inf. Theory (ISIT) (2015)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="research-image">
-                        <img src="figs/3Bottom.png" alt="Core information theory concepts" class="diorama">
-                    </div>
-                </div>
-            </div>
-
-            <!-- AI and Machine Learning -->
-            <div class="research-area">
-                <div class="research-content">
-                    <div class="research-image">
-                        <img src="figs/2Middle.png" alt="AI and machine learning algorithms" class="diorama">
-                    </div>
-                    <div class="research-text">
-                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-harvard-crimson">Artificial Intelligence & Machine Learning</h2>
-                        <p class="text-lg text-gray-700 mb-4">
-                            We translate deep theoretical insights into practical AI and machine learning algorithms that learn, adapt, and make reliable decisions.
-                        </p>
-                        <p class="text-gray-600 mb-6">
-                            Our theory-guided approach to AI and machine learning focuses on three critical challenges: fairness, privacy, and reliability. We develop algorithms that don't just work well in practice, but come with mathematical guarantees about their performance and behavior.
-                        </p>
-                        
-                        <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
-                        
-                        <!-- Publication list ordered from most recent to oldest -->
-                        <div class="publication-list space-y-3">
-                            <div class="publication-item">
-                                <div class="publication-title">AI Alignment at Your Discretion</div>
-                                <div class="publication-authors">M. Buyl, H. Khalaf, C.M. Verdun, L.M. Paes, C.V. Machado, F.P. Calmon</div>
-                                <div class="publication-venue">ACM FAccT (2025)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Multi-Group Proportional Representation</div>
-                                <div class="publication-authors">A. Oesterling, C.M. Verdun, C.X. Long, A. Glynn, L.M. Paes, S. Vithana, M. Cardone, F. P. Calmon</div>
-                                <div class="publication-venue">NeurIPS (2024)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Beyond ADULT and COMPAS: Fair multi-class prediction via information projection</div>
-                                <div class="publication-authors">W. Alghamdi, H. Hsu, H. Jeong, H. Wang, P. W. Michalak, S. Asoodeh, F. P. Calmon</div>
-                                <div class="publication-venue">NeurIPS (2022) - Oral Presentation</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Repairing without retraining: Avoiding disparate impact with counterfactual distributions</div>
-                                <div class="publication-authors">H. Wang, B. Ustun, F. P. Calmon</div>
-                                <div class="publication-venue">ICML (2019)</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Applications -->
-            <div class="research-area">
-                <div class="research-content">
-                    <div class="research-text">
-                        <h2 class="text-3xl md:text-4xl font-semibold tracking-tight mb-4 text-harvard-crimson">Real-World Applications</h2>
-                        <p class="text-lg text-gray-700 mb-4">
-                            Our work impacts diverse fields, from reliable AI and privacy-preserving machine learning to next-generation wireless networks.
-                        </p>
-                        <p class="text-gray-600 mb-6">
-                            We engineer AI and machine learning algorithms that promote privacy, safety, and reliability for all. Our research extends from healthcare and hiring systems to telecommunications and beyond, ensuring that information theory reaches exciting new application frontiers.
-                        </p>
-                        
-                        <h4 class="text-lg font-semibold mb-4 text-harvard-crimson">Selected Publications</h4>
-
-                        <!-- Publication list ordered from most recent to oldest -->
-                        <div class="publication-list space-y-3">
-                            <div class="publication-item">
-                                <div class="publication-title">Bottlenecks CLUB: Unifying information-theoretic trade-offs among complexity, leakage, and utility</div>
-                                <div class="publication-authors">B. Razeghi, F. P. Calmon, D. Gunduz, S. Voloshynovskiy</div>
-                                <div class="publication-venue">IEEE Trans. Inf. Forensics and Security (2023)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Three variants of differential privacy: Lossless conversion and applications</div>
-                                <div class="publication-authors">S. Asoodeh, J. Liao, F. P. Calmon, O. Kosut, L. Sankar</div>
-                                <div class="publication-venue">IEEE J. Sel. Areas Inf. Theory (2021)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Privacy with estimation guarantees</div>
-                                <div class="publication-authors">H. Wang, L. Vo, F. P. Calmon, M. Médard, K. R. Duffy, M. Varia</div>
-                                <div class="publication-venue">IEEE Trans. Inf. Theory (2019)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Confronting data sparsity to identify potential sources of zika virus spillover infection among primates</div>
-                                <div class="publication-authors">S. Majumdar, B. Han, F. P. Calmon, B. Glicksberg, R. Horesh, A. Kumar, A. Perer, E. V. Marschall, D. Wei, A. Mojsilović, K. Varshney</div>
-                                <div class="publication-venue">Epidemics (2019)</div>
-                            </div>
-                            <div class="publication-item">
-                                <div class="publication-title">Data pre-processing for discrimination prevention: Information-theoretic optimization and analysis</div>
-                                <div class="publication-authors">F. P. Calmon, D. Wei, B. Vinzamuri, K. N. Ramamurthy, K. Varshney</div>
-                                <div class="publication-venue">IEEE J. Sel. Topics Signal Proces (2018)</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="research-image">
-                        <img src="figs/1Top.png" alt="Real-world applications of information theory" class="diorama">
-                    </div>
-                </div>
-            </div>
 
             <!-- Publication Search Section -->
             <div class="mt-16">
-                <h2 class="text-3xl font-semibold mb-6 text-harvard-crimson text-center">Search All Publications</h2>
-                <p class="text-gray-600 text-center mb-6">Explore our complete collection of research papers by searching titles, authors, venues, or keywords.</p>
+                <h2 class="text-3xl font-semibold mb-6 text-harvard-crimson text-center">Search Our Publications</h2>
+                <p class="text-gray-600 text-center mb-6">Explore our collection of research papers by searching titles, authors, venues, or keywords.</p>
                 <div class="search-wrapper">
                     <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -619,22 +592,11 @@
                     <button class="filter-btn" data-filter="journal">Journals</button>
                 </div>
                 <div class="results-count" id="resultsCount"></div>
-                <div class="publication-grid" id="publicationGrid"></div>
-            </div>
-
-            <div class="text-center mt-12">
-                <p class="text-lg text-gray-600 mb-4">
-                    For a complete list of publications, visit our 
-                    <a href="https://scholar.google.com/citations?hl=en&user=P8N_YH4AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" class="text-harvard-crimson hover:underline">Google Scholar page</a>.
-                </p>
-                
-                <div class="mt-8 bg-white p-6 rounded-lg border border-gray-200">
-                    <h3 class="text-2xl font-semibold mb-4 text-harvard-crimson">Research Support</h3>
-                    <p class="text-gray-700 max-w-3xl mx-auto">
-                        Our research group is supported by the NSF and by generous gifts and awards from Google, IBM, Amazon, and Oracle Research. This funding enables us to advance the frontiers of information theory and its applications to AI and machine learning.
-                    </p>
+                <div class="publication-container">
+                    <div class="publication-grid" id="publicationGrid"></div>
                 </div>
             </div>
+
 
             <!-- SEAS Logo -->
             <div class="mt-16 text-center">
@@ -853,6 +815,22 @@
                     currentFilter = btn.dataset.filter;
                     applyFilters();
                 });
+            });
+
+            // Intersection Observer for fade-in animations
+            const sections = document.querySelectorAll('.fade-in-section');
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
             });
         });
     </script>

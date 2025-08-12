@@ -742,20 +742,6 @@
     "bibtex": "bibtex/j6.bib"
   },
   {
-    "id": "j5",
-    "title": "Mutual outage probability",
-    "authors": "F. P. Calmon, Á. A. M. de Medeiros, M. D. Yacoub",
-    "venue": "IEEE Trans. Wireless Commun.",
-    "year": 2017,
-    "type": "journal",
-    "category": "Wireless Communications",
-    "keywords": "outage probability, mutual information, wireless communication, fading channels",
-    "pub_website": "https://ieeexplore.ieee.org/document/7880679",
-    "arxiv_website": null,
-    "code_repository": null,
-    "bibtex": "bibtex/j5.bib"
-  },
-  {
     "id": "j4",
     "title": "Multi-user guesswork and brute force security",
     "authors": "M. M. Christiansen, K. R. Duffy, F. P. Calmon, M. Médard",

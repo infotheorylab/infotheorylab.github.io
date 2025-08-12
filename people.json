@@ -3,6 +3,8 @@
     "name": "Prof. Flavio du Pin Calmon",
     "role": "Thomas D. Cabot Associate Professor of Electrical Engineering",
     "website": "https://people.seas.harvard.edu/~flavio/",
+    "google_scholar": "https://scholar.google.com/citations?user=P8N_YH4AAAAJ&hl=en",
+    "linkedin": "https://www.linkedin.com/in/flavio-calmon",
     "photo": "flavio.jpg",
     "type": "faculty"
   },
@@ -11,6 +13,8 @@
       "name": "Juan Felipe Gomez",
       "role": "PhD Student (G5)",
       "website": null,
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "felipe.jpeg",
       "type": "student"
     },
@@ -18,6 +22,8 @@
       "name": "Carol Long",
       "role": "PhD Student (G4)",
       "website": "https://carol-long.github.io/",
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "carol.jpg",
       "type": "student"
     },
@@ -25,6 +31,8 @@
       "name": "Alex Oesterling",
       "role": "PhD Student (G3, co-advised with Hima Lakkaraju)",
       "website": "https://www.alexoesterling.com/",
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "alex.jpg",
       "type": "student"
     },
@@ -32,13 +40,17 @@
       "name": "Rodrigo Cruz",
       "role": "PhD Student (G3)",
       "website": null,
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "rodrigo.jpg",
       "type": "student"
     },
     {
       "name": "Elena Ghazi",
       "role": "PhD Student (G2, co-advised with Salil Vadhan)",
-      "website": "https://scholar.google.com/citations?user=0vnuix0AAAAJ&hl=en",
+      "website": null,
+      "google_scholar": "https://scholar.google.com/citations?user=0vnuix0AAAAJ&hl=en",
+      "linkedin": null,
       "photo": "elena.jpg",
       "type": "student"
     },
@@ -46,13 +58,17 @@
       "name": "Hadi Khalaf",
       "role": "PhD Student (G2)",
       "website": "https://hadikhalaf.com/",
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "hadi.jpg",
       "type": "student"
     },
     {
       "name": "Dr. Sajani Vithana",
       "role": "Post-doctoral Fellow",
-      "website": "https://scholar.google.com/citations?user=l5oE7xwAAAAJ&hl=en",
+      "website": "https://sajani-vithana.github.io/website/",
+      "google_scholar": "https://scholar.google.com/citations?user=_hSfZbMAAAAJ&hl=en",
+      "linkedin": null,
       "photo": "sajani.jpg",
       "type": "postdoc"
     },
@@ -60,6 +76,8 @@
       "name": "Dr. Claudio Mayrink Verdun",
       "role": "Post-doctoral Fellow",
       "website": "https://claudioverdun.github.io/",
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "claudio.jpg",
       "type": "postdoc"
     },
@@ -67,13 +85,17 @@
       "name": "Dr. Behrooz Razeghi",
       "role": "Post-doctoral Fellow",
       "website": "http://www.behroozrazeghi.com/",
+      "google_scholar": null,
+      "linkedin": null,
       "photo": "behrooz.jpg",
       "type": "postdoc"
     },
     {
       "name": "Caio Vieira Machado",
       "role": "Visiting Fellow (PhD student at Oxford University)",
-      "website": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR/",
+      "website": null,
+      "google_scholar": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR",
+      "linkedin": null,
       "photo": "caio.jpg",
       "type": "visitor"
     }
