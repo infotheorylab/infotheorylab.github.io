@@ -34,10 +34,18 @@
 
         /* Container for the scroll-snap functionality */
         .scroll-container {
-            scroll-snap-type: y mandatory;
+            scroll-snap-type: y proximity;
             overflow-y: scroll;
             height: 100vh;
             scroll-padding-top: 80px; /* Account for fixed header */
+            scroll-behavior: smooth;
+        }
+
+        /* Desktop uses mandatory snap for crisp experience */
+        @media (min-width: 769px) {
+            .scroll-container {
+                scroll-snap-type: y mandatory;
+            }
         }
 
         /* Each section will snap into view */
@@ -56,10 +64,31 @@
             .scroll-section {
                 min-height: 100vh;
                 padding: 1rem;
+                scroll-snap-align: none;
+            }
+            
+            /* Title sections snap on mobile */
+            .scroll-section:first-child,
+            .scroll-section:last-child {
+                scroll-snap-align: start;
             }
             
             .container {
                 padding: 0 1rem;
+            }
+            
+            /* Mobile: Make publication areas scrollable within sections */
+            .content-publications {
+                max-height: 40vh;
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+                scroll-snap-align: none;
+                padding-right: 0.5rem;
+            }
+            
+            /* Improve touch scrolling for publication lists */
+            .publication-list {
+                scroll-snap-type: none;
             }
         }
 
@@ -175,6 +204,35 @@
         /* Simple publication list styling */
         .publication-list {
             margin-top: 1rem;
+        }
+        
+        /* Mobile publication scrolling indicator */
+        @media (max-width: 768px) {
+            .content-publications::before {
+                content: "📖 Scroll to read all publications";
+                display: block;
+                font-size: 0.8rem;
+                color: #6b7280;
+                margin-bottom: 0.5rem;
+                text-align: center;
+                padding: 0.25rem;
+                background: linear-gradient(90deg, transparent, #f3f4f6, transparent);
+                border-radius: 0.25rem;
+            }
+            
+            .content-publications::-webkit-scrollbar {
+                width: 4px;
+            }
+            
+            .content-publications::-webkit-scrollbar-track {
+                background: #f1f1f1;
+                border-radius: 2px;
+            }
+            
+            .content-publications::-webkit-scrollbar-thumb {
+                background: #A41034;
+                border-radius: 2px;
+            }
         }
 
         .publication-item {
@@ -649,10 +707,12 @@
 
         // JavaScript to handle the fade-in effect on scroll
         document.addEventListener('DOMContentLoaded', () => {
+            const isMobile = window.innerWidth <= 768;
+            
             const observerOptions = {
                 root: document.querySelector('.scroll-container'),
                 rootMargin: '0px',
-                threshold: 0.5 // Trigger when 50% of the element is visible
+                threshold: isMobile ? 0.3 : 0.5 // Lower threshold on mobile for better responsiveness
             };
 
             const observer = new IntersectionObserver((entries, observer) => {
@@ -665,6 +725,54 @@
 
             const targets = document.querySelectorAll('.fade-in');
             targets.forEach(target => observer.observe(target));
+            
+            // Mobile-specific scroll handling
+            if (isMobile) {
+                let isScrolling = false;
+                let scrollTimeout;
+                
+                const scrollContainer = document.querySelector('.scroll-container');
+                
+                // Detect when user stops scrolling and allow snap behavior
+                scrollContainer.addEventListener('scroll', () => {
+                    isScrolling = true;
+                    
+                    clearTimeout(scrollTimeout);
+                    scrollTimeout = setTimeout(() => {
+                        isScrolling = false;
+                    }, 150);
+                });
+                
+                // Enhance touch scrolling for publication areas
+                const publicationContainers = document.querySelectorAll('.content-publications');
+                
+                publicationContainers.forEach(container => {
+                    let startY = 0;
+                    let isPublicationScrolling = false;
+                    
+                    container.addEventListener('touchstart', (e) => {
+                        startY = e.touches[0].clientY;
+                        isPublicationScrolling = false;
+                    });
+                    
+                    container.addEventListener('touchmove', (e) => {
+                        const currentY = e.touches[0].clientY;
+                        const deltaY = Math.abs(currentY - startY);
+                        
+                        // If significant vertical movement, consider it publication scrolling
+                        if (deltaY > 10) {
+                            isPublicationScrolling = true;
+                        }
+                    });
+                    
+                    // Prevent page scroll when scrolling within publications
+                    container.addEventListener('scroll', (e) => {
+                        if (isPublicationScrolling) {
+                            e.stopPropagation();
+                        }
+                    });
+                });
+            }
             
             // Mobile menu toggle
             const menuBtn = document.getElementById('menu-btn');
@@ -724,6 +832,18 @@
             setTimeout(() => {
                 animateBinaryDecode();
             }, 2000);
+            
+            // Handle window resize to update mobile detection
+            let resizeTimeout;
+            window.addEventListener('resize', () => {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    const newIsMobile = window.innerWidth <= 768;
+                    if (newIsMobile !== isMobile) {
+                        location.reload(); // Reload to apply correct scroll behavior
+                    }
+                }, 250);
+            });
         });
     </script>
 
