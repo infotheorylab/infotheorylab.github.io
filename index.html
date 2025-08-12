@@ -34,18 +34,11 @@
 
         /* Container for the scroll-snap functionality */
         .scroll-container {
-            scroll-snap-type: y proximity;
+            scroll-snap-type: y proximity; /* Gentle snap for first section on mobile */
             overflow-y: scroll;
             height: 100vh;
             scroll-padding-top: 80px; /* Account for fixed header */
             scroll-behavior: smooth;
-        }
-
-        /* Desktop uses mandatory snap for crisp experience */
-        @media (min-width: 769px) {
-            .scroll-container {
-                scroll-snap-type: y mandatory;
-            }
         }
 
         /* Each section will snap into view */
@@ -59,34 +52,103 @@
             position: relative;
         }
 
-        /* Mobile responsive adjustments */
-        @media (max-width: 768px) {
-            .scroll-section {
-                min-height: 100vh;
-                padding: 1rem;
-                scroll-snap-align: none;
+        /* Animated scroll down indicator - base styles */
+        .scroll-down-indicator {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2.5s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .scroll-down-indicator span {
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            color: #9ca3af;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        .scroll-down-indicator svg {
+            width: 20px;
+            height: 20px;
+            color: #9ca3af;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-8px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-4px);
+            }
+        }
+
+        /* Desktop uses mandatory snap for crisp experience */
+        @media (min-width: 769px) {
+            .scroll-container {
+                scroll-snap-type: y mandatory;
+                scroll-padding-top: 40px; /* Further reduced for scroll indicator visibility */
             }
             
-            /* Title sections snap on mobile */
-            .scroll-section:first-child,
-            .scroll-section:last-child {
+            /* Ensure scroll indicators are visible with better bottom spacing */
+            .scroll-down-indicator {
+                bottom: 6rem; /* Increased clearance from viewport bottom to prevent overlap */
+            }
+            
+            /* Move content up on desktop to provide better spacing for scroll arrows */
+            .scroll-section {
+                padding-bottom: 9rem; /* Increased bottom padding to move content up */
+            }
+        }
+
+        /* Mobile responsive adjustments */
+        @media (max-width: 768px) {
+            /* Hide scroll arrows on mobile except for the first section */
+            .scroll-down-indicator {
+                display: none;
+            }
+            
+            /* Show scroll arrow only on the home/first section in mobile */
+            #home .scroll-down-indicator {
+                display: flex;
+            }
+            
+            /* First section: snap and full height with safe padding */
+            #home.scroll-section {
                 scroll-snap-align: start;
+                min-height: 100vh;
+                padding-top: 7.5rem; /* Clear address bar + fixed header */
+                padding-left: 1rem;
+                padding-right: 1rem;
+                padding-bottom: 2rem;
+                justify-content: center;
+            }
+            
+            /* Other sections: no snap, natural height */
+            .scroll-section:not(#home) {
+                scroll-snap-align: none;
+                min-height: auto;
+                padding: 2rem 1rem;
             }
             
             .container {
                 padding: 0 1rem;
             }
             
-            /* Mobile: Make publication areas scrollable within sections */
+            /* Mobile: Publications flow naturally with content */
             .content-publications {
-                max-height: 40vh;
-                overflow-y: auto;
-                -webkit-overflow-scrolling: touch;
+                max-height: none; /* Remove height restriction */
+                overflow-y: visible; /* Natural flow */
                 scroll-snap-align: none;
-                padding-right: 0.5rem;
+                padding-right: 0;
             }
             
-            /* Improve touch scrolling for publication lists */
+            /* Natural scrolling for publication lists */
             .publication-list {
                 scroll-snap-type: none;
             }
@@ -155,43 +217,6 @@
             width: 100%;
             height: auto;
         }
-        
-        /* Animated scroll down indicator */
-        .scroll-down-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2.5s infinite;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .scroll-down-indicator span {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            color: #9ca3af;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-        .scroll-down-indicator svg {
-            width: 20px;
-            height: 20px;
-            color: #9ca3af;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-8px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-4px);
-            }
-        }
-
         /* Binary decoding animation styles */
         .binary-decode {
             display: inline-block;
@@ -206,34 +231,6 @@
             margin-top: 1rem;
         }
         
-        /* Mobile publication scrolling indicator */
-        @media (max-width: 768px) {
-            .content-publications::before {
-                content: "📖 Scroll for selected publications";
-                display: block;
-                font-size: 0.8rem;
-                color: #6b7280;
-                margin-bottom: 0.5rem;
-                text-align: center;
-                padding: 0.25rem;
-                background: linear-gradient(90deg, transparent, #f3f4f6, transparent);
-                border-radius: 0.25rem;
-            }
-            
-            .content-publications::-webkit-scrollbar {
-                width: 4px;
-            }
-            
-            .content-publications::-webkit-scrollbar-track {
-                background: #f1f1f1;
-                border-radius: 2px;
-            }
-            
-            .content-publications::-webkit-scrollbar-thumb {
-                background: #A41034;
-                border-radius: 2px;
-            }
-        }
 
         .publication-item {
             display: block;
@@ -382,20 +379,9 @@
                 font-size: 3rem;
             }
             
-            /* Mobile Learn More section adjustments */
+            /* Simplified mobile Learn More section */
             #contact .fade-in {
-                justify-content: flex-start !important;
-                padding-top: 6rem; /* Safe distance from fixed header */
-            }
-            
-            /* Reduce excessive spacing on mobile */
-            #contact h2 {
-                margin-bottom: 2rem !important; /* Reduce from mb-16 to mb-8 equivalent */
-            }
-            
-            /* Reduce SEAS logo top margin on mobile */
-            #contact .mt-16 {
-                margin-top: 2rem !important; /* Reduce from mt-16 to mt-8 equivalent */
+                justify-content: center; /* Return to natural centering */
             }
         }
     </style>
@@ -500,6 +486,13 @@
                     </div>
                 </div>
             </div>
+            <!-- Animated Scroll Down Indicator -->
+            <div class="scroll-down-indicator">
+                <span>Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
         </section>
 
         <!-- Section 3: AI and Machine Learning -->
@@ -526,6 +519,13 @@
                     </div>
                 </div>
             </div>
+            <!-- Animated Scroll Down Indicator -->
+            <div class="scroll-down-indicator">
+                <span>Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+            </div>
         </section>
 
         <!-- Section 4: Applications -->
@@ -551,6 +551,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <!-- Animated Scroll Down Indicator -->
+            <div class="scroll-down-indicator">
+                <span>Scroll</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
             </div>
         </section>
 
