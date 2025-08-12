@@ -77,6 +77,23 @@
             color: #1a202c;
         }
 
+        /* Mobile menu styling to match desktop */
+        #mobile-menu a {
+            font-family: 'Plantin MT Pro', serif;
+            text-transform: capitalize;
+            transition: color 0.3s ease;
+        }
+
+        #mobile-menu a:hover {
+            color: #1a202c;
+            background-color: transparent;
+        }
+
+        /* Active menu item styling - only for menu items that should be highlighted */
+        .menu-active {
+            background-color: #A41034;
+        }
+
         /* Main content area with proper header spacing */
         .main-content {
             padding-top: 100px;
@@ -172,11 +189,11 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Research</a>
-                <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">People</a>
-                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">News</a>
-                <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-white hover:bg-harvard-crimson">Github</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-harvard-crimson">Contact</a>
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Research</a>
+                <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">People</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">News</a>
+                <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Github</a>
+                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-white menu-active">Contact</a>
             </div>
         </div>
     </header>

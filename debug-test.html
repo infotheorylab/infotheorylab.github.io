@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Links Debug Test</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .social-links {
+            display: inline-flex;
+            gap: 0.4rem;
+            margin-left: 0.5rem;
+            align-items: center;
+        }
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 18px;
+            height: 18px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            opacity: 0.8;
+        }
+        .social-link:hover {
+            opacity: 1;
+            transform: scale(1.15);
+        }
+        .social-link i {
+            font-size: 16px;
+            font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+            font-weight: 900;
+            line-height: 1;
+        }
+        .test-person { 
+            margin: 20px 0; 
+            padding: 10px; 
+            border: 1px solid #ccc; 
+            border-radius: 5px;
+        }
+        .person-name { 
+            font-weight: bold; 
+            color: #A41034; 
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Social Links Debug Test</h1>
+    <div id="test-container"></div>
+    
+    <script>
+        // Test data from people.json
+        const testPeople = [
+            {
+                name: "Prof. Flavio du Pin Calmon",
+                website: "https://people.seas.harvard.edu/~flavio/",
+                google_scholar: "https://scholar.google.com/citations?user=P8N_YH4AAAAJ&hl=en",
+                linkedin: "https://www.linkedin.com/in/flavio-calmon"
+            },
+            {
+                name: "Carol Long",
+                website: "https://carol-long.github.io/",
+                google_scholar: null,
+                linkedin: "https://www.linkedin.com/in/carol-long/"
+            },
+            {
+                name: "Elena Ghazi",
+                website: null,
+                google_scholar: "https://scholar.google.com/citations?user=0vnuix0AAAAJ&hl=en",
+                linkedin: null
+            },
+            {
+                name: "Juan Felipe Gomez",
+                website: null,
+                google_scholar: null,
+                linkedin: null
+            }
+        ];
+
+        // Replicate the exact createSocialLinks function
+        function createSocialLinks(person) {
+            console.log('=== Creating social links for:', person.name, '===');
+            console.log('Website:', person.website);
+            console.log('Google Scholar:', person.google_scholar);
+            console.log('LinkedIn:', person.linkedin);
+            
+            const socialContainer = document.createElement('span');
+            socialContainer.className = 'social-links';
+
+            // Website link (external link icon)
+            if (person.website) {
+                console.log('✓ Adding website link for:', person.name);
+                const websiteLink = document.createElement('a');
+                websiteLink.href = person.website;
+                websiteLink.target = '_blank';
+                websiteLink.className = 'social-link';
+                websiteLink.style.color = '#6b7280';
+                websiteLink.innerHTML = '<i class="fas fa-external-link-alt"></i>';
+                websiteLink.title = 'Personal Website';
+                socialContainer.appendChild(websiteLink);
+                console.log('  → Website icon created and appended');
+            }
+
+            // Google Scholar link (graduation cap icon)
+            if (person.google_scholar) {
+                console.log('✓ Adding Google Scholar link for:', person.name);
+                const scholarLink = document.createElement('a');
+                scholarLink.href = person.google_scholar;
+                scholarLink.target = '_blank';
+                scholarLink.className = 'social-link';
+                scholarLink.style.color = '#4285f4';
+                scholarLink.innerHTML = '<i class="fas fa-graduation-cap"></i>';
+                scholarLink.title = 'Google Scholar';
+                socialContainer.appendChild(scholarLink);
+                console.log('  → Google Scholar icon created and appended');
+            } else {
+                console.log('✗ No Google Scholar link for:', person.name, '(value:', person.google_scholar, ')');
+            }
+
+            // LinkedIn link
+            if (person.linkedin) {
+                console.log('✓ Adding LinkedIn link for:', person.name);
+                const linkedinLink = document.createElement('a');
+                linkedinLink.href = person.linkedin;
+                linkedinLink.target = '_blank';
+                linkedinLink.className = 'social-link';
+                linkedinLink.style.color = '#0A66C2';
+                linkedinLink.innerHTML = '<i class="fab fa-linkedin"></i>';
+                linkedinLink.title = 'LinkedIn';
+                socialContainer.appendChild(linkedinLink);
+                console.log('  → LinkedIn icon created and appended');
+            } else {
+                console.log('✗ No LinkedIn link for:', person.name, '(value:', person.linkedin, ')');
+            }
+
+            console.log('Final social container children count:', socialContainer.children.length);
+            console.log('Social container HTML:', socialContainer.outerHTML);
+            return socialContainer.children.length > 0 ? socialContainer : null;
+        }
+
+        // Render test people
+        const container = document.getElementById('test-container');
+        
+        testPeople.forEach(person => {
+            const personDiv = document.createElement('div');
+            personDiv.className = 'test-person';
+            
+            const nameDiv = document.createElement('div');
+            nameDiv.className = 'person-name';
+            nameDiv.textContent = person.name;
+            
+            const socialLinks = createSocialLinks(person);
+            if (socialLinks) {
+                nameDiv.appendChild(socialLinks);
+            }
+            
+            personDiv.appendChild(nameDiv);
+            container.appendChild(personDiv);
+        });
+    </script>
+</body>
+</html>
