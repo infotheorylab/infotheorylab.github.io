@@ -98,6 +98,15 @@
       "linkedin": null,
       "photo": "caio.jpg",
       "type": "visitor"
+    },
+       {
+      "name": "Atefeh Gilani",
+      "role": "Visiting Fellow (PhD student at ASU)",
+      "website": null,
+      "google_scholar": "https://scholar.google.com/citations?user=wfUqonMAAAAJ&hl=en&oi=sra",
+      "linkedin": null,
+      "photo": "atefeh.jpeg",
+      "type": "visitor"
     }
   ],
   "alumni": [
