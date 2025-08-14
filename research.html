@@ -724,8 +724,8 @@
                 if (grid) {
                     grid.innerHTML = `
                         <div class="no-results">
-                            <p>Publications are currently loading...</p>
-                            <p class="text-sm text-gray-500 mt-2">If this persists, the search feature may require a web server to function properly.</p>
+                            <p>Error loading publications: ${error.message}</p>
+                            <p class="text-sm text-gray-500 mt-2">Please check the browser console for more details.</p>
                         </div>
                     `;
                 }
@@ -890,9 +890,19 @@
             grid.innerHTML = publicationsHTML;
             
             // Re-render MathJax for any LaTeX math in the abstracts
-            if (window.MathJax) {
-                MathJax.typesetPromise();
-            }
+            setTimeout(() => {
+                if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(() => {
+                        // Fallback: if MathJax fails, show raw LaTeX text
+                        const mathElements = document.querySelectorAll('.abstract-content');
+                        mathElements.forEach(element => {
+                            element.innerHTML = element.innerHTML
+                                .replace(/\$([^$]+)\$/g, '$1')  // Remove $ delimiters
+                                .replace(/\\\\([a-zA-Z]+)/g, '\\\\$1'); // Keep LaTeX commands readable
+                        });
+                    });
+                }
+            }, 100);
         }
 
         // Update results count
