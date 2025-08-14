@@ -21,6 +21,21 @@
     <!-- Plantin Font from CDN -->
     <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
     
+    <!-- MathJax for LaTeX math rendering -->
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            }
+        };
+    </script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
     <!-- Satoshi Font from CDN -->
     <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
     
@@ -291,7 +306,7 @@
             background: white;
             border: 1px solid #e5e7eb;
             border-radius: 0.75rem;
-            padding: 1.5rem;
+            padding: 1.25rem;
             transition: all 0.3s ease;
             border-left: 4px solid #A41034;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -303,48 +318,25 @@
         }
         
         .pub-link-button {
-            display: inline-block;
-            padding: 0.35rem 0.75rem;
-            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0;
+            font-size: 0.875rem;
             font-weight: 500;
-            border-radius: 0.375rem;
             text-decoration: none;
-            margin-right: 0.5rem;
-            transition: background-color 0.2s ease-in-out;
-            color: white;
+            margin-right: 1rem;
+            transition: color 0.2s ease-in-out;
+            color: #6b7280;
+            background: none;
+            border: none;
         }
 
-        /* Harvard Crimson for Paper */
-        .pub-link-button.paper {
-            background-color: #A51C30;
-        }
-        .pub-link-button.paper:hover {
-            background-color: #8C1829;
+        .pub-link-button:hover {
+            color: #A41034;
         }
 
-        /* Slate Blue for arXiv (cool academic contrast) */
-        .pub-link-button.arxiv {
-            background-color: #3C4C6B;
-        }
-        .pub-link-button.arxiv:hover {
-            background-color: #2C3B55;
-        }
 
-        /* Forest Green for Code (tech/dev-friendly) */
-        .pub-link-button.code {
-            background-color: #2E5E4E;
-        }
-        .pub-link-button.code:hover {
-            background-color: #234A3C;
-        }
-
-        /* Deep Indigo for BibTeX (scholarly tone) */
-        .pub-link-button.bibtex {
-            background-color: #4B3869;
-        }
-        .pub-link-button.bibtex:hover {
-            background-color: #392A4E;
-        }
 
         .bibtex-block {
             background-color: #f7f7ff;
@@ -364,29 +356,64 @@
             display: none;
         }
 
+        .pub-links-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
         .pub-links {
-            margin-top: 0.5rem;
+            margin-top: 0;
+            margin-left: auto;
+        }
+
+        .pub-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         .pub-title {
             font-weight: 600;
             color: #1a202c;
-            margin-bottom: 0.5rem;
             font-size: 1rem;
             line-height: 1.4;
+            flex: 1;
+        }
+
+        .pub-award {
+            background-color: #fef3c7;
+            color: #d97706;
+            padding: 0.125rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .pub-authors {
             color: #6b7280;
             font-size: 0.875rem;
-            margin-bottom: 0.375rem;
+            margin-bottom: 0.25rem;
         }
 
         .pub-venue {
             color: #A41034;
             font-size: 0.875rem;
             font-weight: 500;
-            margin-bottom: 0.375rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-tldr {
+            color: #374151;
+            font-size: 0.95rem;
+            font-weight: 500;
+            margin-bottom: 0.125rem;
+            line-height: 1.5;
         }
 
         .pub-meta {
@@ -408,6 +435,54 @@
         .pub-award {
             background-color: #fef3c7;
             color: #d97706;
+        }
+
+        .abstract-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #A41034;
+            border: 1px solid #A41034;
+            border-radius: 0.375rem;
+            padding: 0.375rem 0.75rem;
+            font-size: 0.875rem;
+            color: white;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-top: 0.25rem;
+            font-weight: 500;
+        }
+
+        .abstract-toggle:hover {
+            color: white;
+            border-color: #8C1829;
+            background-color: #8C1829;
+        }
+
+        .abstract-icon {
+            transition: transform 0.2s ease;
+            width: 16px;
+            height: 16px;
+        }
+
+        .abstract-toggle.expanded .abstract-icon {
+            transform: rotate(180deg);
+        }
+
+        .abstract-content {
+            margin-top: 0.75rem;
+            padding: 1em 1.25em;
+            background-color: #f7f7ff;
+            border-radius: 0.5rem;
+            border-left: 4px solid #4B3869;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #1a1a1a;
+            overflow-x: auto;
+        }
+
+        .abstract-content.hidden {
+            display: none;
         }
 
         .no-results {
@@ -666,7 +741,7 @@
                     pub.authors,
                     pub.venue,
                     pub.keywords,
-                    pub.category,
+                    Array.isArray(pub.category) ? pub.category.join(' ') : pub.category,
                     pub.year.toString()
                 ].join(' ').toLowerCase();
 
@@ -681,8 +756,27 @@
             }
             
             return publications.filter(pub => {
-                return pub.category === filter || pub.type === filter;
+                // Handle both single category (string) and multiple categories (array)
+                const categories = Array.isArray(pub.category) ? pub.category : [pub.category];
+                return categories.includes(filter) || pub.type === filter;
             });
+        }
+
+        // Abstract toggle functionality
+        function toggleAbstract(id) {
+            const content = document.getElementById(id);
+            const button = content.previousElementSibling;
+            const textSpan = button.querySelector('.abstract-text');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                button.classList.add('expanded');
+                textSpan.textContent = 'Abstract';
+            } else {
+                content.classList.add('hidden');
+                button.classList.remove('expanded');
+                textSpan.textContent = 'Abstract';
+            }
         }
 
         // bib functionality
@@ -716,32 +810,54 @@
             }
 
             const publicationsHTML = filteredPublications.map(pub => {
-                // Tag badges
-                let tagsHTML = `
-                    <span class="pub-tag">${pub.category}</span>
-                    <span class="pub-tag">${pub.type}</span>
-                    <span class="pub-tag">${pub.year}</span>
-                `;
-                if (pub.award) {
-                    tagsHTML += `<span class="pub-tag pub-award">${pub.award}</span>`;
-                }
+                // Abstract dropdown functionality
+                const abstractId = `abstract-${pub.id}`;
+                const hasAbstract = pub.abstract && pub.abstract.trim() !== '';
+                const abstractButton = hasAbstract ? 
+                    `<button class="abstract-toggle" onclick="toggleAbstract('${abstractId}')">
+                        <span class="abstract-text">Abstract</span>
+                        <svg class="abstract-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6,9 12,15 18,9"></polyline>
+                        </svg>
+                    </button>` : '';
+                let tagsHTML = abstractButton;
 
                 // Link buttons
                 const links = [];
                 let bibtexBlock = "";
 
                 if (pub.pub_website) {
-                    links.push(`<a class="pub-link-button paper" href="${pub.pub_website}" target="_blank">Paper</a>`);
+                    links.push(`<a class="pub-link-button paper" href="${pub.pub_website}" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                        Paper
+                    </a>`);
                 }
                 if (pub.arxiv_website) {
-                    links.push(`<a class="pub-link-button arxiv" href="${pub.arxiv_website}" target="_blank">arXiv</a>`);
+                    links.push(`<a class="pub-link-button arxiv" href="${pub.arxiv_website}" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                        arXiv
+                    </a>`);
                 }
                 if (pub.code_repository) {
-                    links.push(`<a class="pub-link-button code" href="${pub.code_repository}" target="_blank">Code</a>`);
+                    links.push(`<a class="pub-link-button code" href="${pub.code_repository}" target="_blank">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                        Code
+                    </a>`);
                 }
                 if (pub.bibtex) {
                     const bibId = `bib-${pub.id}`;
-                    links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}', '${pub.bibtex}')">BibTeX</a>`);
+                    links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}', '${pub.bibtex}')">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                        </svg>
+                        BibTeX
+                    </a>`);
                     bibtexBlock = `<pre id="${bibId}" class="bibtex-block hidden">Loading...</pre>`;
                 }
 
@@ -750,12 +866,21 @@
                 // Final HTML block
                 return `
                     <div class="publication-card">
-                        <div class="pub-title">${pub.title}</div>
+                        <div class="pub-header">
+                            <div class="pub-title">${pub.title}</div>
+                            ${pub.award ? `<span class="pub-award">${pub.award}</span>` : ''}
+                        </div>
                         <div class="pub-authors">${pub.authors}</div>
-                        <div class="pub-venue">${pub.venue} (${pub.year})</div>
-                        <div class="pub-meta">${pub.category}, ${pub.type}</div>
-                        <div class="pub-meta">${tagsHTML}</div>
-                        ${linksHTML}
+                        <div class="pub-venue">${pub.type === 'preprint' ? pub.venue : `${pub.venue} (${pub.year})`}</div>
+                        ${pub.tldr ? `<div class="pub-tldr">${pub.tldr}</div>` : ''}
+
+                        <div class="pub-meta">
+                            <div class="pub-links-row">
+                                ${tagsHTML}
+                                ${linksHTML}
+                            </div>
+                        </div>
+                        ${hasAbstract ? `<div id="${abstractId}" class="abstract-content hidden">${pub.abstract}</div>` : ''}
                         ${bibtexBlock}
                     </div>
                 `;
@@ -763,6 +888,11 @@
 
 
             grid.innerHTML = publicationsHTML;
+            
+            // Re-render MathJax for any LaTeX math in the abstracts
+            if (window.MathJax) {
+                MathJax.typesetPromise();
+            }
         }
 
         // Update results count
