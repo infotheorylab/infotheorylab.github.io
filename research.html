@@ -266,9 +266,37 @@
             height: 1.5rem;
         }
 
+        .search-container {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+
         .search-wrapper {
             position: relative;
-            margin-bottom: 1rem;
+            flex: 1;
+        }
+
+        .surprise-me-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #A41034;
+            color: white;
+            border: none;
+            border-radius: 0.75rem;
+            padding: 0.875rem 1.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .surprise-me-btn:hover {
+            background-color: #8C1829;
+            transform: translateY(-1px);
         }
 
         .filter-buttons {
@@ -669,11 +697,19 @@
             <div class="mt-16">
                 <h2 class="text-3xl font-semibold mb-6 text-harvard-crimson text-center">Search Our Publications</h2>
                 <p class="text-gray-600 text-center mb-6">Explore our collection of research papers by searching titles, authors, venues, or keywords.</p>
-                <div class="search-wrapper">
-                    <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                    <input type="text" id="searchInput" class="search-input" placeholder="Search by title, author, venue, or keywords...">
+                <div class="search-container">
+                    <div class="search-wrapper">
+                        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
+                        <input type="text" id="searchInput" class="search-input" placeholder="Search by title, author, venue, or keywords...">
+                    </div>
+                    <button id="surpriseMeBtn" class="surprise-me-btn">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+                        </svg>
+                        Surprise Me
+                    </button>
                 </div>
                 <div class="filter-buttons">
                     <button class="filter-btn active" data-filter="all">All</button>
@@ -913,6 +949,36 @@
                 `Showing ${count} of ${total} publications`;
         }
 
+        // Surprise Me functionality
+        function surpriseMe() {
+            if (publications.length === 0) return;
+            
+            // Get a random publication
+            const randomIndex = Math.floor(Math.random() * publications.length);
+            const randomPub = publications[randomIndex];
+            
+            // Clear search and filters
+            document.getElementById('searchInput').value = '';
+            currentFilter = 'all';
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector('[data-filter="all"]').classList.add('active');
+            
+            // Show only the random publication
+            filteredPublications = [randomPub];
+            renderPublications();
+            updateResultsCount();
+            
+            // Scroll to the publication
+            setTimeout(() => {
+                const firstCard = document.querySelector('.publication-card');
+                if (firstCard) {
+                    firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }, 100);
+        }
+
         // Apply current filter and search
         function applyFilters() {
             let results = filterPublications(currentFilter);
@@ -959,6 +1025,12 @@
             const searchInput = document.getElementById('searchInput');
             if (searchInput) {
                 searchInput.addEventListener('input', applyFilters);
+            }
+
+            // Surprise Me button
+            const surpriseMeBtn = document.getElementById('surpriseMeBtn');
+            if (surpriseMeBtn) {
+                surpriseMeBtn.addEventListener('click', surpriseMe);
             }
 
             // Filter buttons
