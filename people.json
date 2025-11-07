@@ -11,7 +11,7 @@
   "current": [
     {
       "name": "Juan Felipe Gomez",
-      "role": "PhD Student (G5)",
+      "role": "PhD Student (G6)",
       "website": null,
       "google_scholar": null,
       "linkedin": null,
@@ -20,7 +20,7 @@
     },
     {
       "name": "Carol Long",
-      "role": "PhD Student (G4)",
+      "role": "PhD Student (G5)",
       "website": "https://carol-long.github.io/",
       "google_scholar": null,
       "linkedin": null,
@@ -29,7 +29,7 @@
     },
     {
       "name": "Alex Oesterling",
-      "role": "PhD Student (G3, co-advised with Hima Lakkaraju)",
+      "role": "PhD Student (G4, co-advised with Hima Lakkaraju)",
       "website": "https://www.alexoesterling.com/",
       "google_scholar": null,
       "linkedin": null,
@@ -89,24 +89,6 @@
       "linkedin": null,
       "photo": "behrooz.jpg",
       "type": "postdoc"
-    },
-    {
-      "name": "Caio Vieira Machado",
-      "role": "Visiting Fellow (PhD student at Oxford University)",
-      "website": null,
-      "google_scholar": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR",
-      "linkedin": null,
-      "photo": "caio.jpg",
-      "type": "visitor"
-    },
-       {
-      "name": "Atefeh Gilani",
-      "role": "Visiting Fellow (PhD student at ASU)",
-      "website": null,
-      "google_scholar": "https://scholar.google.com/citations?user=wfUqonMAAAAJ&hl=en&oi=sra",
-      "linkedin": null,
-      "photo": "atefeh.jpeg",
-      "type": "visitor"
     }
   ],
   "alumni": [
@@ -200,17 +182,44 @@
       "type": "postdoc"
     },
     {
+      "name": "Atefeh Gilani",
+      "role": "PhD student at Arizona State University, 2025",
+      "website": null,
+      "google_scholar": "https://scholar.google.com/citations?user=wfUqonMAAAAJ&hl=en&oi=sra",
+      "linkedin": null,
+      "photo": "atefeh.jpeg",
+      "type": "visitor"
+    },
+    {
       "name": "Hannah Laus",
-      "role": "Visiting Fellow (TU Munich & Munich Center for Machine Learning, Germany), 2025",
+      "role": "PhD Student at TU Munich & Munich Center for Machine Learning, Germany, 2025",
       "website": null,
       "photo": "hannah.jpg",
       "type": "visitor"
     },
     {
+      "name": "Sangwon Jung",
+      "role": "PhD student at Seoul National University, 2025",
+      "website": null,
+      "google_scholar": "https://scholar.google.com/citations?user=WdC_a5IAAAAJ&hl=ko",
+      "linkedin": null,
+      "photo": null,
+      "type": "visitor"
+    },
+    {
       "name": "Dor Tsur",
-      "role": "Former Visiting Fellow (Ben Gurion University), 2024",
+      "role": "PhD Student at Ben Gurion University, 2025",
       "website": "https://sites.google.com/view/dortsur/home",
       "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Caio Vieira Machado",
+      "role": "PhD student at Oxford University, 2025",
+      "website": null,
+      "google_scholar": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR",
+      "linkedin": null,
+      "photo": "caio.jpg",
       "type": "visitor"
     },
     {
