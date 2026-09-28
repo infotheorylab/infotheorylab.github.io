@@ -2,15 +2,16 @@
 // Pages include <header data-site-header></header> and <footer data-site-footer></footer>.
 
 const NAV = [
-    { href: 'research.html', label: 'Research' },
-    { href: 'people.html', label: 'People' },
-    { href: 'news.html', label: 'News' },
-    { href: 'contact.html', label: 'Contact' },
+    { href: '/research', label: 'Research' },
+    { href: '/people', label: 'People' },
+    { href: '/news', label: 'News' },
+    { href: '/contact', label: 'Contact' },
     { href: 'https://github.com/infoTheoryLab/', label: 'GitHub', external: true }
 ];
 
 function renderHeader(el) {
-    const current = location.pathname.split('/').pop() || 'index.html';
+    // Clean URLs: /research and /research.html both mark Research as current.
+    const current = '/' + location.pathname.split('/').pop().replace(/\.html$/, '');
     const links = NAV.map(item => {
         const attrs = item.external
             ? ' target="_blank" rel="noopener"'
@@ -21,7 +22,7 @@ function renderHeader(el) {
     el.className = 'site-header';
     el.innerHTML = `
         <div class="wrap">
-            <a class="wordmark" href="index.html"><span class="wordmark-accent">Information Theory</span> Lab <span class="wordmark-at">@ Harvard</span></a>
+            <a class="wordmark" href="/"><span class="wordmark-accent">Information Theory</span> Lab <span class="wordmark-at">@ Harvard</span></a>
             <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
                 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
             </button>
@@ -47,12 +48,12 @@ function renderFooter(el) {
                     Science &amp; Engineering Complex, 150 Western Ave, Allston, MA 02134
                 </div>
                 <ul>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="people.html">People</a></li>
-                    <li><a href="news.html">News</a></li>
+                    <li><a href="/research">Research</a></li>
+                    <li><a href="/people">People</a></li>
+                    <li><a href="/news">News</a></li>
                 </ul>
                 <ul>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="/contact">Contact</a></li>
                     <li><a href="https://github.com/infoTheoryLab/" target="_blank" rel="noopener">GitHub</a></li>
                 </ul>
             </div>
