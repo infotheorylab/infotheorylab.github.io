@@ -37,14 +37,7 @@
             object-fit: cover;
             background: var(--paper-alt);
         }
-        .photo.initials {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: var(--serif);
-            font-size: 28px;
-            color: var(--ink-faint);
-        }
+        .photo-empty { background: none; }
         .pi .photo { width: 120px; height: 120px; }
         .name {
             font-family: var(--serif);
@@ -146,6 +139,13 @@
 
     <section class="people-section">
         <div class="wrap">
+            <div class="bar"><span>Visitors</span></div>
+            <div class="members" id="visitors"></div>
+        </div>
+    </section>
+
+    <section class="people-section">
+        <div class="wrap">
             <div class="bar"><span>Former Students</span></div>
             <ul class="alumni" id="alumni-students"></ul>
         </div>
@@ -186,10 +186,10 @@
 
     function photoHTML(p) {
         if (p.photo && p.photo !== 'placeholder.jpg') {
-            return `<img class="photo" src="profile-pics/${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy">`;
+            return `<img class="photo" src="profile-pics/${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy" onerror="this.remove()">`;
         }
-        const initials = p.name.replace(/^(Dr\.|Prof\.)\s+/, '').split(/\s+/).map(w => w[0]).slice(0, 2).join('');
-        return `<div class="photo initials" aria-hidden="true">${esc(initials)}</div>`;
+        // No photo: keep an empty slot the same size so names line up with the others.
+        return '<div class="photo photo-empty" aria-hidden="true"></div>';
     }
 
     function linksHTML(p) {
@@ -223,6 +223,7 @@
         const current = data.current || [];
         document.getElementById('students').innerHTML = current.filter(p => p.type === 'student').map(memberHTML).join('');
         document.getElementById('postdocs').innerHTML = current.filter(p => p.type === 'postdoc').map(memberHTML).join('');
+        document.getElementById('visitors').innerHTML = current.filter(p => p.type === 'visitor').map(memberHTML).join('');
 
         const alumni = data.alumni || [];
         document.getElementById('alumni-students').innerHTML =

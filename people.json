@@ -80,6 +80,33 @@
       "linkedin": "https://ch.linkedin.com/in/behroozrazeghi",
       "photo": "behrooz.jpg",
       "type": "postdoc"
+    },
+    {
+      "name": "Sidong Guo",
+      "role": "PhD Student (3rd year), Georgia Tech",
+      "website": "https://sidongg.github.io/",
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Leonhard Grosse",
+      "role": "PhD Student (4th year), KTH",
+      "website": null,
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": null,
+      "type": "visitor"
+    },
+    {
+      "name": "Roberta Viola",
+      "role": "Research Engineer, Kunumi",
+      "website": null,
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": null,
+      "type": "visitor"
     }
   ],
   "alumni": [
