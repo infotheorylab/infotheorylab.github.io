@@ -10,35 +10,17 @@
   },
   "current": [
     {
-      "name": "Juan Felipe Gomez",
-      "role": "PhD Student (G6)",
-      "website": null,
-      "google_scholar": null,
-      "linkedin": null,
-      "photo": "felipe.jpeg",
-      "type": "student"
-    },
-    {
-      "name": "Carol Long",
-      "role": "PhD Student (G5)",
-      "website": "https://carol-long.github.io/",
-      "google_scholar": null,
-      "linkedin": null,
-      "photo": "carol.jpg",
-      "type": "student"
-    },
-    {
       "name": "Alex Oesterling",
-      "role": "PhD Student (G4, co-advised with Hima Lakkaraju)",
+      "role": "PhD Student (G5, co-advised with Hima Lakkaraju)",
       "website": "https://www.alexoesterling.com/",
       "google_scholar": null,
       "linkedin": null,
       "photo": "alex.jpg",
       "type": "student"
     },
-        {
+    {
       "name": "Rodrigo Cruz",
-      "role": "PhD Student (G3)",
+      "role": "PhD Student (G4)",
       "website": null,
       "google_scholar": "https://scholar.google.com/citations?user=BWl1RzgAAAAJ&hl=en",
       "linkedin": null,
@@ -47,7 +29,7 @@
     },
     {
       "name": "Elena Ghazi",
-      "role": "PhD Student (G2, co-advised with Salil Vadhan)",
+      "role": "PhD Student (G3, co-advised with Salil Vadhan)",
       "website": "https://elena-ghazi.github.io/",
       "google_scholar": "https://scholar.google.com/citations?user=0vnuix0AAAAJ&hl=en",
       "linkedin": "https://www.linkedin.com/in/elena-ghazi/",
@@ -56,11 +38,29 @@
     },
     {
       "name": "Hadi Khalaf",
-      "role": "PhD Student (G2)",
+      "role": "PhD Student (G3)",
       "website": "https://hadikhalaf.com/",
       "google_scholar": "https://scholar.google.com/citations?user=IxeWGPAAAAAJ&hl=en&oi=ao",
       "linkedin": null,
       "photo": "hadi.png",
+      "type": "student"
+    },
+    {
+      "name": "Benjamin Kim",
+      "role": "PhD Student (G1, co-advised with Muriel Médard)",
+      "website": "https://bkim34.github.io/",
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": null,
+      "type": "student"
+    },
+    {
+      "name": "Harry Cheon",
+      "role": "PhD Student (G1)",
+      "website": "https://harry.scheon.com/",
+      "google_scholar": "https://scholar.google.com/citations?user=fR8g5aYAAAAJ",
+      "linkedin": "https://www.linkedin.com/in/harrycheon17",
+      "photo": "harry.jpg",
       "type": "student"
     },
     {
@@ -70,15 +70,6 @@
       "google_scholar": "https://scholar.google.com/citations?user=_hSfZbMAAAAJ&hl=en",
       "linkedin": null,
       "photo": "sajani.jpg",
-      "type": "postdoc"
-    },
-    {
-      "name": "Dr. Claudio Mayrink Verdun",
-      "role": "Post-doctoral Fellow",
-      "website": "https://claudioverdun.github.io/",
-      "google_scholar": null,
-      "linkedin": null,
-      "photo": "claudio.jpg",
       "type": "postdoc"
     },
     {
@@ -93,8 +84,34 @@
   ],
   "alumni": [
     {
+      "name": "Dr. Juan Felipe Gomez",
+      "role": "Now Postdoctoral Fellow at the Hasso Plattner Institute",
+      "website": null,
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": "felipe.jpeg",
+      "type": "phd",
+      "thesis": {
+        "title": "Advances in Information-Theoretic Differential Privacy: Composition and Calibration",
+        "url": "https://dash.harvard.edu/entities/publication/0739e3e4-ee5f-4213-8382-f8c46aea3de9"
+      }
+    },
+    {
+      "name": "Dr. Carol Long",
+      "role": "Now Postdoctoral Fellow at the ETH Zurich AI Center",
+      "website": "https://carol-long.github.io/",
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": "carol.jpg",
+      "type": "phd",
+      "thesis": {
+        "title": "Trustworthy AI: Ensuring Reliability and Accountability from Models to Agents",
+        "url": "https://arxiv.org/pdf/2605.08964"
+      }
+    },
+    {
       "name": "Dr. Hao Wang",
-      "role": "Former PhD student, now at MIT-IBM Watson AI Lab",
+      "role": "Now at MIT-IBM Watson AI Lab",
       "website": "https://haowang94.github.io/",
       "photo": null,
       "thesis": {
@@ -105,7 +122,7 @@
     },
     {
       "name": "Dr. Wael Alghamdi",
-      "role": "Former PhD student, now co-founder of Delta Flow AI",
+      "role": "Now co-founder of Delta Flow AI",
       "website": "https://www.delta-flow.io/",
       "photo": null,
       "thesis": {
@@ -116,7 +133,7 @@
     },
     {
       "name": "Dr. Hsiang Hsu",
-      "role": "Former PhD student, now Researcher at JP Morgan Chase",
+      "role": "Now Researcher at JP Morgan Chase",
       "website": "https://hsianghsu.github.io/",
       "photo": null,
       "thesis": {
@@ -127,62 +144,71 @@
     },
     {
       "name": "Dr. Lucas Monteiro Paes",
-      "role": "Former PhD student, now Postdoctoral Researcher at Apple",
+      "role": "Now Postdoctoral Researcher at Apple",
       "website": "https://lucasmonteiropaes.github.io/",
       "photo": "lucas.jpg",
       "type": "phd"
     },
     {
+      "name": "Dr. Claudio Mayrink Verdun",
+      "role": "Now Research Scientist at MIT CSAIL",
+      "website": "https://claudioverdun.github.io/",
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": "claudio.jpg",
+      "type": "postdoc"
+    },
+    {
       "name": "Dr. Haewon Jeong",
-      "role": "Former Post-Doc, now faculty at UCSB",
+      "role": "Now faculty at UCSB",
       "website": "https://www.haewonjeong.com/",
       "photo": null,
       "type": "postdoc"
     },
     {
       "name": "Dr. Shahab Asoodeh",
-      "role": "Former Post-Doc, now faculty at McMaster University",
+      "role": "Now faculty at McMaster University",
       "website": "https://www.cas.mcmaster.ca/~asoodehs/",
       "photo": null,
       "type": "postdoc"
     },
     {
       "name": "Dr. Berk Ustun",
-      "role": "Former CRCS Post-Doc, now faculty at UCSD",
+      "role": "Now faculty at UCSD (CRCS Post-Doc)",
       "website": "http://www.berkustun.com/",
       "photo": null,
       "type": "postdoc"
     },
     {
       "name": "Dr. Mario Diaz",
-      "role": "Former Post-Doc (joint with ASU), now faculty at UNAM",
+      "role": "Now faculty at UNAM (joint with ASU)",
       "website": "https://mariodiaztorres.com/",
       "photo": null,
       "type": "postdoc"
     },
     {
       "name": "Dr. Juwendo Denis",
-      "role": "Former Post-Doc, now Senior Algorithm Designer at Parallel Wireless",
+      "role": "Now Senior Algorithm Designer at Parallel Wireless",
       "website": "https://www.linkedin.com/in/juwendo-denis-b92b234a",
       "photo": null,
       "type": "postdoc"
     },
     {
       "name": "Madeleine Barowsky",
-      "role": "Former Master's student, now software engineer at Etsy",
+      "role": "Now software engineer at Etsy (Master's student)",
       "website": "https://www.linkedin.com/in/madeleinebarowsky",
       "photo": null,
       "type": "masters"
     },
     {
       "name": "Dr. Javier Zazo",
-      "role": "Former CRCS Post-Doc, now at Microsoft Research",
+      "role": "Now at Microsoft Research (CRCS Post-Doc)",
       "website": "http://www.javierzazo.me/",
       "photo": null,
       "type": "postdoc"
     },
     {
-      "name": "Atefeh Gilani",
+      "name": "Dr. Atefeh Gilani",
       "role": "PhD student at Arizona State University, 2025",
       "website": null,
       "google_scholar": "https://scholar.google.com/citations?user=wfUqonMAAAAJ&hl=en&oi=sra",
@@ -198,7 +224,7 @@
       "type": "visitor"
     },
     {
-      "name": "Sangwon Jung",
+      "name": "Dr. Sangwon Jung",
       "role": "PhD student at Seoul National University, 2025",
       "website": null,
       "google_scholar": "https://scholar.google.com/citations?user=WdC_a5IAAAAJ&hl=ko",
@@ -207,14 +233,14 @@
       "type": "visitor"
     },
     {
-      "name": "Dor Tsur",
+      "name": "Dr. Dor Tsur",
       "role": "PhD Student at Ben Gurion University, 2025",
       "website": "https://sites.google.com/view/dortsur/home",
       "photo": null,
       "type": "visitor"
     },
     {
-      "name": "Caio Vieira Machado",
+      "name": "Dr. Caio Vieira Machado",
       "role": "PhD student at Oxford University, 2025",
       "website": null,
       "google_scholar": "https://scholar.google.com/citations?user=c63-1jwAAAAJ&hl=pt-BR",
@@ -230,7 +256,7 @@
       "type": "visitor"
     },
     {
-      "name": "Bogdan Kulynych",
+      "name": "Dr. Bogdan Kulynych",
       "role": "Former Visiting Fellow (EPFL, Switzerland), 2022",
       "website": "https://kulyny.ch/",
       "photo": null,

@@ -1,0 +1,275 @@
+/* Shared styles for the Information Theory Lab site. */
+
+:root {
+    --ink: #111111;
+    --ink-soft: #4a4a4a;
+    --ink-faint: #8a8a8a;
+    --rule: #e4e4e4;
+    --paper: #ffffff;
+    --paper-alt: #f7f7f5;
+    --crimson: #a41034;
+
+    --serif: 'Source Serif 4', Georgia, serif;
+    --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+    --code: 'JetBrains Mono', ui-monospace, Menlo, monospace;  /* wordmark and binary text only */
+    --label: var(--sans);                                       /* small labels, links, dates */
+
+    --max: 1440px;
+    --gutter: clamp(16px, 4vw, 48px);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+.wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: saturate(180%) blur(8px);
+    border-bottom: 1px solid var(--rule);
+}
+
+.site-header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+}
+
+.wordmark {
+    font-family: var(--code);
+    font-size: 16px;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    text-decoration: none;
+}
+
+.wordmark-accent {
+    color: var(--crimson);
+}
+
+.wordmark-at { color: var(--ink); }
+
+.nav { display: flex; gap: 32px; }
+
+.nav a {
+    font-size: 15px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color 0.15s;
+}
+
+.nav a:hover, .nav a[aria-current="page"] { color: var(--ink); }
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    padding: 8px;
+    margin-right: -8px;
+    cursor: pointer;
+    color: var(--ink);
+}
+
+@media (max-width: 760px) {
+    .nav-toggle { display: block; }
+    .nav {
+        display: none;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--paper);
+        border-bottom: 1px solid var(--rule);
+        padding: 8px var(--gutter) 16px;
+    }
+    .nav.open { display: flex; }
+    .nav a { padding: 10px 0; font-size: 17px; }
+}
+
+/* ---------- Type ---------- */
+
+.display {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(44px, 7vw, 88px);
+    line-height: 1.02;
+    letter-spacing: -0.025em;
+    margin: 0;
+}
+
+.lede {
+    font-size: clamp(19px, 2vw, 23px);
+    line-height: 1.5;
+    color: var(--ink-soft);
+    max-width: 38em;
+    margin: 0;
+}
+
+h2.section-title {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(30px, 3.6vw, 44px);
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+h3 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0;
+}
+
+/* Binary text: fixed-width digits so decoding doesn't reflow the line. */
+.binary {
+    font-family: var(--code);
+    font-feature-settings: "zero" 0;
+}
+
+/* ---------- Sections ---------- */
+
+.section { padding: clamp(40px, 5vw, 64px) 0; }
+.section.alt { background: var(--paper-alt); }
+
+/* Label bar that sits above each section; its label decodes from bits. */
+.bar {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 14px;
+    margin-bottom: clamp(32px, 5vw, 56px);
+    border-bottom: 1px solid var(--ink);
+    font-family: var(--label);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.bar .bar-index { color: var(--crimson); }
+.bar .bar-link {
+    margin-left: auto;
+    text-transform: none;
+    letter-spacing: 0;
+    text-decoration: none;
+    color: var(--ink-soft);
+}
+.bar .bar-link:hover { color: var(--ink); }
+
+.arrow-link {
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+}
+.arrow-link::after { content: " \2192"; }
+
+/* Section headings that hang in the left margin, outside the text column.
+   A page opts in with <body class="margin-page">: its .section content is indented by
+   --margin-w, and .margin-label headings sit in that space at the page edge. */
+.margin-page { --margin-w: 0px; }
+.margin-layout { display: grid; grid-template-columns: 1fr; gap: 24px; }
+.margin-label {
+    margin: 0;
+    font-family: var(--serif);
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--crimson);
+}
+.margin-label a {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--label);
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0;
+    color: var(--ink);
+    text-decoration: none;
+}
+.margin-label a:hover { color: var(--crimson); }
+
+@media (min-width: 1100px) {
+    .margin-page { --margin-w: 260px; }
+    .margin-page main .section .wrap { padding-left: calc(var(--gutter) + var(--margin-w)); }
+    .margin-layout {
+        grid-template-columns: var(--margin-w) 1fr;
+        gap: 0;
+        margin-left: calc(-1 * var(--margin-w));
+    }
+    .margin-label {
+        position: sticky;
+        top: 96px;
+        align-self: start;
+        padding-right: 24px;
+        padding-top: 14px;  /* sit on the baseline of the larger content titles */
+        font-size: 28px;
+    }
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    border-top: 1px solid var(--rule);
+    padding: 40px 0 32px;
+    font-size: 15px;
+    color: var(--ink-soft);
+}
+
+.site-footer .cols {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 32px;
+}
+
+.site-footer .footer-title {
+    font-family: var(--serif);
+    font-size: 19px;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.site-footer .footer-title .accent { color: var(--crimson); }
+
+.site-footer ul { list-style: none; margin: 0; padding: 0; }
+.site-footer li { margin: 4px 0; }
+.site-footer a { text-decoration: none; }
+.site-footer a:hover { color: var(--ink); }
+
+.site-footer .fineprint {
+    margin-top: 48px;
+    font-size: 13px;
+    color: var(--ink-faint);
+}
+
+@media (max-width: 760px) {
+    .site-footer .cols { grid-template-columns: 1fr; }
+}

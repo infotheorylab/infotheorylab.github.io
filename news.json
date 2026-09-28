@@ -1,0 +1,126 @@
+[
+  {
+    "date": "2026-05",
+    "title": "Hadi Khalaf awarded Kempner Graduate Fellowship",
+    "body": "Hadi was awarded a Graduate Fellowship from the Kempner Institute for the Study of Natural and Artificial Intelligence at Harvard.",
+    "link": null
+  },
+  {
+    "date": "2026-05",
+    "title": "Carol Long and Juan Felipe Gomez defend their Ph.D.s",
+    "body": "Congratulations to Dr. Carol Long, who is joining the ETH Zurich AI Center as a Postdoctoral Fellow, and Dr. Juan Felipe Gomez, who is joining the Hasso Plattner Institute as a Postdoctoral Fellow.",
+    "link": null,
+    "links": [
+      {
+        "label": "Carol's thesis",
+        "url": "https://arxiv.org/pdf/2605.08964"
+      },
+      {
+        "label": "Juan Felipe's thesis",
+        "url": "https://dash.harvard.edu/entities/publication/0739e3e4-ee5f-4213-8382-f8c46aea3de9"
+      }
+    ]
+  },
+  {
+    "date": "2026-04",
+    "title": "Oral presentation at ICLR 2026",
+    "body": "Our paper \"Temporal Sparse Autoencoders: Leveraging the Sequential Nature of Language for Interpretability\" was selected for an oral presentation at ICLR 2026.",
+    "link": "https://arxiv.org/abs/2511.05541"
+  },
+  {
+    "date": "2025-05",
+    "title": "Lucas Monteiro Paes defends his Ph.D.",
+    "body": "Lucas successfully defended his doctoral thesis and will be joining Apple in June.",
+    "link": null
+  },
+  {
+    "date": "2025-04",
+    "title": "AI in Brazil Panel Series",
+    "body": "Professor Calmon organized the AI in Brazil Panel Series, highlighting AI research and opportunities in Brazil.",
+    "link": "https://www.drclas.harvard.edu/event/artificial-intelligence-brazil-panel-series-day-1"
+  },
+  {
+    "date": "2025-04",
+    "title": "Best Paper Award at NENLP",
+    "body": "Our paper \"AI Alignment at Your Discretion\" won the Best Paper Award at NENLP.",
+    "link": "https://arxiv.org/abs/2502.10441"
+  },
+  {
+    "date": "2025-01",
+    "title": "Thomas D. Cabot Associate Professorship",
+    "body": "Professor Calmon was named the Thomas D. Cabot Associate Professor of Electrical Engineering.",
+    "link": null
+  },
+  {
+    "date": "2024-07",
+    "title": "James L. Massey Research & Teaching Award",
+    "body": "Professor Calmon received the 2024 James L. Massey Award from the IEEE Information Theory Society, recognizing outstanding achievement in research and teaching by young scholars.",
+    "link": "https://www.itsoc.org/news/2024-james-l-massey-research-teaching-award-young-scholars-awarded-flavio-du-pin-calmon"
+  },
+  {
+    "date": "2024-03",
+    "title": "Lucas Monteiro Paes named Apple Scholar",
+    "body": "Lucas Monteiro Paes was named an Apple Scholar in AI/ML.",
+    "link": "https://seas.harvard.edu/news/2024/03/phd-student-monteiro-paes-named-apple-scholar-aiml"
+  },
+  {
+    "date": "2023-09",
+    "title": "New research funding",
+    "body": "Two new NSF awards, on approximate coded computing and on information theory and differential privacy, and a Harvard Brazil Lemann Research Award on algorithmic discrimination in education.",
+    "link": null,
+    "links": [
+      {
+        "label": "NSF: approximate coded computing",
+        "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2231707&HistoricalAwards=false"
+      },
+      {
+        "label": "NSF: information theory and differential privacy",
+        "url": "https://www.nsf.gov/awardsearch/showAward?AWD_ID=2312667&HistoricalAwards=false"
+      },
+      {
+        "label": "Lemann Brazil Research Fund",
+        "url": "https://news.harvard.edu/gazette/story/newsplus/2023-lemann-brazil-research-fund-awardees-announced/"
+      }
+    ]
+  },
+  {
+    "date": "2023-05",
+    "title": "PhD defenses",
+    "body": "Dr. Hsiang Hsu and Dr. Wael Alghamdi successfully defended their Ph.D. dissertations.",
+    "link": null
+  },
+  {
+    "date": "2022-09",
+    "title": "Symposium on Machine Learning and Information Theory",
+    "body": "Professor Calmon organized a symposium at the 2022 Congresso Nacional de Matemática Aplicada e Computacional in Campinas, Brazil.",
+    "link": null,
+    "links": [
+      {
+        "label": "CNMAC 2022",
+        "url": "http://www.cnmac.org.br/novo/"
+      },
+      {
+        "label": "Harvard Brazil Lemann Research Award",
+        "url": "https://research.harvard.edu/lemann-brazil-research-fund/"
+      }
+    ]
+  },
+  {
+    "date": "2022-08",
+    "title": "Meta Research PhD Fellowship Spotlight",
+    "body": "Hsiang Hsu's research on predictive multiplicity and the Rashomon effect was featured as the Meta Research PhD Fellowship Spotlight.",
+    "link": "https://research.facebook.com/blog/2022/8/meta-research-phd-fellowship-spotlight-resolving-the-rashomon-effect-in-machine-learning/"
+  },
+  {
+    "date": "2022-07",
+    "title": "ISIT 2022 Tutorial",
+    "body": "Professor Calmon organized a tutorial on \"Information-Theoretic Tools for Responsible Machine Learning\" with Haewon Jeong, Shahab Asoodeh, and Mario Diaz.",
+    "link": "https://sites.google.com/view/isit2022tutorial/home"
+  },
+  {
+    "date": "2022-05",
+    "title": "Hao Wang defends his Ph.D.",
+    "body": "Dr. Hao Wang defended his Ph.D. and joined the MIT-IBM Watson AI Lab in Cambridge.",
+    "link": "https://haowang94.github.io/files/thesis.pdf"
+  }
+]

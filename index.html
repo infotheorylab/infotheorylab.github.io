@@ -4,888 +4,267 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Information Theory Laboratory</title>
-    
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Satoshi Font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    
-    <!-- Plantin Font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
+    <meta name="description" content="The Information Theory Laboratory at Harvard SEAS builds the mathematical foundations of reliable and trustworthy machine learning and AI.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
 
     <style>
-        /* Custom styles for the page */
-        body {
-            font-family: 'Satoshi', sans-serif; /* Default body font */
-            background-color: #FFFFFF;
-            color: #1a202c;
-        }
-        
-        /* Headings use Plantin */
-        h1, h2, h3, h4, h5, h6, .font-plantin {
-            font-family: 'Plantin MT Pro', serif;
-        }
+        /* Home page uses black text; grey only for the smallest labels. */
+        :root { --ink-soft: var(--ink); --ink-faint: #555; }
 
-        /* Harvard Crimson text color */
-        .text-harvard-crimson {
-            color: #A41034;
+        /* ---------- Hero ---------- */
+        .hero {
+            padding: clamp(80px, 12vw, 160px) 0 clamp(64px, 8vw, 120px);
         }
+        .hero + .section { padding-top: 0; }
+        /* Scales with the window so the headline fits on one line on laptops and up. */
+        .hero .display { font-size: clamp(40px, 6.1vw, 88px); }
+        .hero .display .binary {
+            color: var(--crimson);
+            font-size: 0.86em;
+            letter-spacing: -0.04em;
+            word-spacing: -0.35em;  /* a monospace space is a full character wide */
+        }
+        .hero .lede { margin-top: 32px; }
 
-        /* Container for the scroll-snap functionality */
-        .scroll-container {
-            scroll-snap-type: y proximity; /* Gentle snap for first section on mobile */
-            overflow-y: scroll;
-            height: 100vh;
-            scroll-padding-top: 80px; /* Account for fixed header */
-            scroll-behavior: smooth;
-        }
+        /* ---------- Sections: heading in the margin, content to the right ---------- */
+        .band .margin-label { padding-top: 0; }
 
-        /* Each section will snap into view */
-        .scroll-section {
-            scroll-snap-align: start;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            position: relative;
-        }
-
-        /* Animated scroll down indicator - base styles */
-        .scroll-down-indicator {
-            position: absolute;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            animation: bounce 2.5s infinite;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .scroll-down-indicator span {
-            font-size: 0.75rem;
-            letter-spacing: 0.1em;
-            color: #9ca3af;
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-        .scroll-down-indicator svg {
-            width: 20px;
-            height: 20px;
-            color: #9ca3af;
-        }
-
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-8px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-4px);
-            }
-        }
-
-        /* Desktop uses mandatory snap for crisp experience */
-        @media (min-width: 769px) {
-            .scroll-container {
-                scroll-snap-type: y mandatory;
-                scroll-padding-top: 40px; /* Further reduced for scroll indicator visibility */
-            }
-            
-            /* Ensure scroll indicators are visible with better bottom spacing */
-            .scroll-down-indicator {
-                bottom: 6rem; /* Increased clearance from viewport bottom to prevent overlap */
-            }
-            
-            /* Move content up on desktop to provide better spacing for scroll arrows */
-            .scroll-section {
-                padding-bottom: 9rem; /* Increased bottom padding to move content up */
-            }
-        }
-
-        /* Mobile responsive adjustments */
-        @media (max-width: 768px) {
-            /* Hide scroll arrows on mobile except for the first section */
-            .scroll-down-indicator {
-                display: none;
-            }
-            
-            /* Show scroll arrow only on the home/first section in mobile */
-            #home .scroll-down-indicator {
-                display: flex;
-            }
-            
-            /* First section: snap and full height with safe padding */
-            #home.scroll-section {
-                scroll-snap-align: start;
-                min-height: 100vh;
-                padding-top: 7.5rem; /* Clear address bar + fixed header */
-                padding-left: 1rem;
-                padding-right: 1rem;
-                padding-bottom: 2rem;
-                justify-content: center;
-            }
-            
-            /* Other sections: no snap, natural height */
-            .scroll-section:not(#home) {
-                scroll-snap-align: none;
-                min-height: auto;
-                padding: 2rem 1rem;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-            
-            /* Mobile: Publications flow naturally with content */
-            .content-publications {
-                max-height: none; /* Remove height restriction */
-                overflow-y: visible; /* Natural flow */
-                scroll-snap-align: none;
-                padding-right: 0;
-            }
-            
-            /* Natural scrolling for publication lists */
-            .publication-list {
-                scroll-snap-type: none;
-            }
-        }
-
-        /* Animation for elements to fade in when they become visible */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Styling for the header */
-        header {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        
-        /* Header title font */
-        header .title-font {
-             font-family: 'Plantin MT Pro', serif;
-        }
-
-        /* Custom styles for nav links */
-        header nav a {
-            position: relative;
-            transition: color 0.3s ease;
-            text-transform: capitalize;
-            font-family: 'Plantin MT Pro', serif;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem; /* Space between icon and text */
-            padding-top: 0.5rem;
-        }
-
-        /* Stylish top line effect */
-        header nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background-color: #1a202c;
-            transition: width 0.3s ease-out;
-        }
-
-        header nav a:hover::before {
-            width: 50%;
-        }
-
-        header nav a:hover {
-            color: #1a202c;
-        }
-
-        /* Mobile menu styling to match desktop */
-        #mobile-menu a {
-            font-family: 'Plantin MT Pro', serif;
-            text-transform: capitalize;
-            transition: color 0.3s ease;
-        }
-
-        #mobile-menu a:hover {
-            color: #1a202c;
-            background-color: transparent;
-        }
-
-        /* Styling for the diorama images */
-        .diorama {
-            max-width: 450px;
-            width: 100%;
-            height: auto;
-        }
-        /* Binary decoding animation styles */
-        .binary-decode {
-            display: inline-block;
-            position: relative;
-            color: #A41034;
-            font-family: 'Plantin MT Pro', serif;
-        }
-
-
-        /* Simple publication list styling */
-        .publication-list {
-            margin-top: 1rem;
-        }
-        
-
-        .publication-item {
-            display: block;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid #e5e7eb;
-            transition: all 0.3s ease;
-        }
-
-        .publication-item:hover {
-            background-color: #f9fafb;
-            padding-left: 0.5rem;
-        }
-
-        .publication-link {
-            display: inline;
-            color: #A41034;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .publication-link:hover {
-            color: #7c2d2e;
-        }
-
-        .publication-item:last-child {
-            border-bottom: none;
-        }
-
-        /* Venue information styling */
-        .venue-info {
-            font-size: 0.9em;
-            color: #6b7280;
-            font-weight: normal;
-            margin-left: 0.5rem;
-        }
-
-        /* Research area content layout */
-        .research-area-content {
+        /* ---------- Research areas: one row per topic ---------- */
+        .area {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto auto;
-            gap: 1rem;
+            gap: clamp(32px, 5vw, 80px);
             align-items: start;
+            padding: 48px 0;
+        }
+        .area:first-child { padding-top: 0; }
+        .area:last-child { padding-bottom: 0; }
+        .area-title {
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: clamp(28px, 3vw, 38px);
+            line-height: 1.15;
+            letter-spacing: -0.015em;
+            margin: 0;
+        }
+        .area-text {
+            margin: 14px 0 0;
+            font-size: 17px;
+        }
+        .selected { margin-top: 6px; }
+        .selected-label {
+            font-family: var(--label);
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--ink-faint);
+            padding: 0 0 4px;
+        }
+        .pub {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid var(--rule);
+            text-decoration: none;
+        }
+        .pub:last-child { border-bottom: 0; }
+        .pub-title {
+            font-size: 15px;
+            line-height: 1.4;
+            color: var(--crimson);
+        }
+        a.pub:hover .pub-title { text-decoration: underline; text-underline-offset: 3px; }
+        .pub-venue {
+            display: block;
+            margin-top: 2px;
+            font-size: 13px;
+            color: var(--ink-faint);
         }
 
-        /* Desktop layout: Group title+explanation+publications in left, image in right for normal sections */
-        .research-area-content .content-title {
-            grid-column: 1;
-            grid-row: 1;
-            text-align: left;
+        /* ---------- News ---------- */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px 40px;
+        }
+        .news-date {
+            font-family: var(--label);
+            font-size: 12px;
+            color: var(--ink-faint);
+        }
+        .news-card h3 {
+            font-size: 21px;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+        .news-card h3 a { text-decoration: none; }
+        .news-card h3 a:hover { color: var(--crimson); }
+        .news-card p {
+            font-size: 15px;
+            color: var(--ink-soft);
+            margin: 8px 0 0;
         }
 
-        .research-area-content .content-explanation {
-            grid-column: 1;
-            grid-row: 2;
-            text-align: left;
+        /* ---------- Explore ---------- */
+        .explore a {
+            display: grid;
+            grid-template-columns: 1fr 2fr auto;
+            gap: 24px;
+            align-items: baseline;
+            padding: 28px 0;
+            border-bottom: 1px solid var(--rule);
+            text-decoration: none;
         }
-
-        .research-area-content .content-image {
-            grid-column: 2;
-            grid-row: 1 / span 3;
-            text-align: center;
-            align-self: center;
+        .explore a:first-child { padding-top: 0; }
+        .explore a:last-child { border-bottom: 0; }
+        .explore .explore-title {
+            font-family: var(--serif);
+            font-size: clamp(24px, 2.6vw, 32px);
+            letter-spacing: -0.01em;
         }
-
-        .research-area-content .content-publications {
-            grid-column: 1;
-            grid-row: 3;
-            text-align: left;
+        .explore .explore-desc { color: var(--ink-soft); }
+        .explore .explore-arrow {
+            font-size: 22px;
+            transition: transform 0.2s;
         }
+        .explore a:hover .explore-title { color: var(--crimson); }
+        .explore a:hover .explore-arrow { transform: translateX(6px); }
 
-        /* Desktop layout for reverse sections: Image on left, content on right */
-        .research-area-content.reverse .content-title {
-            grid-column: 2;
-            grid-row: 1;
-            text-align: left;
-        }
-
-        .research-area-content.reverse .content-explanation {
-            grid-column: 2;
-            grid-row: 2;
-            text-align: left;
-        }
-
-        .research-area-content.reverse .content-image {
-            grid-column: 1;
-            grid-row: 1 / span 3;
-            text-align: center;
-            align-self: center;
-        }
-
-        .research-area-content.reverse .content-publications {
-            grid-column: 2;
-            grid-row: 3;
-            text-align: left;
-        }
-
-        @media (max-width: 768px) {
-            .research-area-content {
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-                text-align: center;
-            }
-            
-            /* Mobile order: Title → Explanation → Image → Publications */
-            .content-title {
-                order: 1;
-            }
-            
-            .content-explanation {
-                order: 2;
-            }
-            
-            .content-image {
-                order: 3;
-            }
-            
-            .content-publications {
-                order: 4;
-            }
-        }
-
-        /* Loading state for publications */
-        .publication-loading {
-            text-align: center;
-            padding: 2rem;
-            color: #6b7280;
-        }
-
-        /* Additional mobile adjustments */
-        @media (max-width: 768px) {
-            .diorama {
-                max-width: 300px;
-            }
-            
-            .text-4xl {
-                font-size: 2rem;
-            }
-            
-            .text-5xl {
-                font-size: 2.5rem;
-            }
-            
-            .text-6xl {
-                font-size: 3rem;
-            }
-            
-            /* Simplified mobile Learn More section */
-            #contact .fade-in {
-                justify-content: center; /* Return to natural centering */
-            }
-            
-            /* SEAS logo bottom spacing for mobile browser navigation */
-            #contact .mt-16 {
-                margin-bottom: 4rem; /* Add bottom margin to prevent overlap with mobile browser navigation */
-            }
+        @media (max-width: 860px) {
+            .area { grid-template-columns: 1fr; gap: 20px; }
+            .news-grid { grid-template-columns: 1fr; }
+            .explore a { grid-template-columns: 1fr auto; }
+            .explore .explore-desc { grid-column: 1 / -1; grid-row: 2; }
         }
     </style>
 </head>
-<body class="overflow-hidden">
+<body class="margin-page">
 
-    <!-- Fixed Header -->
-    <header class="fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-lg title-font font-normal tracking-tight">
-                <a href="#home"><span class="text-harvard-crimson">Information Theory</span> Lab</a>
+<header data-site-header></header>
+
+<main>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="wrap">
+            <h1 class="display">The <span class="binary" id="hero-decode">Information Theory</span> Laboratory</h1>
+            <p class="lede">Building the mathematical foundations of reliable and trustworthy machine learning and artificial intelligence systems.</p>
+        </div>
+    </section>
+
+    <!-- Research areas -->
+    <section class="section band">
+        <div class="wrap"><div class="margin-layout">
+            <h2 class="margin-label">Our Research <a href="research.html">See more &rarr;</a></h2>
+            <div>
+
+            <div class="areas">
+                <article class="area">
+                    <div>
+                        <h3 class="area-title">Core Information Theory</h3>
+                        <p class="area-text">We develop new mathematical tools that help us model and control information in systems that learn from data. We use these tools to delineate fundamental limits of learning, communication, and compression.</p>
+                    </div>
+                    <div class="selected" data-pubs="theory"></div>
+                </article>
+                <article class="area">
+                    <div>
+                        <h3 class="area-title">Artificial Intelligence &amp; Machine Learning</h3>
+                        <p class="area-text">We engineer AI and machine learning algorithms that promote privacy, safety, and reliability for all.</p>
+                    </div>
+                    <div class="selected" data-pubs="aiml"></div>
+                </article>
+                <article class="area">
+                    <div>
+                        <h3 class="area-title">Information Theory in Practice</h3>
+                        <p class="area-text">We work with a range of applications including AI alignment, privacy, fair machine learning, coded computing, and beyond.</p>
+                    </div>
+                    <div class="selected" data-pubs="applications"></div>
+                </article>
             </div>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8 text-gray-500 font-medium">
-                <a href="research.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
-                    <span>Research</span>
+            </div>
+        </div></div>
+    </section>
+
+    <!-- News -->
+    <section class="section band">
+        <div class="wrap"><div class="margin-layout">
+            <h2 class="margin-label">News <a href="news.html">See more &rarr;</a></h2>
+            <div class="news-grid" id="news-grid"></div>
+        </div></div>
+    </section>
+
+    <!-- Explore -->
+    <section class="section band">
+        <div class="wrap"><div class="margin-layout">
+            <h2 class="margin-label">Explore</h2>
+            <nav class="explore">
+                <a href="research.html#publications">
+                    <span class="explore-title">Publications</span>
+                    <span class="explore-desc">Search our papers by title, author, venue, or topic.</span>
+                    <span class="explore-arrow">&rarr;</span>
                 </a>
                 <a href="people.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    <span>People</span>
-                </a>
-                <a href="news.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" /></svg>
-                    <span>News</span>
-                </a>
-                <a href="https://github.com/infoTheoryLab/" target="_blank">
-                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    <span>Github</span>
+                    <span class="explore-title">People</span>
+                    <span class="explore-desc">PI, PhD students, post-docs, visitors, and our alumni.</span>
+                    <span class="explore-arrow">&rarr;</span>
                 </a>
                 <a href="contact.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                    <span>Contact</span>
+                    <span class="explore-title">Join us</span>
+                    <span class="explore-desc">How to get in touch.</span>
+                    <span class="explore-arrow">&rarr;</span>
                 </a>
             </nav>
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-harvard-crimson">
-                    <span class="sr-only">Open main menu</span>
-                    <!-- Icon when menu is closed. -->
-                    <svg id="icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <!-- Icon when menu is open. -->
-                    <svg id="icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu, show/hide based on menu state. -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Research</a>
-                <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">People</a>
-                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">News</a>
-                <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Github</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Contact</a>
-            </div>
-        </div>
-    </header>
+        </div></div>
+    </section>
 
-    <!-- Scroll Snap Container -->
-    <div class="scroll-container">
+</main>
 
-        <!-- Section 1: Title & Motto -->
-        <section id="home" class="scroll-section">
-            <div class="text-center fade-in max-w-4xl">
-                <h1 class="text-5xl md:text-6xl font-semibold tracking-tighter mb-6">The <span id="binary-text" class="binary-decode">Information Theory</span> Laboratory</h1>
-                <p class="text-xl md:text-2xl text-gray-600">Building the mathematical foundations of reliable and trustworthy machine learning and artificial intelligence systems.</p>
-            </div>
-            <!-- Animated Scroll Down Indicator -->
-            <div class="scroll-down-indicator">
-                <span>Scroll</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </div>
-        </section>
+<footer data-site-footer></footer>
 
-        <!-- Section 2: Core Information Theory -->
-        <section class="scroll-section">
-            <div class="container mx-auto max-w-6xl px-6 fade-in">
-                <div class="research-area-content">
-                    <div class="content-title">
-                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-3 text-harvard-crimson">Core Information Theory</h2>
-                    </div>
-                    <div class="content-explanation">
-                        <p class="text-xl text-gray-600 mb-4">
-                            We develop new mathematical tools that help us model and control information in systems that learn from data. We use these tools to delineate fundamental limits of learning, communication, and compression.
-                        </p>
-                    </div>
-                    <div class="content-image">
-                        <img src="figs/3Bottom.png" alt="Core information theory concepts" class="diorama mx-auto">
-                    </div>
-                    <div class="content-publications">
-                        <div id="theory-publications-container" class="mt-4">
-                            <div class="publication-loading">
-                                <p>Loading theory publications...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Animated Scroll Down Indicator -->
-            <div class="scroll-down-indicator">
-                <span>Scroll</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </div>
-        </section>
+<script src="assets/site.js"></script>
+<script>
+    const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
-        <!-- Section 3: AI and Machine Learning -->
-        <section class="scroll-section">
-            <div class="container mx-auto max-w-6xl px-6 fade-in">
-                <div class="research-area-content reverse">
-                    <div class="content-title">
-                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-3 text-harvard-crimson">Artificial Intelligence & Machine Learning</h2>
-                    </div>
-                    <div class="content-explanation">
-                        <p class="text-xl text-gray-600 mb-4">
-                            We engineer AI and machine learning algorithms that promote privacy, safety, and reliability for all.
-                        </p>
-                    </div>
-                    <div class="content-image">
-                        <img src="figs/2Middle.png" alt="AI and machine learning algorithms" class="diorama mx-auto">
-                    </div>
-                    <div class="content-publications">
-                        <div id="aiml-publications-container" class="mt-4">
-                            <div class="publication-loading">
-                                <p>Loading AI/ML publications...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Animated Scroll Down Indicator -->
-            <div class="scroll-down-indicator">
-                <span>Scroll</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </div>
-        </section>
-
-        <!-- Section 4: Applications -->
-        <section class="scroll-section">
-            <div class="container mx-auto max-w-6xl px-6 fade-in">
-                <div class="research-area-content">
-                    <div class="content-title">
-                        <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-3 text-harvard-crimson">Information Theory in Practice</h2>
-                    </div>
-                    <div class="content-explanation">
-                        <p class="text-xl text-gray-600 mb-4">
-                            We work with a range of applications including AI alignment, privacy, fair machine learning, coded computing, and beyond.
-                        </p>
-                    </div>
-                    <div class="content-image">
-                        <img src="figs/1Top.png" alt="Real-world applications" class="diorama mx-auto">
-                    </div>
-                    <div class="content-publications">
-                        <div id="applications-publications-container" class="mt-4">
-                            <div class="publication-loading">
-                                <p>Loading applications publications...</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Animated Scroll Down Indicator -->
-            <div class="scroll-down-indicator">
-                <span>Scroll</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                </svg>
-            </div>
-        </section>
-
-        <!-- Section 5: Learn More / Contact -->
-        <section id="contact" class="scroll-section">
-            <div class="text-center fade-in flex flex-col justify-center h-full">
-                <div>
-                    <h2 class="text-4xl md:text-5xl font-semibold tracking-tighter leading-tight mb-16">Learn More</h2>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:flex lg:flex-row items-center justify-center gap-y-12 gap-x-8 lg:space-x-20">
-                        
-                        <!-- Research Link -->
-                        <a href="research.html" class="group flex flex-col items-center space-y-3 text-center transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-gray-500 group-hover:text-harvard-crimson transition-colors duration-300">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                            </svg>
-                            <span class="text-xl font-medium text-gray-700 group-hover:text-harvard-crimson transition-colors duration-300">Research</span>
-                        </a>
-
-                        <!-- People Link -->
-                        <a href="people.html" class="group flex flex-col items-center space-y-3 text-center transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-12 h-12 text-gray-500 group-hover:text-harvard-crimson transition-colors duration-300"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                            <span class="text-xl font-medium text-gray-700 group-hover:text-harvard-crimson transition-colors duration-300">People</span>
-                        </a>
-
-                        <!-- News Link -->
-                        <a href="news.html" class="group flex flex-col items-center space-y-3 text-center transition-transform duration-300 ease-in-out hover:-translate-y-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-gray-500 group-hover:text-harvard-crimson transition-colors duration-300">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" />
-                            </svg>
-                            <span class="text-xl font-medium text-gray-700 group-hover:text-harvard-crimson transition-colors duration-300">News</span>
-                        </a>
-
-                        <!-- Github Link -->
-                        <a href="https://github.com/infoTheoryLab/" target="_blank" class="group flex flex-col items-center space-y-3 text-center transition-transform duration-300 ease-in-out hover:-translate-y-2 col-span-1 md:col-auto">
-                             <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 text-gray-500 group-hover:text-harvard-crimson transition-colors duration-300 fill-current">
-                                <title>GitHub</title>
-                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                            </svg>
-                            <span class="text-xl font-medium text-gray-700 group-hover:text-harvard-crimson transition-colors duration-300">Github</span>
-                        </a>
-
-                        <!-- Contact Link -->
-                        <a href="contact.html" class="group flex flex-col items-center space-y-3 text-center transition-transform duration-300 ease-in-out hover:-translate-y-2 col-span-1 md:col-auto">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-gray-500 group-hover:text-harvard-crimson transition-colors duration-300">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
-                            </svg>
-                            <span class="text-xl font-medium text-gray-700 group-hover:text-harvard-crimson transition-colors duration-300">Contact</span>
-                        </a>
-
-                    </div>
-                </div>
-                
-                <!-- SEAS Logo -->
-                <div class="mt-16">
-                     <img src="figs/seaslogo.png" alt="Harvard School of Engineering and Applied Sciences Logo" class="w-56 mx-auto">
-                </div>
-            </div>
-        </section>
-
-    </div>
-
-    <script>
-        // Publication IDs configuration - loaded from external file
-        let PUBLICATION_CONFIG = {};
-
-        // Publications data
-        let publications = [];
-
-        // Load both configuration and publications
-        Promise.all([
-            fetch('publication-config.json'),
-            fetch('publications.json')
-        ])
-        .then(responses => {
-            // Check if both requests were successful
-            if (!responses[0].ok) {
-                throw new Error(`Error loading config: ${responses[0].status}`);
-            }
-            if (!responses[1].ok) {
-                throw new Error(`Error loading publications: ${responses[1].status}`);
-            }
-            return Promise.all([responses[0].json(), responses[1].json()]);
-        })
-        .then(([configData, publicationsData]) => {
-            PUBLICATION_CONFIG = configData;
-            publications = publicationsData;
-            loadPublications();
-        })
-        .catch(error => {
-            console.error('Error loading data:', error);
-            // Show error message in publication containers
-            document.querySelectorAll('.publication-loading').forEach(container => {
-                container.innerHTML = '<p>Error loading publications. Please check your connection.</p>';
-            });
+    // Selected publications per research area, chosen by ID in publication-config.json.
+    Promise.all([
+        fetch('publication-config.json').then(r => r.json()),
+        fetch('publications.json').then(r => r.json())
+    ]).then(([config, pubs]) => {
+        const byId = Object.fromEntries(pubs.map(p => [p.id, p]));
+        document.querySelectorAll('[data-pubs]').forEach(el => {
+            const items = (config[el.dataset.pubs] || []).map(id => byId[id]).filter(Boolean);
+            el.innerHTML = '<div class="selected-label">Selected publications</div>' + items.map(p => {
+                const link = p.pub_website || p.arxiv_website;
+                const inner = `<span class="pub-title">${esc(p.title)}</span><span class="pub-venue">${esc(p.venue)}, ${esc(p.year)}</span>`;
+                return link
+                    ? `<a class="pub" href="${esc(link)}" target="_blank" rel="noopener">${inner}</a>`
+                    : `<div class="pub">${inner}</div>`;
+            }).join('');
         });
+    }).catch(err => console.error('Could not load publications', err));
 
-        // Function to find publication by ID
-        function findPublicationById(id) {
-            return publications.find(pub => pub.id === id);
-        }
+    // Three most recent news items from news.json.
+    const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const formatMonth = ym => { const [y, m] = ym.split('-'); return `${MONTHS[+m - 1]} ${y}`; };
 
-        // Function to render a publication link
-        function renderPublicationLink(publication) {
-            if (!publication) return '';
-            
-            // Use paper link if available, otherwise arXiv link
-            const link = publication.pub_website || publication.arxiv_website;
-            const venueInfo = `<span class="venue-info">${publication.venue}, ${publication.year}</span>`;
-            
-            if (link) {
-                return `<div class="publication-item"><a href="${link}" target="_blank" class="publication-link">${publication.title}</a> ${venueInfo}</div>`;
-            } else {
-                return `<div class="publication-item"><span class="publication-link" style="cursor: default; color: #6b7280;">${publication.title}</span> ${venueInfo}</div>`;
-            }
-        }
+    fetch('news.json').then(r => r.json()).then(items => {
+        items.sort((a, b) => b.date.localeCompare(a.date));
+        document.getElementById('news-grid').innerHTML = items.slice(0, 3).map(n => `
+            <article class="news-card">
+                <div class="news-date">${formatMonth(n.date)}</div>
+                <h3>${n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">${esc(n.title)}</a>` : esc(n.title)}</h3>
+                <p>${esc(n.body)}</p>
+            </article>`).join('');
+    }).catch(err => console.error('Could not load news', err));
 
-        // Function to load publications into containers
-        function loadPublications() {
-            // Load theory publications
-            const theoryContainer = document.getElementById('theory-publications-container');
-            const theoryPubs = PUBLICATION_CONFIG.theory
-                .map(findPublicationById)
-                .filter(pub => pub !== undefined);
-            
-            if (theoryPubs.length > 0) {
-                theoryContainer.innerHTML = `
-                    <h4 class="text-lg font-semibold mb-3 text-harvard-crimson">Selected Publications</h4>
-                    <div class="publication-list">
-                        ${theoryPubs.map(renderPublicationLink).join('')}
-                    </div>
-                `;
-            } else {
-                theoryContainer.innerHTML = '<p class="text-gray-600">No theory publications available.</p>';
-            }
-
-            // Load AI/ML publications
-            const aimlContainer = document.getElementById('aiml-publications-container');
-            const aimlPubs = PUBLICATION_CONFIG.aiml
-                .map(findPublicationById)
-                .filter(pub => pub !== undefined);
-            
-            if (aimlPubs.length > 0) {
-                aimlContainer.innerHTML = `
-                    <h4 class="text-lg font-semibold mb-3 text-harvard-crimson">Selected Publications</h4>
-                    <div class="publication-list">
-                        ${aimlPubs.map(renderPublicationLink).join('')}
-                    </div>
-                `;
-            } else {
-                aimlContainer.innerHTML = '<p class="text-gray-600">No AI/ML publications available.</p>';
-            }
-
-            // Load applications publications
-            const applicationsContainer = document.getElementById('applications-publications-container');
-            const applicationsPubs = PUBLICATION_CONFIG.applications
-                .map(findPublicationById)
-                .filter(pub => pub !== undefined);
-            
-            if (applicationsPubs.length > 0) {
-                applicationsContainer.innerHTML = `
-                    <h4 class="text-lg font-semibold mb-3 text-harvard-crimson">Selected Publications</h4>
-                    <div class="publication-list">
-                        ${applicationsPubs.map(renderPublicationLink).join('')}
-                    </div>
-                `;
-            } else {
-                applicationsContainer.innerHTML = '<p class="text-gray-600">No applications publications available.</p>';
-            }
-        }
-
-        // JavaScript to handle the fade-in effect on scroll
-        document.addEventListener('DOMContentLoaded', () => {
-            const isMobile = window.innerWidth <= 768;
-            
-            const observerOptions = {
-                root: document.querySelector('.scroll-container'),
-                rootMargin: '0px',
-                threshold: isMobile ? 0.3 : 0.5 // Lower threshold on mobile for better responsiveness
-            };
-
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            const targets = document.querySelectorAll('.fade-in');
-            targets.forEach(target => observer.observe(target));
-            
-            // Mobile-specific scroll handling
-            if (isMobile) {
-                let isScrolling = false;
-                let scrollTimeout;
-                
-                const scrollContainer = document.querySelector('.scroll-container');
-                
-                // Detect when user stops scrolling and allow snap behavior
-                scrollContainer.addEventListener('scroll', () => {
-                    isScrolling = true;
-                    
-                    clearTimeout(scrollTimeout);
-                    scrollTimeout = setTimeout(() => {
-                        isScrolling = false;
-                    }, 150);
-                });
-                
-                // Enhance touch scrolling for publication areas
-                const publicationContainers = document.querySelectorAll('.content-publications');
-                
-                publicationContainers.forEach(container => {
-                    let startY = 0;
-                    let isPublicationScrolling = false;
-                    
-                    container.addEventListener('touchstart', (e) => {
-                        startY = e.touches[0].clientY;
-                        isPublicationScrolling = false;
-                    });
-                    
-                    container.addEventListener('touchmove', (e) => {
-                        const currentY = e.touches[0].clientY;
-                        const deltaY = Math.abs(currentY - startY);
-                        
-                        // If significant vertical movement, consider it publication scrolling
-                        if (deltaY > 10) {
-                            isPublicationScrolling = true;
-                        }
-                    });
-                    
-                    // Prevent page scroll when scrolling within publications
-                    container.addEventListener('scroll', (e) => {
-                        if (isPublicationScrolling) {
-                            e.stopPropagation();
-                        }
-                    });
-                });
-            }
-            
-            // Mobile menu toggle
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const iconOpen = document.getElementById('icon-open');
-            const iconClose = document.getElementById('icon-close');
-
-            menuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                iconOpen.classList.toggle('hidden');
-                iconClose.classList.toggle('hidden');
-            });
-
-            // Binary decoding animation
-            const binaryText = document.getElementById('binary-text');
-            const originalText = 'Information Theory';
-            const chars = originalText.split('');
-            let animationInterval;
-
-            function generateRandomBinary(length) {
-                return Array.from({ length }, () => Math.random() > 0.5 ? '1' : '0').join('');
-            }
-
-            function animateBinaryDecode() {
-                let step = 0;
-                const totalSteps = 20; // Number of animation frames
-                const decodeSteps = 12; // When to start revealing actual text
-
-                const interval = setInterval(() => {
-                    if (step < decodeSteps) {
-                        // Pure binary phase
-                        binaryText.textContent = generateRandomBinary(originalText.length);
-                    } else {
-                        // Progressive decode phase
-                        const revealIndex = Math.floor(((step - decodeSteps) / (totalSteps - decodeSteps)) * originalText.length);
-                        const revealed = originalText.substring(0, revealIndex);
-                        const binary = generateRandomBinary(originalText.length - revealIndex);
-                        binaryText.textContent = revealed + binary;
-                    }
-                    
-                    step++;
-                    
-                    if (step >= totalSteps) {
-                        clearInterval(interval);
-                        // Final reveal
-                        binaryText.textContent = originalText;
-                        
-                        // Schedule next animation cycle
-                        setTimeout(() => {
-                            animateBinaryDecode();
-                        }, 3000); // Wait 3 seconds before next cycle
-                    }
-                }, 100); // 100ms between frames
-            }
-
-            // Start the animation after a short delay
-            setTimeout(() => {
-                animateBinaryDecode();
-            }, 2000);
-            
-            // Handle window resize to update mobile detection
-            let resizeTimeout;
-            window.addEventListener('resize', () => {
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(() => {
-                    const newIsMobile = window.innerWidth <= 768;
-                    if (newIsMobile !== isMobile) {
-                        location.reload(); // Reload to apply correct scroll behavior
-                    }
-                }, 250);
-            });
-        });
-    </script>
+    // Hero: "Information Theory" periodically decodes from bits.
+    const hero = document.getElementById('hero-decode');
+    const loop = () => decode(hero, { frames: 22, noiseFrames: 12, interval: 90 }).then(() => setTimeout(loop, 4000));
+    setTimeout(loop, 1200);
+</script>
 
 </body>
 </html>

@@ -4,1217 +4,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research - The Information Theory Laboratory</title>
-    
-    <!-- Meta Tags -->
-    <meta name="description" content="Research at the Harvard Information Theory Lab, focused on trustworthy AI, ML, and information-theoretic foundations." />
-    <link rel="canonical" href="https://infotheorylab.github.io/research.html" />
-    <meta property="og:title" content="Research – HIT Lab" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://infotheorylab.github.io/assets/preview.png" />
+    <meta name="description" content="Research at the Harvard Information Theory Lab, focused on trustworthy AI, ML, and information-theoretic foundations.">
+    <link rel="canonical" href="https://infotheorylab.github.io/research.html">
+    <meta property="og:title" content="Research – HIT Lab">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://infotheorylab.github.io/assets/preview.png">
 
-    <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Satoshi Font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    
-    <!-- Plantin Font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
-    
-    <!-- MathJax for LaTeX math rendering -->
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']],
-                displayMath: [['$$', '$$'], ['\\[', '\\]']]
-            },
-            svg: {
-                fontCache: 'global'
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    
-    <!-- Satoshi Font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
-    
-    <!-- Plantin Font from CDN -->
-    <link href="https://fonts.cdnfonts.com/css/plantin-mt-pro" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/site.css">
 
     <style>
-        /* Custom styles for the page */
-        body {
-            font-family: 'Satoshi', sans-serif;
-            background-color: #FFFFFF;
-            color: #1a202c;
-        }
-        
-        /* Headings use Plantin */
-        h1, h2, h3, h4, h5, h6, .font-plantin {
-            font-family: 'Plantin MT Pro', serif;
-        }
-        
-        /* Headings use Plantin */
-        h1, h2, h3, h4, h5, h6, .font-plantin {
-            font-family: 'Plantin MT Pro', serif;
-        }
+        .page-head { padding: clamp(64px, 9vw, 120px) 0 clamp(32px, 4vw, 48px); }
+        .page-head .lede { margin-top: 24px; max-width: none; }
 
-        /* Harvard Crimson text color */
-        .text-harvard-crimson {
-            color: #A41034;
-        }
-
-        /* Styling for the header */
-        header {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-        }
-        
-        /* Header title font */
-        header .title-font {
-             font-family: 'Plantin MT Pro', serif;
-        }
-
-        /* Custom styles for nav links */
-        header nav a {
-            position: relative;
-            transition: color 0.3s ease;
-            text-transform: capitalize;
-            font-family: 'Plantin MT Pro', serif;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding-top: 0.5rem;
-        }
-
-        /* Stylish top line effect */
-        header nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background-color: #1a202c;
-            transition: width 0.3s ease-out;
-        }
-
-        header nav a:hover::before {
-            width: 50%;
-        }
-
-        header nav a:hover {
-            color: #1a202c;
-        }
-
-        /* Mobile menu styling to match desktop */
-        #mobile-menu a {
-            font-family: 'Plantin MT Pro', serif;
-            text-transform: capitalize;
-            transition: color 0.3s ease;
-        }
-
-        #mobile-menu a:hover {
-            color: #1a202c;
-            background-color: transparent;
-        }
-
-        /* Active menu item styling - only for menu items that should be highlighted */
-        .menu-active {
-            background-color: #A41034;
-        }
-
-        /* Custom styles for nav links */
-        header nav a {
-            position: relative;
-            transition: color 0.3s ease;
-            text-transform: capitalize;
-            font-family: 'Plantin MT Pro', serif;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding-top: 0.5rem;
-        }
-
-        /* Stylish top line effect */
-        header nav a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background-color: #1a202c;
-            transition: width 0.3s ease-out;
-        }
-
-        header nav a:hover::before {
-            width: 50%;
-        }
-
-        header nav a:hover {
-            color: #1a202c;
-        }
-
-        /* Publication list styles */
-        .publication-item {
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #e5e7eb;
-        }
-
-        .publication-title {
-            font-weight: 600;
-            color: #1a202c;
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-authors {
-            color: #6b7280;
-            font-size: 0.9rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .publication-venue {
-            color: #A41034;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        /* Research area styles */
-        .research-area {
-            background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
-            border-radius: 1rem;
-            padding: 2rem;
-            margin-bottom: 3rem;
-            border: 1px solid #e5e7eb;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        .research-area:nth-child(even) {
-            background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
-        }
-
-        .diorama {
-            max-width: 300px;
-            width: 100%;
-            height: auto;
-        }
-
-        .research-content {
-            display: flex;
-            align-items: center;
-            gap: 2rem;
-        }
-
-        .research-text {
-            flex: 1;
-        }
-
-        .research-image {
-            flex-shrink: 0;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .research-content {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .research-area:nth-child(even) .research-content {
-                flex-direction: column;
-            }
-        }
-
-        /* Main content area with proper header spacing */
-        .main-content {
-            padding-top: 100px;
-            min-height: 100vh;
-        }
-
-        /* Publication search styles */
-
-        .search-input {
-            width: 100%;
-            padding: 0.875rem 1.25rem 0.875rem 3rem;
-            border: 2px solid #d1d5db;
-            border-radius: 0.75rem;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            background-color: #f9fafb;
-        }
-
-        .search-input:focus {
-            outline: none;
-            border-color: #A41034;
-            background-color: white;
-            box-shadow: 0 0 0 4px rgba(164, 16, 52, 0.1);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #6b7280;
-            width: 1.5rem;
-            height: 1.5rem;
-        }
-
-        .search-container {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1rem;
-            align-items: center;
-        }
-
-        .search-wrapper {
-            position: relative;
-            flex: 1;
-        }
-
-        .surprise-me-btn {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            background-color: #A41034;
-            color: white;
-            border: none;
-            border-radius: 0.75rem;
-            padding: 0.875rem 1.25rem;
-            font-size: 0.875rem;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            white-space: nowrap;
-        }
-
-        .surprise-me-btn:hover {
-            background-color: #8C1829;
-            transform: translateY(-1px);
-        }
-
-        .filter-buttons {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        .filter-btn {
-            padding: 0.5rem 1rem;
-            border: 2px solid #e2e8f0;
-            border-radius: 9999px;
-            background-color: white;
-            color: #374151;
-            font-size: 0.875rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            border-color: #A41034;
-            background-color: #A41034;
-            color: white;
-        }
-
-        .publication-grid {
+        /* ---------- Vision / Approach / Support ---------- */
+        .principles {
             display: grid;
-            gap: 1rem;
-            margin-top: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: clamp(24px, 4vw, 56px);
         }
-
-        .publication-card {
-            background: white;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.75rem;
-            padding: 1.25rem;
-            transition: all 0.3s ease;
-            border-left: 4px solid #A41034;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-        }
-
-        /* More compact publication cards for desktop */
-        @media (min-width: 1024px) {
-            .publication-card {
-                padding: 1rem;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .publication-card {
-                padding: 0.875rem;
-            }
-        }
-
-        .publication-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 7px 14px rgba(0,0,0,0.07), 0 3px 6px rgba(0,0,0,0.05);
-        }
-        
-        .pub-link-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.25rem;
-            padding: 0;
-            font-size: 0.875rem;
-            font-weight: 500;
-            text-decoration: none;
-            margin-right: 1rem;
-            transition: color 0.2s ease-in-out;
-            color: #6b7280;
-            background: none;
-            border: none;
-        }
-
-        .pub-link-button:hover {
-            color: #A41034;
-        }
-
-
-
-        .bibtex-block {
-            background-color: #f7f7ff;
-            border-left: 4px solid #4B3869;
-            padding: 1em 1.25em;
-            border-radius: 0.5rem;
-            font-family: monospace;
-            white-space: pre-wrap;
-            font-size: 0.9rem;
-            margin-top: 0.75em;
-            color: #1a1a1a;
-            line-height: 1.5;
-            overflow-x: auto;
-        }
-
-        .hidden {
-            display: none;
-        }
-
-        .pub-links-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .pub-links {
-            margin-top: 0;
-            margin-left: auto;
-        }
-
-        .pub-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .pub-title {
+        .principle h3 {
             font-weight: 600;
-            color: #1a202c;
-            font-size: 1rem;
-            line-height: 1.4;
-            flex: 1;
+            font-size: 22px;
+            color: var(--crimson);
+        }
+        .principle p {
+            margin: 10px 0 0;
+            color: var(--ink-soft);
         }
 
-        .pub-award {
-            background-color: #fef3c7;
-            color: #d97706;
-            padding: 0.125rem 0.5rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-            white-space: nowrap;
-            flex-shrink: 0;
-        }
-
-        .pub-authors {
-            color: #6b7280;
-            font-size: 0.875rem;
-            margin-bottom: 0.25rem;
-        }
-
-        .pub-venue {
-            color: #A41034;
-            font-size: 0.875rem;
-            font-weight: 500;
-            margin-bottom: 0.25rem;
-        }
-
-        .pub-tldr {
-            color: #374151;
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin-bottom: 0.125rem;
-            line-height: 1.5;
-        }
-
-        .pub-meta {
+        /* ---------- Search and filters ---------- */
+        /* Search and category filters share one row; the filters hide while searching. */
+        .tools {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-top: 0.75rem;
-        }
-
-        /* More compact spacing for desktop */
-        @media (min-width: 1024px) {
-            .pub-authors {
-                margin-bottom: 0.2rem;
-            }
-            
-            .pub-venue {
-                margin-bottom: 0.2rem;
-            }
-            
-            .pub-tldr {
-                margin-bottom: 0.1rem;
-            }
-            
-            .pub-meta {
-                margin-top: 0.5rem;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .pub-authors {
-                margin-bottom: 0.15rem;
-            }
-            
-            .pub-venue {
-                margin-bottom: 0.15rem;
-            }
-            
-            .pub-tldr {
-                margin-bottom: 0.075rem;
-            }
-            
-            .pub-meta {
-                margin-top: 0.375rem;
-            }
-        }
-
-        .pub-tag {
-            padding: 0.125rem 0.5rem;
-            background-color: #f3f4f6;
-            color: #374151;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .pub-award {
-            background-color: #fef3c7;
-            color: #d97706;
-        }
-
-        .abstract-toggle {
-            display: flex;
             align-items: center;
-            gap: 0.5rem;
-            background-color: #A41034;
-            border: 1px solid #A41034;
-            border-radius: 0.375rem;
-            padding: 0.375rem 0.75rem;
-            font-size: 0.875rem;
-            color: white;
+            gap: 12px 32px;
+            margin-bottom: 40px;
+        }
+        .search {
+            flex: 1 1 280px;
+            font: inherit;
+            font-size: 17px;
+            padding: 10px 0;
+            border: 0;
+            border-bottom: 1px solid var(--ink);
+            background: transparent;
+            color: var(--ink);
+            outline: none;
+        }
+        .search::placeholder { color: var(--ink-faint); }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 4px;
+        }
+        .tools.searching .filters { display: none; }
+        .filter {
+            font: inherit;
+            font-size: 15px;
+            background: none;
+            border: 1px solid transparent;
+            border-radius: 6px;
+            padding: 4px 10px;
+            color: var(--crimson);
             cursor: pointer;
-            transition: all 0.2s ease;
-            margin-top: 0.25rem;
-            font-weight: 500;
+        }
+        .filter:hover { background: #fdf0f1; }
+        .filter.active {
+            background: #fdf0f1;
+            border-color: #f3c4ca;
+            font-weight: 600;
         }
 
-        /* More compact abstract toggle for desktop */
-        @media (min-width: 1024px) {
-            .abstract-toggle {
-                padding: 0.25rem 0.625rem;
-                font-size: 0.8rem;
-                margin-top: 0.2rem;
-            }
+        /* ---------- Publication list ---------- */
+        .year-group {
+            display: grid;
+            grid-template-columns: 160px 1fr;
+            gap: 32px;
+            border-top: 1px solid var(--ink);
         }
-
-        @media (min-width: 1280px) {
-            .abstract-toggle {
-                padding: 0.2rem 0.5rem;
-                font-size: 0.75rem;
-                margin-top: 0.15rem;
-            }
+        .year-group:first-child { border-top: 0; }
+        .year-group:first-child .year-label { padding-top: 0; }
+        .year-group:first-child .pub:first-child { padding-top: 4px; }
+        .year-label {
+            position: sticky;
+            top: 88px;
+            align-self: start;
+            margin: 0;
+            padding-top: 24px;
+            font-family: var(--serif);
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 1.1;
+            color: var(--crimson);
         }
-
-        .abstract-toggle:hover {
-            color: white;
-            border-color: #8C1829;
-            background-color: #8C1829;
+        .pubs { list-style: none; margin: 0; padding: 0; }
+        .pub:last-child { border-bottom: 0; }
+        .pub {
+            padding: 28px 0;
+            border-bottom: 1px solid var(--rule);
         }
-
-        .abstract-icon {
-            transition: transform 0.2s ease;
-            width: 16px;
-            height: 16px;
+        .pub-title {
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.3;
+            margin: 0;
         }
-
-        .abstract-toggle.expanded .abstract-icon {
-            transform: rotate(180deg);
+        /* Title on the left, links on the right of the same row. */
+        .pub-head {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 32px;
         }
-
-        .abstract-content {
-            margin-top: 0.75rem;
-            padding: 1em 1.25em;
-            background-color: #f7f7ff;
-            border-radius: 0.5rem;
-            border-left: 4px solid #4B3869;
-            font-size: 0.9rem;
-            line-height: 1.5;
-            color: #1a1a1a;
-            overflow-x: auto;
+        .pub-links {
+            display: flex;
+            flex-shrink: 0;
+            gap: 16px;
+            font-family: var(--label);
+            font-size: 13px;
         }
-
-        /* More compact abstract styling for desktop */
-        @media (min-width: 1024px) {
-            .abstract-content {
-                margin-top: 0.5rem;
-                padding: 0.75em 1em;
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
+        .pub-links a {
+            font: inherit;
+            color: var(--crimson);
+            background: none;
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            text-decoration: none;
         }
-
-        @media (min-width: 1280px) {
-            .abstract-content {
-                margin-top: 0.375rem;
-                padding: 0.625em 0.875em;
-                font-size: 0.85rem;
-                line-height: 1.35;
-            }
+        .pub-links a:hover { text-decoration: underline; text-underline-offset: 3px; }
+        .pub-authors {
+            margin-top: 12px;
+            font-size: 15px;
+            color: var(--ink-soft);
         }
-
-        .abstract-content.hidden {
-            display: none;
+        .pub-authors strong { color: var(--ink); font-weight: 600; }
+        .pub-venue {
+            margin-top: 4px;
+            font-size: 15px;
+            color: var(--ink-soft);
         }
-
-        .no-results {
-            text-align: center;
-            padding: 2rem;
-            color: #6b7280;
+        .pub-venue em { font-style: italic; }
+        .pub-award {
+            display: inline-block;
+            margin-left: 12px;
+            padding: 2px 8px;
+            font-family: var(--sans);
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            line-height: 1.6;
+            color: #8f1d2c;
+            background: #fdf0f1;
+            border: 1px solid #f3c4ca;
+            border-radius: 6px;
+            vertical-align: 1px;
         }
+        .empty { padding: 40px 0; color: var(--ink-faint); }
 
-        .results-count {
-            color: #6b7280;
-            font-size: 0.875rem;
-            margin-bottom: 1rem;
+        @media (max-width: 860px) {
+            .principles { grid-template-columns: 1fr; }
+            .year-group { grid-template-columns: 1fr; gap: 0; }
+            .pub-head { flex-direction: column; gap: 6px; }
+            .year-label { position: static; font-size: 28px; }
         }
-
-        /* Pagination and scrollable container styles */
-        .publication-container {
-            max-height: 600px;
-            overflow-y: auto;
-            border: 1px solid #e5e7eb;
-            border-radius: 0.75rem;
-            padding: 1rem;
-            background-color: #f9fafb;
-            margin-bottom: 1.5rem;
-            scrollbar-width: thin;
-            scrollbar-color: #A41034 #f1f5f9;
-        }
-
-        /* Larger container height for desktop */
-        @media (min-width: 1024px) {
-            .publication-container {
-                max-height: 700px;
-            }
-        }
-
-        @media (min-width: 1280px) {
-            .publication-container {
-                max-height: 800px;
-            }
-        }
-
-        .publication-container::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .publication-container::-webkit-scrollbar-track {
-            background: #f1f5f9;
-            border-radius: 4px;
-        }
-
-        .publication-container::-webkit-scrollbar-thumb {
-            background: #A41034;
-            border-radius: 4px;
-        }
-
-        .publication-container::-webkit-scrollbar-thumb:hover {
-            background: #8C1829;
-        }
-
-        /* Mobile responsive styles */
-        @media (max-width: 768px) {
-            .publication-container {
-                max-height: 500px;
-                padding: 0.75rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .publication-container {
-                max-height: 400px;
-                padding: 0.5rem;
-            }
-        }
-
     </style>
 </head>
 <body>
 
-    <!-- Fixed Header -->
-    <header class="fixed top-0 left-0 right-0 z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-lg title-font font-normal tracking-tight">
-                <a href="index.html"><span class="text-harvard-crimson">Information Theory</span> Lab</a>
-            </div>
-            <!-- Desktop Navigation -->
-            <nav class="hidden md:flex space-x-8 text-gray-500 font-medium">
-                <a href="research.html" class="text-harvard-crimson">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.627 48.627 0 0 1 12 20.904a48.627 48.627 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.57 50.57 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" /></svg>
-                    <span>Research</span>
-                </a>
-                <a href="people.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                    <span>People</span>
-                </a>
-                <a href="news.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 0 1-2.25 2.25M16.5 7.5V18a2.25 2.25 0 0 0 2.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 0 0 2.25 2.25h13.5M6 7.5h3v3H6v-3Z" /></svg>
-                    <span>News</span>
-                </a>
-                <a href="https://github.com/infoTheoryLab/" target="_blank">
-                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 fill-current"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-                    <span>Github</span>
-                </a>
-                <a href="contact.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" /></svg>
-                    <span>Contact</span>
-                </a>
-            </nav>
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-harvard-crimson">
-                    <span class="sr-only">Open main menu</span>
-                    <svg id="icon-open" class="h-6 w-6 block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
-                    <svg id="icon-close" class="h-6 w-6 hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+<header data-site-header></header>
+
+<main>
+
+    <section class="page-head">
+        <div class="wrap">
+            <h1 class="display">Research</h1>
+            <p class="lede">Our research group works on information theory, machine learning, and artificial intelligence. We aim to develop foundational theory that guides the design of trustworthy AI and machine learning systems.</p>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="principles">
+                <div class="principle">
+                    <h3>Vision</h3>
+                    <p>A future where AI systems work reliably for everyone, are trustworthy by design, and are built on solid mathematical foundations.</p>
+                </div>
+                <div class="principle">
+                    <h3>Approach</h3>
+                    <p>We use tools from information theory to understand how to design trustworthy AI systems. We prove theorems <em>and</em> create algorithms, since theory-guided solutions can massively outperform trial-and-error heuristics.</p>
+                </div>
+                <div class="principle">
+                    <h3>Research Support</h3>
+                    <p>Our research group is supported by the NSF and by generous gifts and awards from Google, IBM, Amazon, and Oracle Research.</p>
+                </div>
             </div>
         </div>
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden">
-            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-white menu-active">Research</a>
-                <a href="people.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">People</a>
-                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">News</a>
-                <a href="https://github.com/infoTheoryLab/" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Github</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-500">Contact</a>
+    </section>
+
+    <section class="section" id="publications">
+        <div class="wrap">
+            <div class="tools">
+                <input type="search" id="search" class="search" placeholder="Search by title, author, venue, or keyword" aria-label="Search publications">
+                <div class="filters" id="filters"></div>
             </div>
+
+            <div id="pubs"></div>
         </div>
-    </header>
+    </section>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <div class="container mx-auto max-w-6xl px-6 py-8">
-            <div class="text-center mb-12">
-                <h1 class="text-4xl md:text-5xl font-semibold tracking-tighter mb-6 text-harvard-crimson">Research</h1>
-                <p class="text-xl text-gray-600 max-w-4xl mx-auto">
-                    Our research group works on information theory, machine learning, and artificial intelligence. We aim to develop foundational theory that guides the design of trustworthy AI and machine learning systems.
-                </p>
-            </div>
+</main>
 
-            <!-- Research Philosophy -->
-            <div class="mb-16">
-                <div class="space-y-6 max-w-4xl mx-auto">
-                    <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-harvard-crimson rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="figs/telescope_low.png" alt="Telescope icon for Vision" class="w-12 h-12">
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                <span class="text-xl font-semibold text-harvard-crimson font-plantin">Vision:</span> A future where AI systems work reliably for everyone, are trustworthy by design, and are built on solid mathematical foundations.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-harvard-crimson rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="figs/gears_low.png" alt="Gears icon for Approach" class="w-12 h-12">
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                <span class="text-xl font-semibold text-harvard-crimson font-plantin">Approach:</span> We use tools from information theory to understand how to design trustworthy AI systems. We prove theorems <b>and</b> create algorithms since  theory-guided solutions can massively outperform trial-and-error heuristics.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="flex items-start space-x-6">
-                        <div class="flex-shrink-0">
-                            <div class="w-16 h-16 bg-harvard-crimson rounded-2xl flex items-center justify-center shadow-lg">
-                                <img src="figs/rocket_low.png" alt="Rocket icon for Research Support" class="w-12 h-12">
-                            </div>
-                        </div>
-                        <div>
-                            <p class="text-gray-700 leading-relaxed text-lg">
-                                <span class="text-xl font-semibold text-harvard-crimson font-plantin">Research Support:</span> Our research group is supported by the NSF and by generous gifts and awards from Google, IBM, Amazon, and Oracle Research.
-                            </p>
-                        </div>
-                    </div>
+<footer data-site-footer></footer>
+
+<script src="assets/site.js"></script>
+<script>
+    const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const asList = v => Array.isArray(v) ? v.filter(Boolean) : (v ? [v] : []);
+
+    let pubs = [];
+    let names = { lab: {}, other: {} };
+    let active = 'All';
+
+    // Authors are stored with initials; authors.json maps them to full names.
+    // Lab members are bolded.
+    // Newer entries store full names; lab members are recognized either way.
+    function renderAuthors(authors) {
+        const labNames = new Set(Object.values(names.lab));
+        return authors.split(',').map(a => a.trim()).filter(Boolean).map(a => {
+            if (names.lab[a]) return `<strong>${esc(names.lab[a])}</strong>`;
+            if (labNames.has(a)) return `<strong>${esc(a)}</strong>`;
+            return esc(names.other[a] || a);
+        }).join(', ');
+    }
+
+    function searchText(p) {
+        const expanded = p.authors.split(',').map(a => names.lab[a.trim()] || names.other[a.trim()] || '').join(' ');
+        return [p.title, p.authors, expanded, p.venue, p.keywords, asList(p.category).join(' '), p.year].join(' ').toLowerCase();
+    }
+
+    function renderPub(p) {
+        const links = [];
+        if (p.arxiv_website) links.push(`<a href="${esc(p.arxiv_website)}" target="_blank" rel="noopener">arXiv</a>`);
+        if (p.pub_website) links.push(`<a href="${esc(p.pub_website)}" target="_blank" rel="noopener">Paper</a>`);
+        if (p.code_repository) links.push(`<a href="${esc(p.code_repository)}" target="_blank" rel="noopener">Code</a>`);
+
+        const isPreprint = p.type === 'preprint' || /^(arxiv|under review)/i.test(p.venue);
+        const venue = isPreprint ? 'Preprint' : p.venue;
+        return `
+            <li class="pub">
+                <div class="pub-head">
+                    <h3 class="pub-title">${esc(p.title)}</h3>
+                    ${links.length ? `<div class="pub-links">${links.join('')}</div>` : ''}
                 </div>
-            </div>
+                <div class="pub-authors">${renderAuthors(p.authors)}</div>
+                <div class="pub-venue"><em>${esc(venue)}</em>${p.award ? `<span class="pub-award">${esc(p.award)}</span>` : ''}</div>
+            </li>`;
+    }
 
-
-            <!-- Publication Search Section -->
-            <div class="mt-16">
-                <h2 class="text-3xl font-semibold mb-6 text-harvard-crimson text-center">Search Our Publications</h2>
-                <p class="text-gray-600 text-center mb-6">Explore our collection of research papers by searching titles, authors, venues, or keywords.</p>
-                <div class="search-container">
-                    <div class="search-wrapper">
-                        <svg class="search-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                        </svg>
-                        <input type="text" id="searchInput" class="search-input" placeholder="Search by title, author, venue, or keywords...">
-                    </div>
-                    <button id="surpriseMeBtn" class="surprise-me-btn">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-                        </svg>
-                        Surprise Me
-                    </button>
-                </div>
-                <div class="filter-buttons" id="filterButtons">
-                    <button class="filter-btn active" data-filter="all">All</button>
-                    <!-- <button class="filter-btn" data-filter="conference">Conferences</button> -->
-                    <!-- <button class="filter-btn" data-filter="journal">Journals</button> -->
-                </div>
-                <div class="results-count" id="resultsCount"></div>
-                <div class="publication-container">
-                    <div class="publication-grid" id="publicationGrid"></div>
-                </div>
-            </div>
-
-
-            <!-- SEAS Logo -->
-            <div class="mt-16 text-center">
-                <img src="figs/seaslogo.png" alt="Harvard School of Engineering and Applied Sciences Logo" class="w-56 mx-auto">
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Publications data and search functionality
-        let publications = [];
-        let filteredPublications = [];
-        let activeFilters = new Set(['all']); // Track multiple active filters, start with 'all'
-
-        // Load publications from JSON file
-        // Add cache-busting parameter to prevent browser caching
-        fetch('publications.json?v=' + new Date().getTime())
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                // Sort publications by year in descending order (newest first)
-                publications = data.sort((a, b) => b.year - a.year);
-                filteredPublications = [...publications];
-                generateCategoryFilters();
-                renderPublications();
-                updateResultsCount();
-            })
-            .catch(error => {
-                console.error('Error loading publications:', error);
-                const grid = document.getElementById('publicationGrid');
-                if (grid) {
-                    grid.innerHTML = `
-                        <div class="no-results">
-                            <p>Error loading publications: ${error.message}</p>
-                            <p class="text-sm text-gray-500 mt-2">Please check the browser console for more details.</p>
-                        </div>
-                    `;
-                }
-            });
-
-        // Search functionality
-        function searchPublications(query) {
-            const searchTerms = query.toLowerCase().split(' ').filter(term => term.length > 0);
-            
-            return publications.filter(pub => {
-                const searchableText = [
-                    pub.title,
-                    pub.authors,
-                    pub.venue,
-                    pub.keywords,
-                    Array.isArray(pub.category) ? pub.category.join(' ') : pub.category,
-                    pub.year.toString()
-                ].join(' ').toLowerCase();
-
-                return searchTerms.every(term => searchableText.includes(term));
-            });
+    // Papers grouped by year, with the year in the left margin.
+    function render(list) {
+        const el = document.getElementById('pubs');
+        if (!list.length) {
+            el.innerHTML = '<p class="empty">No publications match your search.</p>';
+            return;
         }
+        const years = [...new Set(list.map(p => p.year))].sort((a, b) => b - a);
+        el.innerHTML = years.map(y => `
+            <section class="year-group">
+                <h2 class="year-label">${esc(y)}</h2>
+                <ul class="pubs">${list.filter(p => p.year === y).map(renderPub).join('')}</ul>
+            </section>`).join('');
+    }
 
-        // Generate category filter buttons dynamically from actual categories
-        function generateCategoryFilters() {
-            // Extract all unique categories from publications
-            const categorySet = new Set();
-            publications.forEach(pub => {
-                if (pub.category) {
-                    const categories = Array.isArray(pub.category) ? pub.category : [pub.category];
-                    categories.forEach(cat => {
-                        if (cat) { // Filter out null/undefined
-                            categorySet.add(cat);
-                        }
-                    });
-                }
-            });
-            
-            // Sort categories alphabetically
-            const categories = Array.from(categorySet).sort();
-            
-            // Get the filter buttons container
-            const filterButtonsContainer = document.getElementById('filterButtons');
-            if (!filterButtonsContainer) return;
-            
-            // Add category buttons after the "All" button
-            categories.forEach(category => {
-                const button = document.createElement('button');
-                button.className = 'filter-btn';
-                button.setAttribute('data-filter', category);
-                button.textContent = category;
-                filterButtonsContainer.appendChild(button);
-            });
-            
-        }
+    // While searching, the filters are hidden and the search covers every category.
+    function apply() {
+        const terms = document.getElementById('search').value.toLowerCase().split(/\s+/).filter(Boolean);
+        const searching = terms.length > 0;
+        document.querySelector('.tools').classList.toggle('searching', searching);
+        render(pubs.filter(p =>
+            (searching || active === 'All' || asList(p.category).includes(active)) &&
+            terms.every(t => searchText(p).includes(t))
+        ));
+    }
 
-        // Attach event listeners to filter buttons using event delegation
-        function attachFilterListeners() {
-            const filterButtonsContainer = document.getElementById('filterButtons');
-            if (!filterButtonsContainer) return;
-            
-            // Use event delegation - single listener on container handles all buttons
-            filterButtonsContainer.addEventListener('click', (e) => {
-                const btn = e.target.closest('.filter-btn');
-                if (!btn) return;
-                
-                const filter = btn.dataset.filter;
-                
-                // Handle "All" button - clears all other filters
-                if (filter === 'all') {
-                    activeFilters.clear();
-                    activeFilters.add('all');
-                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                    btn.classList.add('active');
-                } else {
-                    // Toggle the filter
-                    if (activeFilters.has('all')) {
-                        activeFilters.clear();
-                        document.querySelector('[data-filter="all"]').classList.remove('active');
-                    }
-                    
-                    if (activeFilters.has(filter)) {
-                        // Remove filter
-                        activeFilters.delete(filter);
-                        btn.classList.remove('active');
-                    } else {
-                        // Add filter
-                        activeFilters.add(filter);
-                        btn.classList.add('active');
-                    }
-                    
-                    // If no filters are active, activate "All"
-                    if (activeFilters.size === 0) {
-                        activeFilters.add('all');
-                        document.querySelector('[data-filter="all"]').classList.add('active');
-                    }
-                }
-                
-                applyFilters();
-            });
-        }
-
-        // Filter functionality - supports multiple filters (intersection)
-        function filterPublications() {
-            // If "all" is selected or no filters, return all publications
-            if (activeFilters.has('all') || activeFilters.size === 0) {
-                return [...publications];
-            }
-            
-            // Filter publications to match ALL active filters (intersection)
-            return publications.filter(pub => {
-                const pubCategories = Array.isArray(pub.category) ? pub.category : (pub.category ? [pub.category] : []);
-                
-                // Check if publication matches all active filters
-                return Array.from(activeFilters).every(filter => {
-                    // Handle type filters (conference, journal)
-                    if (pub.type === filter) {
-                        return true;
-                    }
-                    
-                    // Handle category filters
-                    return pubCategories.includes(filter);
-                });
-            });
-        }
-
-        // Abstract toggle functionality
-        function toggleAbstract(id) {
-            const content = document.getElementById(id);
-            const button = content.previousElementSibling;
-            const textSpan = button.querySelector('.abstract-text');
-            
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                button.classList.add('expanded');
-                textSpan.textContent = 'Abstract';
-            } else {
-                content.classList.add('hidden');
-                button.classList.remove('expanded');
-                textSpan.textContent = 'Abstract';
-            }
-        }
-
-        // bib functionality
-        function toggleBibtex(id, filePath) {
-            const el = document.getElementById(id);
-            if (!el) return;
-
-            if (el.classList.contains('hidden')) {
-                if (el.textContent === 'Loading...') {
-                fetch(filePath)
-                    .then(res => res.text())
-                    .then(data => {
-                    el.textContent = data;
-                    el.classList.remove('hidden');
-                    });
-                } else {
-                el.classList.remove('hidden');
-                }
-            } else {
-                el.classList.add('hidden');
-            }
-        }
-
-        // Render publications
-        function renderPublications() {
-            const grid = document.getElementById('publicationGrid');
-            
-            if (filteredPublications.length === 0) {
-                grid.innerHTML = '<div class="no-results">No publications found matching your criteria.</div>';
-                return;
-            }
-
-            const publicationsHTML = filteredPublications.map(pub => {
-                // Abstract dropdown functionality
-                const abstractId = `abstract-${pub.id}`;
-                const hasAbstract = pub.abstract && pub.abstract.trim() !== '';
-                const abstractButton = hasAbstract ? 
-                    `<button class="abstract-toggle" onclick="toggleAbstract('${abstractId}')">
-                        <span class="abstract-text">Abstract</span>
-                        <svg class="abstract-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polyline points="6,9 12,15 18,9"></polyline>
-                        </svg>
-                    </button>` : '';
-                let tagsHTML = abstractButton;
-
-                // Link buttons
-                const links = [];
-                let bibtexBlock = "";
-
-                if (pub.pub_website) {
-                    links.push(`<a class="pub-link-button paper" href="${pub.pub_website}" target="_blank">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                        Paper
-                    </a>`);
-                }
-                if (pub.arxiv_website) {
-                    links.push(`<a class="pub-link-button arxiv" href="${pub.arxiv_website}" target="_blank">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                        arXiv
-                    </a>`);
-                }
-                if (pub.code_repository) {
-                    links.push(`<a class="pub-link-button code" href="${pub.code_repository}" target="_blank">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                        Code
-                    </a>`);
-                }
-                if (pub.bibtex) {
-                    const bibId = `bib-${pub.id}`;
-                    links.push(`<a class="pub-link-button bibtex" href="javascript:void(0);" onclick="toggleBibtex('${bibId}', '${pub.bibtex}')">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M7 17L17 7M17 7H7M17 7V17"/>
-                        </svg>
-                        BibTeX
-                    </a>`);
-                    bibtexBlock = `<pre id="${bibId}" class="bibtex-block hidden">Loading...</pre>`;
-                }
-
-                const linksHTML = links.length ? `<div class="pub-links">${links.join(" ")}</div>` : "";
-
-                // Final HTML block
-                return `
-                    <div class="publication-card">
-                        <div class="pub-header">
-                            <div class="pub-title">${pub.title}</div>
-                            ${pub.award ? `<span class="pub-award">${pub.award}</span>` : ''}
-                        </div>
-                        <div class="pub-authors">${pub.authors}</div>
-                        <div class="pub-venue">${pub.type === 'preprint' ? pub.venue : `${pub.venue} (${pub.year})`}</div>
-                        ${pub.tldr ? `<div class="pub-tldr">${pub.tldr}</div>` : ''}
-
-                        <div class="pub-meta">
-                            <div class="pub-links-row">
-                                ${tagsHTML}
-                                ${linksHTML}
-                            </div>
-                        </div>
-                        ${hasAbstract ? `<div id="${abstractId}" class="abstract-content hidden">${pub.abstract}</div>` : ''}
-                        ${bibtexBlock}
-                    </div>
-                `;
-            }).join('');
-
-
-            grid.innerHTML = publicationsHTML;
-            
-            // Re-render MathJax for any LaTeX math in the abstracts
-            setTimeout(() => {
-                if (window.MathJax && typeof MathJax.typesetPromise === 'function') {
-                    MathJax.typesetPromise().catch(() => {
-                        // Fallback: if MathJax fails, show raw LaTeX text
-                        const mathElements = document.querySelectorAll('.abstract-content');
-                        mathElements.forEach(element => {
-                            element.innerHTML = element.innerHTML
-                                .replace(/\$([^$]+)\$/g, '$1')  // Remove $ delimiters
-                                .replace(/\\\\([a-zA-Z]+)/g, '\\\\$1'); // Keep LaTeX commands readable
-                        });
-                    });
-                }
-            }, 100);
-        }
-
-        // Update results count
-        function updateResultsCount() {
-            const count = filteredPublications.length;
-            const total = publications.length;
-            document.getElementById('resultsCount').textContent = 
-                `Showing ${count} of ${total} publications`;
-        }
-
-        // Surprise Me functionality
-        function surpriseMe() {
-            if (publications.length === 0) return;
-            
-            // Get a random publication
-            const randomIndex = Math.floor(Math.random() * publications.length);
-            const randomPub = publications[randomIndex];
-            
-            // Clear search and filters
-            document.getElementById('searchInput').value = '';
-            activeFilters.clear();
-            activeFilters.add('all');
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            document.querySelector('[data-filter="all"]').classList.add('active');
-            
-            // Show only the random publication
-            filteredPublications = [randomPub];
-            renderPublications();
-            updateResultsCount();
-            
-            // Scroll to the publication
-            setTimeout(() => {
-                const firstCard = document.querySelector('.publication-card');
-                if (firstCard) {
-                    firstCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                }
-            }, 100);
-        }
-
-        // Apply current filters and search
-        function applyFilters() {
-            let results = filterPublications();
-            
-            const searchQuery = document.getElementById('searchInput').value.trim();
-            if (searchQuery) {
-                const searchTerms = searchQuery.toLowerCase().split(' ').filter(term => term.length > 0);
-                results = results.filter(pub => {
-                    const searchableText = [
-                        pub.title,
-                        pub.authors,
-                        pub.venue,
-                        pub.keywords,
-                        Array.isArray(pub.category) ? pub.category.join(' ') : pub.category,
-                        pub.year.toString()
-                    ].join(' ').toLowerCase();
-
-                    return searchTerms.every(term => searchableText.includes(term));
-                });
-            }
-            
-            filteredPublications = results;
-            renderPublications();
-            updateResultsCount();
-        }
-
-        // Event listeners
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
-            const menuBtn = document.getElementById('menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const iconOpen = document.getElementById('icon-open');
-            const iconClose = document.getElementById('icon-close');
-
-            if (menuBtn) {
-                menuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                    iconOpen.classList.toggle('hidden');
-                    iconClose.classList.toggle('hidden');
-                });
-            }
-
-            // Search input
-            const searchInput = document.getElementById('searchInput');
-            if (searchInput) {
-                searchInput.addEventListener('input', applyFilters);
-            }
-
-            // Surprise Me button
-            const surpriseMeBtn = document.getElementById('surpriseMeBtn');
-            if (surpriseMeBtn) {
-                surpriseMeBtn.addEventListener('click', surpriseMe);
-            }
-
-            // Attach filter button listeners using event delegation
-            attachFilterListeners();
-
+    function renderFilters() {
+        const cats = [...new Set(pubs.flatMap(p => asList(p.category)))].sort();
+        const el = document.getElementById('filters');
+        el.innerHTML = ['All', ...cats].map(c =>
+            `<button class="filter${c === active ? ' active' : ''}" data-cat="${esc(c)}">${esc(c)}</button>`).join('');
+        el.addEventListener('click', e => {
+            const btn = e.target.closest('.filter');
+            if (!btn) return;
+            active = btn.dataset.cat;
+            el.querySelectorAll('.filter').forEach(b => b.classList.toggle('active', b === btn));
+            apply();
         });
-    </script>
+    }
+
+    document.getElementById('search').addEventListener('input', apply);
+
+    Promise.all([
+        fetch('publications.json?v=' + Date.now()).then(r => r.json()),
+        fetch('authors.json').then(r => r.json()).catch(() => ({}))
+    ]).then(([data, authorMap]) => {
+        names = { lab: authorMap.lab || {}, other: authorMap.other || {} };
+        pubs = data.sort((a, b) => b.year - a.year);
+        renderFilters();
+        apply();
+    }).catch(err => {
+        console.error('Could not load publications', err);
+        document.getElementById('pubs').innerHTML = '<li class="empty">Could not load publications.</li>';
+    });
+</script>
 
 </body>
 </html>
