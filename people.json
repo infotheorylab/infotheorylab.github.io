@@ -49,9 +49,9 @@
       "name": "Benjamin Kim",
       "role": "PhD Student (G1, co-advised with Muriel Médard)",
       "website": "https://bkim34.github.io/",
-      "google_scholar": null,
-      "linkedin": null,
-      "photo": null,
+      "google_scholar": "https://scholar.google.com/citations?user=FJPBlE8AAAAJ&hl=en",
+      "linkedin": "https://www.linkedin.com/in/bkim34/",
+      "photo": "ben-crop.png",
       "type": "student"
     },
     {
@@ -60,7 +60,7 @@
       "website": "https://harry.scheon.com/",
       "google_scholar": "https://scholar.google.com/citations?user=fR8g5aYAAAAJ",
       "linkedin": "https://www.linkedin.com/in/harrycheon17",
-      "photo": "harry.jpg",
+      "photo": "harry-crop.jpg",
       "type": "student"
     },
     {
