@@ -1,5 +1,44 @@
 [
   {
+      "id": "cs63",
+      "title": "Sort, Partition, Randomize: Optimal Binary Hypothesis Testing under Local Differential Privacy",
+      "authors": "Elena Ghazi, Jawad Nasser, Flavio du Pin Calmon, Ibrahim Issa",
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+      "year": 2026,
+      "type": "conference",
+      "category": [
+          "Privacy",
+          "Information Theory"
+      ],
+      "keywords": "local differential privacy, hypothesis testing",
+      "tldr": null,
+      "abstract": "We study optimal design of $\\varepsilon$-locally differentially private mechanisms for binary hypothesis testing. Each observation is drawn from one of two known distributions $P_0,P_1$ on a finite alphabet of size $k$, privatized by a mechanism $Q$, and then used to infer which distribution generated the data. We measure testing utility using an $f$-divergence, including total variation, KL, and hockey-stick divergences, between the two induced output distributions. Previous work established structural properties of optimal mechanisms, but only yielded exponential-time algorithms. We prove a sharp structure: for every $\\varepsilon$ and every $f$-divergence objective, after sorting the alphabet by likelihood ratio, there exists an optimal mechanism that partitions the sorted alphabet into contiguous blocks and applies randomized response to the block label. We call this class Sort-Partition-Randomize (SPR). This characterization yields an exact dynamic program that computes an optimal mechanism in $O(k^3)$ time, and more generally in $O(\\ell k^2)$ time with an $\\ell$-output budget. Our results make it possible to efficiently compute and characterize the exact optimum across the full privacy range, beyond asymptotic privacy regimes.",
+      "pub_website": null,
+      "arxiv_website": "https://arxiv.org/abs/2606.07443",
+      "code_repository": null,
+      "bibtex": null,
+      "award": "Spotlight Presentation"
+  },
+  {
+      "id": "cs64",
+      "title": "ArcMark: Distortion-Free Multi-Byte LLM Watermark via Optimal Transport",
+      "authors": "Atefeh Gilani, Sajani Vithana, Carol Long, Oliver Kosut, Lalitha Sankar, Flavio du Pin Calmon",
+      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+      "year": 2026,
+      "type": "conference",
+      "category": [
+          "Large Language Models",
+          "Information Theory"
+      ],
+      "keywords": "watermarking, optimal transport, large language models",
+      "tldr": null,
+      "abstract": "Watermarking is an important tool for promoting the responsible use of large language models (LLMs). Existing watermarks insert a signal into generated tokens that either flags LLM-generated text (zero-bit watermarking) or encodes more complex messages (multi-bit watermarking). Though a number of recent approaches insert multiple bits into text without perturbing average next-token predictions, they largely extend design principles from the zero-bit setting, such as encoding a single bit per token. In contrast, a watermarker capable of embedding multiple bytes into the text would dramatically increase the potential applications, by embedding information such as the ID of the user who submitted the prompt, the precise model version that was used, or even the prompt itself. We address this problem by introducing ArcMark: a new watermark construction based on coding and information-theoretic principles that is capable of reliably embedding multiple bytes of information into just a few hundred tokens, without any distortion of the underlying LLM next-token distribution. We derive ArcMark by formulating the distortion-free watermarking problem as a channel coding problem, and deriving an information-theoretic channel capacity that establishes the fundamental limit of embedding information in LLM output in a distortion-free manner. This capacity formulation informs the design of ArcMark. In practice, ArcMark outperforms competing multi-bit distortion-free watermarks in terms of reconstruction accuracy, including in the face of attacks that alter a subset of the LLM text. ArcMark output is also shown to be indistinguishable from unwatermarked text in terms of perplexity, and in downstream task quality.",
+      "pub_website": null,
+      "arxiv_website": "https://arxiv.org/abs/2602.07235",
+      "code_repository": null,
+      "bibtex": null
+  },
+  {
       "id": "pre1",
       "title": "A Complete Characterization of Tensorizable f-divergences",
       "authors": "Rodrigo Cruz, Flavio du Pin Calmon, Qian Yu",
@@ -35,45 +74,6 @@
       "arxiv_website": "https://arxiv.org/abs/2608.14191",
       "code_repository": null,
       "bibtex": null
-  },
-  {
-      "id": "cs61",
-      "title": "Optimal Domain-Aware Privacy Mechanisms for Synthetic Data Generation",
-      "authors": "Sajani Vithana, Sangwon Jung, Haoyang Hu, Viveck R. Cadambe, Flavio du Pin Calmon, Haewon Jeong",
-      "venue": "International Conference on Machine Learning (ICML)",
-      "year": 2026,
-      "type": "conference",
-      "category": [
-          "Privacy",
-          "Machine Learning"
-      ],
-      "keywords": "differential privacy, synthetic data, privacy mechanisms",
-      "tldr": null,
-      "abstract": "Differential privacy (DP) imposes fundamental trade-offs between privacy and statistical fidelity in synthetic data generation. While access to public data has been shown to improve these trade-offs empirically, existing approaches use public data only indirectly, through pre-processing (e.g., using pre-trained generative models) or post-processing steps (e.g., matching target statistics estimated from public datasets), while relying on domain-agnostic DP mechanisms. In this work, we lay the theoretical framework to study the principled incorporation of public data into DP mechanisms themselves. We consider normalized histograms as distribution estimators and characterize the asymptotically optimal domain-aware privacy mechanism within a specific class of DP mechanisms. We introduce PubMix, a public-data-aware DP mechanism that can be used in histogram-based data synthesis pipelines. Our experiments demonstrate that PubMix significantly improves synthetic data generation quality compared to domain-agnostic privacy mechanisms.",
-      "pub_website": null,
-      "arxiv_website": "https://arxiv.org/abs/2607.18021",
-      "code_repository": null,
-      "bibtex": null
-  },
-  {
-      "id": "cs63",
-      "title": "Sort, Partition, Randomize: Optimal Binary Hypothesis Testing under Local Differential Privacy",
-      "authors": "Elena Ghazi, Jawad Nasser, Flavio du Pin Calmon, Ibrahim Issa",
-      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
-      "year": 2026,
-      "type": "conference",
-      "category": [
-          "Privacy",
-          "Information Theory"
-      ],
-      "keywords": "local differential privacy, hypothesis testing",
-      "tldr": null,
-      "abstract": "We study optimal design of $\\varepsilon$-locally differentially private mechanisms for binary hypothesis testing. Each observation is drawn from one of two known distributions $P_0,P_1$ on a finite alphabet of size $k$, privatized by a mechanism $Q$, and then used to infer which distribution generated the data. We measure testing utility using an $f$-divergence, including total variation, KL, and hockey-stick divergences, between the two induced output distributions. Previous work established structural properties of optimal mechanisms, but only yielded exponential-time algorithms. We prove a sharp structure: for every $\\varepsilon$ and every $f$-divergence objective, after sorting the alphabet by likelihood ratio, there exists an optimal mechanism that partitions the sorted alphabet into contiguous blocks and applies randomized response to the block label. We call this class Sort-Partition-Randomize (SPR). This characterization yields an exact dynamic program that computes an optimal mechanism in $O(k^3)$ time, and more generally in $O(\\ell k^2)$ time with an $\\ell$-output budget. Our results make it possible to efficiently compute and characterize the exact optimum across the full privacy range, beyond asymptotic privacy regimes.",
-      "pub_website": null,
-      "arxiv_website": "https://arxiv.org/abs/2606.07443",
-      "code_repository": null,
-      "bibtex": null,
-      "award": "Spotlight Presentation"
   },
   {
       "id": "pre5",
@@ -114,21 +114,21 @@
       "bibtex": null
   },
   {
-      "id": "cs64",
-      "title": "ArcMark: Distortion-Free Multi-Byte LLM Watermark via Optimal Transport",
-      "authors": "Atefeh Gilani, Sajani Vithana, Carol Long, Oliver Kosut, Lalitha Sankar, Flavio du Pin Calmon",
-      "venue": "Advances in Neural Information Processing Systems (NeurIPS)",
+      "id": "cs61",
+      "title": "Optimal Domain-Aware Privacy Mechanisms for Synthetic Data Generation",
+      "authors": "Sajani Vithana, Sangwon Jung, Haoyang Hu, Viveck R. Cadambe, Flavio du Pin Calmon, Haewon Jeong",
+      "venue": "International Conference on Machine Learning (ICML)",
       "year": 2026,
       "type": "conference",
       "category": [
-          "Large Language Models",
-          "Information Theory"
+          "Privacy",
+          "Machine Learning"
       ],
-      "keywords": "watermarking, optimal transport, large language models",
+      "keywords": "differential privacy, synthetic data, privacy mechanisms",
       "tldr": null,
-      "abstract": "Watermarking is an important tool for promoting the responsible use of large language models (LLMs). Existing watermarks insert a signal into generated tokens that either flags LLM-generated text (zero-bit watermarking) or encodes more complex messages (multi-bit watermarking). Though a number of recent approaches insert multiple bits into text without perturbing average next-token predictions, they largely extend design principles from the zero-bit setting, such as encoding a single bit per token. In contrast, a watermarker capable of embedding multiple bytes into the text would dramatically increase the potential applications, by embedding information such as the ID of the user who submitted the prompt, the precise model version that was used, or even the prompt itself. We address this problem by introducing ArcMark: a new watermark construction based on coding and information-theoretic principles that is capable of reliably embedding multiple bytes of information into just a few hundred tokens, without any distortion of the underlying LLM next-token distribution. We derive ArcMark by formulating the distortion-free watermarking problem as a channel coding problem, and deriving an information-theoretic channel capacity that establishes the fundamental limit of embedding information in LLM output in a distortion-free manner. This capacity formulation informs the design of ArcMark. In practice, ArcMark outperforms competing multi-bit distortion-free watermarks in terms of reconstruction accuracy, including in the face of attacks that alter a subset of the LLM text. ArcMark output is also shown to be indistinguishable from unwatermarked text in terms of perplexity, and in downstream task quality.",
+      "abstract": "Differential privacy (DP) imposes fundamental trade-offs between privacy and statistical fidelity in synthetic data generation. While access to public data has been shown to improve these trade-offs empirically, existing approaches use public data only indirectly, through pre-processing (e.g., using pre-trained generative models) or post-processing steps (e.g., matching target statistics estimated from public datasets), while relying on domain-agnostic DP mechanisms. In this work, we lay the theoretical framework to study the principled incorporation of public data into DP mechanisms themselves. We consider normalized histograms as distribution estimators and characterize the asymptotically optimal domain-aware privacy mechanism within a specific class of DP mechanisms. We introduce PubMix, a public-data-aware DP mechanism that can be used in histogram-based data synthesis pipelines. Our experiments demonstrate that PubMix significantly improves synthetic data generation quality compared to domain-agnostic privacy mechanisms.",
       "pub_website": null,
-      "arxiv_website": "https://arxiv.org/abs/2602.07235",
+      "arxiv_website": "https://arxiv.org/abs/2607.18021",
       "code_repository": null,
       "bibtex": null
   },
@@ -151,41 +151,20 @@
       "bibtex": null
   },
   {
-      "id": "pre9",
-      "title": "RippleBench: Capturing Ripple Effects Using Existing Knowledge Repositories",
-      "authors": "Roy Rinberg, Usha Bhalla, Igor Shilov, Flavio du Pin Calmon, Rohit Gandikota",
-      "venue": "arXiv preprint",
-      "year": 2025,
-      "type": "preprint",
-      "category": [
-          "Large Language Models",
-          "Machine Learning"
-      ],
-      "keywords": "unlearning, benchmarks, knowledge editing",
-      "tldr": null,
-      "abstract": "Targeted interventions on language models, such as unlearning or model editing, aim to modify specific information, but their effects often propagate to related, unintended areas (e.g., removing virology content may degrade performance on allergies); these side-effects are commonly referred to as the ripple effect. We introduce RippleBench-Maker, an automatic pipeline that retrieves semantic neighbors of any source concept from a knowledge repository and generates multiple-choice questions at varying semantic distances. We instantiate this framework using WikiRAG, an open-source RAG system over English Wikipedia, to construct RippleBench-WMDP-Bio (584 seed topics, 352,961 questions), and evaluate eight unlearning methods on Llama3-8B-Instruct. All eight exhibit accuracy drops that are largest near the unlearned target and decay with semantic distance, each with a distinct propagation profile. We replicate these findings across Mistral-7B, Zephyr-7B, and Yi-34B; cross-model delta curves are nearly identical, suggesting ripple effects are a property of the unlearning method rather than the base model. We validate all major pipeline stages using a four-experiment Mechanical Turk study (5,200+ responses, 61 workers). We release all code, data, and infrastructure.",
-      "pub_website": null,
-      "arxiv_website": "https://arxiv.org/abs/2512.04144",
-      "code_repository": null,
-      "bibtex": null
-  },
-  {
-      "id": "cs65",
-      "title": "Optimizing Noise Distributions for Differential Privacy",
-      "authors": "Atefeh Gilani, Juan Felipe Gomez, Shahab Asoodeh, Flavio du Pin Calmon, Oliver Kosut, Lalitha Sankar",
-      "venue": "International Conference on Machine Learning (ICML)",
-      "year": 2025,
-      "type": "conference",
-      "category": [
-          "Privacy"
-      ],
-      "keywords": "differential privacy, noise distributions, optimization",
-      "tldr": null,
-      "abstract": "We propose a unified optimization framework for designing continuous and discrete noise distributions that ensure differential privacy (DP) by minimizing Rényi DP, a variant of DP, under a cost constraint. Rényi DP has the advantage that by considering different values of the Rényi parameter $α$, we can tailor our optimization for any number of compositions. To solve the optimization problem, we reduce it to a finite-dimensional convex formulation and perform preconditioned gradient descent. The resulting noise distributions are then compared to their Gaussian and Laplace counterparts. Numerical results demonstrate that our optimized distributions are consistently better, with significant improvements in $(\\varepsilon, δ)$-DP guarantees in the moderate composition regimes, compared to Gaussian and Laplace distributions with the same variance.",
-      "pub_website": null,
-      "arxiv_website": "https://arxiv.org/abs/2504.14730",
-      "code_repository": null,
-      "bibtex": null
+    "id": "cs55",
+    "title": "Robust AI Evaluation through Maximal Lotteries",
+    "authors": "H. Khalaf, Serena Wang, Daniel Halpern, Itai Shapira, F. P. Calmon, Ariel D. Procaccia",
+    "venue": "International Conference on Machine Learning (ICML)",
+    "year": 2026,
+    "type": "conference",
+    "category": ["Large Language Models", "Machine Learning"],
+    "keywords": "large language models, social choice theory, ai evaluation",
+    "tldr": "We introduce robust lotteries to aggregate heterogeneous preferences into reliable model evaluations.",
+    "abstract": "The standard way to evaluate language models on subjective tasks is through pairwise comparisons: an annotator chooses the ''better'' of two responses to a prompt. Leaderboards aggregate these comparisons into a single Bradley-Terry (BT) ranking, forcing heterogeneous preferences into a total order and violating basic social-choice desiderata. In contrast, social choice theory provides an alternative approach called maximal lotteries, which aggregates pairwise preferences without imposing any assumptions on their structure. However, we show that maximal lotteries are highly sensitive to preference heterogeneity and can favor models that severely underperform on specific tasks or user subpopulations. We introduce robust lotteries that optimize worst-case performance under plausible shifts in the preference data. On large-scale preference datasets, robust lotteries provide more reliable win rate guarantees across the annotator distribution and recover a stable set of top-performing models. By moving from rankings to pluralistic sets of winners, robust lotteries offer a principled step toward an ecosystem of complementary AI systems that serve the full spectrum of human preferences.",
+    "pub_website": null,
+    "arxiv_website": "https://arxiv.org/pdf/2602.21297",
+    "code_repository": null,
+    "bibtex": null
   },
   {
       "id": "cs56",
@@ -223,6 +202,43 @@
       "abstract": "Current practices for reporting differential privacy (DP) guarantees for machine learning (ML) algorithms such as DP-SGD provide an incomplete and potentially misleading picture. For instance, if only a single $(\\varepsilon, δ)$ is known about a mechanism, standard analyses show that there could exist highly accurate inference attacks against training data records, when, upon a more careful analysis, such accurate attacks do not exist for most practical mechanisms. In this position paper, we argue that using _non-asymptotic_ Gaussian Differential Privacy (GDP) as the primary means of communicating DP guarantees in ML avoids these potential downsides. Using two recent developments in the DP literature: (i) open-source numerical accountants capable of computing the privacy profile and $f$-DP curves of DP-SGD to arbitrary accuracy, and (ii) a decision-theoretic metric over DP representations, we show how to provide non-asymptotic bounds on GDP using numerical accountants, and show that GDP can capture the entire privacy profile of DP-SGD and related algorithms with virtually no error, as quantified by the metric. To support our claims, we investigate the privacy profiles of state-of-the-art DP large-scale image classification, and the TopDown algorithm for the U.S. Decennial Census, observing that GDP fits their profiles remarkably well in all cases. We conclude with a discussion on the strengths and weaknesses of this approach, and discuss which other privacy mechanisms could benefit from GDP.",
       "pub_website": null,
       "arxiv_website": "https://arxiv.org/abs/2503.10945",
+      "code_repository": null,
+      "bibtex": null
+  },
+  {
+      "id": "pre9",
+      "title": "RippleBench: Capturing Ripple Effects Using Existing Knowledge Repositories",
+      "authors": "Roy Rinberg, Usha Bhalla, Igor Shilov, Flavio du Pin Calmon, Rohit Gandikota",
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "type": "preprint",
+      "category": [
+          "Large Language Models",
+          "Machine Learning"
+      ],
+      "keywords": "unlearning, benchmarks, knowledge editing",
+      "tldr": null,
+      "abstract": "Targeted interventions on language models, such as unlearning or model editing, aim to modify specific information, but their effects often propagate to related, unintended areas (e.g., removing virology content may degrade performance on allergies); these side-effects are commonly referred to as the ripple effect. We introduce RippleBench-Maker, an automatic pipeline that retrieves semantic neighbors of any source concept from a knowledge repository and generates multiple-choice questions at varying semantic distances. We instantiate this framework using WikiRAG, an open-source RAG system over English Wikipedia, to construct RippleBench-WMDP-Bio (584 seed topics, 352,961 questions), and evaluate eight unlearning methods on Llama3-8B-Instruct. All eight exhibit accuracy drops that are largest near the unlearned target and decay with semantic distance, each with a distinct propagation profile. We replicate these findings across Mistral-7B, Zephyr-7B, and Yi-34B; cross-model delta curves are nearly identical, suggesting ripple effects are a property of the unlearning method rather than the base model. We validate all major pipeline stages using a four-experiment Mechanical Turk study (5,200+ responses, 61 workers). We release all code, data, and infrastructure.",
+      "pub_website": null,
+      "arxiv_website": "https://arxiv.org/abs/2512.04144",
+      "code_repository": null,
+      "bibtex": null
+  },
+  {
+      "id": "cs65",
+      "title": "Optimizing Noise Distributions for Differential Privacy",
+      "authors": "Atefeh Gilani, Juan Felipe Gomez, Shahab Asoodeh, Flavio du Pin Calmon, Oliver Kosut, Lalitha Sankar",
+      "venue": "International Conference on Machine Learning (ICML)",
+      "year": 2025,
+      "type": "conference",
+      "category": [
+          "Privacy"
+      ],
+      "keywords": "differential privacy, noise distributions, optimization",
+      "tldr": null,
+      "abstract": "We propose a unified optimization framework for designing continuous and discrete noise distributions that ensure differential privacy (DP) by minimizing Rényi DP, a variant of DP, under a cost constraint. Rényi DP has the advantage that by considering different values of the Rényi parameter $α$, we can tailor our optimization for any number of compositions. To solve the optimization problem, we reduce it to a finite-dimensional convex formulation and perform preconditioned gradient descent. The resulting noise distributions are then compared to their Gaussian and Laplace counterparts. Numerical results demonstrate that our optimized distributions are consistently better, with significant improvements in $(\\varepsilon, δ)$-DP guarantees in the moderate composition regimes, compared to Gaussian and Laplace distributions with the same variance.",
+      "pub_website": null,
+      "arxiv_website": "https://arxiv.org/abs/2504.14730",
       "code_repository": null,
       "bibtex": null
   },
@@ -356,23 +372,7 @@
       "code_repository": null,
       "bibtex": null
   },
-   {
-    "id": "cs55",
-    "title": "Robust AI Evaluation through Maximal Lotteries",
-    "authors": "H. Khalaf, Serena Wang, Daniel Halpern, Itai Shapira, F. P. Calmon, Ariel D. Procaccia",
-    "venue": "International Conference on Machine Learning (ICML)",
-    "year": 2026,
-    "type": "conference",
-    "category": ["Large Language Models", "Machine Learning"],
-    "keywords": "large language models, social choice theory, ai evaluation",
-    "tldr": "We introduce robust lotteries to aggregate heterogeneous preferences into reliable model evaluations.",
-    "abstract": "The standard way to evaluate language models on subjective tasks is through pairwise comparisons: an annotator chooses the ''better'' of two responses to a prompt. Leaderboards aggregate these comparisons into a single Bradley-Terry (BT) ranking, forcing heterogeneous preferences into a total order and violating basic social-choice desiderata. In contrast, social choice theory provides an alternative approach called maximal lotteries, which aggregates pairwise preferences without imposing any assumptions on their structure. However, we show that maximal lotteries are highly sensitive to preference heterogeneity and can favor models that severely underperform on specific tasks or user subpopulations. We introduce robust lotteries that optimize worst-case performance under plausible shifts in the preference data. On large-scale preference datasets, robust lotteries provide more reliable win rate guarantees across the annotator distribution and recover a stable set of top-performing models. By moving from rankings to pluralistic sets of winners, robust lotteries offer a principled step toward an ecosystem of complementary AI systems that serve the full spectrum of human preferences.",
-    "pub_website": null,
-    "arxiv_website": "https://arxiv.org/pdf/2602.21297",
-    "code_repository": null,
-    "bibtex": null
-  },
-    {
+  {
     "id": "cs54",
     "title": "Unifying Re-Identification, Attribute Inference, and Data Reconstruction Risks in Differential Privacy",
     "authors": "B. Kulynych, J. F. Gomez, G. Kaissis, J. Hayes, B. Balle, F. D. P. Calmon, J. L Raisaro",
@@ -1761,7 +1761,7 @@
     "code_repository": null,
     "bibtex": "bibtex/cs2.bib"
   },
-   {
+  {
     "id": "cs1",
     "title": "Correcting forecasts with multifactor neural attention",
     "authors": "M. Riemer, A. Vempaty, F. P. Calmon, F. Heath, R. Hull, E. Khabiri",

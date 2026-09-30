@@ -93,7 +93,7 @@
     {
       "name": "Leonhard Grosse",
       "role": "PhD Student (4th year), KTH",
-      "website": null,
+      "website": "https://www.kth.se/profile/lgrosse",
       "google_scholar": null,
       "linkedin": null,
       "photo": null,
@@ -111,16 +111,47 @@
   ],
   "alumni": [
     {
-      "name": "Dr. Juan Felipe Gomez",
-      "role": "Now Postdoctoral Fellow at the Hasso Plattner Institute",
-      "website": null,
-      "google_scholar": null,
-      "linkedin": null,
-      "photo": "felipe.jpeg",
+      "name": "Dr. Hao Wang",
+      "role": "Now at MIT-IBM Watson AI Lab",
+      "website": "https://haowang94.github.io/",
+      "photo": null,
+      "thesis": {
+        "title": "Information Theory for Trustworthy Machine Learning",
+        "url": "https://dash.harvard.edu/handle/1/37372251"
+      },
+      "type": "phd"
+    },
+    {
+      "name": "Dr. Hsiang Hsu",
+      "role": "Now Researcher at JP Morgan Chase",
+      "website": "https://hsianghsu.github.io/",
+      "photo": null,
+      "thesis": {
+        "title": "Information-Theoretic Tools for Machine Learning Beyond Accuracy",
+        "url": "https://dash.harvard.edu/handle/1/37375764"
+      },
+      "type": "phd"
+    },
+    {
+      "name": "Dr. Wael Alghamdi",
+      "role": "Now co-founder of Delta Flow AI",
+      "website": "https://www.delta-flow.io/",
+      "photo": null,
+      "thesis": {
+        "title": "Estimation and Optimization of Information Measures with Applications to Fairness and Differential Privacy",
+        "url": "https://dash.harvard.edu/handle/1/37375888"
+      },
+      "type": "phd"
+    },
+    {
+      "name": "Dr. Lucas Monteiro Paes",
+      "role": "Now Postdoctoral Researcher at Apple",
+      "website": "https://lucasmonteiropaes.github.io/",
+      "photo": "lucas.jpg",
       "type": "phd",
       "thesis": {
-        "title": "Advances in Information-Theoretic Differential Privacy: Composition and Calibration",
-        "url": "https://dash.harvard.edu/entities/publication/0739e3e4-ee5f-4213-8382-f8c46aea3de9"
+        "title": "Epistemic Limits of Trustworthy Machine Learning",
+        "url": "https://dash.harvard.edu/entities/publication/8a753327-900a-483b-83bc-6b81d42f23e2"
       }
     },
     {
@@ -137,44 +168,24 @@
       }
     },
     {
-      "name": "Dr. Hao Wang",
-      "role": "Now at MIT-IBM Watson AI Lab",
-      "website": "https://haowang94.github.io/",
-      "photo": null,
+      "name": "Dr. Juan Felipe Gomez",
+      "role": "Now Postdoctoral Fellow at the Hasso Plattner Institute",
+      "website": null,
+      "google_scholar": null,
+      "linkedin": null,
+      "photo": "felipe.jpeg",
+      "type": "phd",
       "thesis": {
-        "title": "Information Theory for Trustworthy Machine Learning",
-        "url": "https://dash.harvard.edu/handle/1/37372251"
-      },
-      "type": "phd"
+        "title": "Advances in Information-Theoretic Differential Privacy: Composition and Calibration",
+        "url": "https://dash.harvard.edu/entities/publication/0739e3e4-ee5f-4213-8382-f8c46aea3de9"
+      }
     },
     {
-      "name": "Dr. Wael Alghamdi",
-      "role": "Now co-founder of Delta Flow AI",
-      "website": "https://www.delta-flow.io/",
+      "name": "Madeleine Barowsky",
+      "role": "Now software engineer at Etsy (Master's student)",
+      "website": "https://www.linkedin.com/in/madeleinebarowsky",
       "photo": null,
-      "thesis": {
-        "title": "Estimation and Optimization of Information Measures with Applications to Fairness and Differential Privacy",
-        "url": "https://dash.harvard.edu/handle/1/37375888"
-      },
-      "type": "phd"
-    },
-    {
-      "name": "Dr. Hsiang Hsu",
-      "role": "Now Researcher at JP Morgan Chase",
-      "website": "https://hsianghsu.github.io/",
-      "photo": null,
-      "thesis": {
-        "title": "Information-Theoretic Tools for Machine Learning Beyond Accuracy",
-        "url": "https://dash.harvard.edu/handle/1/37375764"
-      },
-      "type": "phd"
-    },
-    {
-      "name": "Dr. Lucas Monteiro Paes",
-      "role": "Now Postdoctoral Researcher at Apple",
-      "website": "https://lucasmonteiropaes.github.io/",
-      "photo": "lucas.jpg",
-      "type": "phd"
+      "type": "masters"
     },
     {
       "name": "Dr. Claudio Mayrink Verdun",
@@ -219,13 +230,6 @@
       "website": "https://www.linkedin.com/in/juwendo-denis-b92b234a",
       "photo": null,
       "type": "postdoc"
-    },
-    {
-      "name": "Madeleine Barowsky",
-      "role": "Now software engineer at Etsy (Master's student)",
-      "website": "https://www.linkedin.com/in/madeleinebarowsky",
-      "photo": null,
-      "type": "masters"
     },
     {
       "name": "Dr. Javier Zazo",
