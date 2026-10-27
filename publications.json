@@ -1,5 +1,44 @@
 [
   {
+      "id": "pre11",
+      "title": "Circuits of LLM Classifiers",
+      "authors": "Hadi Khalaf, Sajani Vithana, Kunal Talreja, Haewon Jeong, Viveck R. Cadambe, Flavio du Pin Calmon",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "type": "preprint",
+      "category": [
+          "Interpretability",
+          "Large Language Models"
+      ],
+      "keywords": "llm classifiers, circuits, interpretability, reliability",
+      "tldr": null,
+      "abstract": "Language models make it easy to build classifiers by simply prompting a model with the sample to classify. However, their predictions are neither deterministic nor uniformly reliable across samples. How can we combine predictions from different models to improve reliability? We view LLM classifiers as noisy measurement instruments of an underlying target label. Our goal is to maximize average classification accuracy at a given average query cost. To this end, we introduce circuits that organize LLM classifiers into an adaptive sequence of queries and decisions. We then characterize the optimal circuit, obtain the fundamental limits of achievable accuracy, and provide practical insights on realizing the optimal circuit. Across seven classification tasks spanning safety, health, political science, human preference, agent evaluation, decision-making and reasoning, our method improves the cost-accuracy frontier over routing and cascading baselines.",
+      "pub_website": null,
+      "arxiv_website": "https://arxiv.org/abs/2610.30076",
+      "code_repository": "https://github.com/hskhalaf/lmcircuit",
+      "bibtex": null
+  },
+  {
+      "id": "pre12",
+      "title": "Feedback Coding Enables Inference-Time Covert Agentic Communication",
+      "authors": "Sidong Guo, Sajani Vithana, Atefeh Gilani, Lalitha Sankar, Oliver Kosut, Flavio du Pin Calmon",
+      "venue": "arXiv preprint",
+      "year": 2026,
+      "type": "preprint",
+      "category": [
+          "Information Theory",
+          "Large Language Models"
+      ],
+      "keywords": "covert communication, feedback coding, llm agents, steganography",
+      "tldr": null,
+      "abstract": "As large language models (LLMs) are increasingly used to automate digital interactions, users can leverage LLM-generated text as cover for covert communication within seemingly benign conversations. Existing LLM steganography, however, is predominantly white-box, requiring the sender and receiver to share the cover statistics, typically through access to the model weights and prompt. Black-box schemes remove this requirement by allowing the receiver to operate solely on the generated text, but current approaches rely on fixed-length, open-loop watermarking techniques that suffer from high decoding error rates under variable-length token generation. We recast black-box LLM steganography as a sequential communication problem with causal, noiseless feedback: every generated token is observed by both parties and can guide subsequent embedding. Based on this perspective, we introduce \\textbf{B}urnashev \\textbf{A}daptive Posterior \\textbf{M}atching (BAM), a feedback-coding scheme that combines posterior matching with a decode-and-confirm phase. The design is inspired by classical information-theoretic feedback-coding principles, while its security is established through a cryptographic reduction proof. Across three open-weight language models, we demonstrate that BAM attains 0-0.1\\% empirical message error on an 8-bit payload in around 50 tokens, across 1000 trials, versus 10-17\\% for the strongest black-box baseline at comparable length. Building on the proposed steganography algorithm, we demonstrate the feasibility of an end-to-end communication protocol that achieves high communication rates across multiple conversational settings.",
+      "pub_website": null,
+      "project_website": "https://infotheorylab.github.io/Covert_Chess/",
+      "arxiv_website": "https://arxiv.org/abs/2609.24994",
+      "code_repository": "https://github.com/SiDongG/Covert_Chess",
+      "bibtex": null
+  },
+  {
       "id": "cs63",
       "title": "Sort, Partition, Randomize: Optimal Binary Hypothesis Testing under Local Differential Privacy",
       "authors": "Elena Ghazi, Jawad Nasser, Flavio du Pin Calmon, Ibrahim Issa",

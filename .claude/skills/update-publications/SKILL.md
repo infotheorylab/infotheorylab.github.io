@@ -48,6 +48,7 @@ Add new entries at the top of `publications.json`, newest first. Edit the file a
     "tldr": null,
     "abstract": "Abstract from arXiv, or null",
     "pub_website": "Publisher or proceedings URL, or null",
+    "project_website": "Project page URL, shown as \"Website\" (optional)",
     "arxiv_website": "https://arxiv.org/abs/XXXX.XXXXX",
     "code_repository": null,
     "bibtex": null

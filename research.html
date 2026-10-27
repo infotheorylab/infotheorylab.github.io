@@ -254,6 +254,7 @@
         const links = [];
         if (p.arxiv_website) links.push(`<a href="${esc(p.arxiv_website)}" target="_blank" rel="noopener">arXiv</a>`);
         if (p.pub_website) links.push(`<a href="${esc(p.pub_website)}" target="_blank" rel="noopener">Paper</a>`);
+        if (p.project_website) links.push(`<a href="${esc(p.project_website)}" target="_blank" rel="noopener">Website</a>`);
         if (p.code_repository) links.push(`<a href="${esc(p.code_repository)}" target="_blank" rel="noopener">Code</a>`);
 
         const isPreprint = p.type === 'preprint' || /^(arxiv|under review)/i.test(p.venue);
